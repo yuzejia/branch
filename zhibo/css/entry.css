@@ -1,0 +1,67 @@
+.main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: url("../img/wx.png") no-repeat;
+  background-size: 100% 100%;
+}
+.main .main-popup {
+  width: 4.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 0.12rem;
+  padding-left: 0.64rem;
+  padding-right: 0.64rem;
+}
+.main .main-popup .head-image {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.32rem;
+}
+.main .main-popup .head-image img {
+  display: inline-block;
+  width: 2.51rem;
+  height: 2.51rem;
+}
+.main .main-popup .head-content {
+  text-align: center;
+}
+.main .main-popup .head-content h3 {
+  font-size: 0.23rem;
+  color: #3c3c3c;
+  letter-spacing: 0.01rem;
+  line-height: 0.54rem;
+  font-weight: bold;
+}
+.main .main-popup .head-content .major {
+  margin-top: 0.2rem;
+}
+.main .main-popup .head-content .major p {
+  line-height: 0.5rem;
+  color: #3c3c3c;
+  font-weight: bold;
+}
+.main .main-popup .head-content .watch p {
+  line-height: 0.5rem;
+  color: #3c3c3c;
+  font-weight: bold;
+}
+.main .main-popup .head-content .video-entry {
+  margin-top: 0.15rem;
+}
+.main .main-popup .head-content .video-entry a {
+  display: inline-block;
+  line-height: 1rem;
+  color: #487eba;
+  font-weight: bold;
+  font-size: 0.32rem;
+}
+.main .main-popup .head-slide {
+  width: 100%;
+  margin: 0.2rem auto;
+  height: 2px;
+  background: #b1b1b1;
+}

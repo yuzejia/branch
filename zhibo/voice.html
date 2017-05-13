@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/voice.css">
+    <title>语音贴</title>
+</head>
+<body ng-controller="myCtrl">
+    <div class="voice-content">
+        <div class="title">
+            <input type="text" placeholder="请输入标题名称">
+        </div>
+        <div class="voice-img">
+            <img src="img/voice.png" alt="">
+            <div class="img-bg"></div>
+            <p class="voice-desc">长按按钮进行录音</p>
+        </div>
+
+        <div class="test-voice">
+            <img class="head-img" src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLB1ZmFuYe21atqSse0BR5NT3ZibpeXNwgqt7IHN9hs3VszfbSQoiabomugcuaRTBgR7cEI330ibXlPyw/0" alt="">
+            <div class="voice-msg">
+                <div class="voice-content-bg"></div>
+                <div class="read-flag"></div>
+            </div>
+
+            <p class="voice-opt">撤了重录</p>
+        </div>
+
+        <button class="sendVoice">发布</button>
+        <audio src=""></audio>
+    </div>
+
+<script src="js/libyys-flexible.js"></script>
+<script src="js/jquery.1.11.3.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
+<script src="js/voice.js"></script>
+</body>
+</html>

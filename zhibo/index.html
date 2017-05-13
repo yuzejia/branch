@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
+    <title>直播首页</title>
+</head>
+<body ng-controller="myCtrl">
+<!--直播主区域-->
+    <div class="main">
+        <!--头部-->
+        <div class="topHeader">
+            <div class="head-main">
+                <div class="head-img">
+                    <img class="img1" src="img/head.png" alt="">
+                    <div class="head-name">
+                        <span>喜羊羊</span>
+                        <!--<img class="head-btn" src="img/watch.png" alt="">-->
+                        <div class="head-btn fl">律师</div>
+                        <div class="head-btn fl blue">律博园认证</div>
+                    </div>
+                    <img src="img/share.png" class="img2 fr" alt="" ng-click="makeShare()">
+                </div>
+                <p>善于处理财产纠纷</p>
+            </div>
+            <div class="head-online fl">
+                <span>1212K在线</span>
+            </div>
+            <div class="head-list clearfix fl">
+                <div class="wrapper" id="wrapper2">
+                    <div class="scroller2">
+                        <ul class="head-guest">
+                            <li>
+                                <img src="img/guestImg.png" alt="">
+                                <div class="guest-side1"></div>
+                            </li>
+                            <li>
+                                <img src="img/guestImg.png" alt="">
+                                <div class="guest-side2"></div>
+                            </li>
+                            <li>
+                                <img src="img/guestImg.png" alt="">
+                                <div class="guest-side3"></div>
+                            </li>
+                            <li>
+                                <img src="img/guestImg.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/guestImg.png" alt="">
+                                <div class="guest-side3"></div>
+                            </li>
+                            <li>
+                                <img src="img/guestImg.png" alt="">
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="head-flowers">
+                    <p class="flower-bg"></p>
+                    <span>打赏榜</span>
+                </div>
+            </div>
+            <div class="head-enter fr">
+                <img src="img/enter.png" alt="">
+            </div>
+        </div>
+
+        <!--小助手监控区-->
+        <div class="topTwo hide animated">
+            <p class="topTwo-watch">
+                <span class="topTwo-bg"></span>
+                <span id="systemTips">小助手正在监控室清理出小助手正在监控室清理出小助手正在监控室清理出小助手正在监控室清理出小助手正在监控室清理出小助手正在监控室清理出</span>
+            </p>
+        </div>
+
+        <!--视频区-->
+        <div class="player">
+            <div id="container">
+                <div class="inke-video-wrap">
+                    <video preload="auto" webkit-playsinline="true" playsinline="true" x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-ignore-metadata="true" height="100%" poster="http://image.scale.a8.com/imageproxy2/dimgm/scaleImage?url=http%3A%2F%2Fimg2.inke.cn%2FMTQ5MjQ0ODI3MzgwMiM3OTUjanBn.jpg&w=640&h=640&s=80" ng-click="setInput()">
+                        <source src="http://hlive.jia.360.cn/live_jia_public/36160703546/index.m3u8">
+                        <p>不支持video</p>
+                    </video>
+                    <div class="i-v-mask" ng-show="indexInfo.showPoster">
+                        <div class="i-poster" style="background-image: url(http://image.scale.a8.com/imageproxy2/dimgm/scaleImage?url=http%3A%2F%2Fimg2.inke.cn%2FMTQ5MjQ0ODI3MzgwMiM3OTUjanBn.jpg&w=640&h=640&s=80)"></div>
+                        <span class="i-play-btn" ng-click="startPlay()"></span>
+                    </div>
+                    <span class="i-play-btn2" ng-click="startPlay2($event)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="bottomFooter">
+            <!--留言评论区-->
+            <section id="comment">
+                <div class="data-list">
+
+                    <dl class="clearfix comment-list notice">
+                        <dt class="fl">
+                            <img src="img/logo.jpg" alt="">
+                        </dt>
+                        <dd class="fl">
+                            公告通知：吃饭睡觉打豆豆！！！吃饭睡觉打豆豆！！！吃饭睡觉打豆豆！！！吃饭睡觉打豆豆！！！
+                        </dd>
+                    </dl>
+
+                    <dl class="clearfix comment-list">
+                        <dt class="fl">
+                            <img src="img/pic4.png" alt="">
+                        </dt>
+                        <dd class="fl">
+                            <span>奥特曼打小怪兽</span>  说： <span>我想离婚可是我不清楚财产是怎么分 割的，求教</span>
+                        </dd>
+                    </dl>
+
+                    <dl class="clearfix comment-list welcome">
+                        <dd class="fl">
+                            欢迎<span class="welcome-one">蝙蝠侠</span>进入直播间
+                        </dd>
+                    </dl>
+
+                    <dl class="clearfix comment-list gift">
+                        <dt class="fl">
+                            <img src="img/pic4.png" alt="">
+                        </dt>
+                        <dd class="fl">
+                            <span>奥特曼打小怪兽</span>  打赏：
+                            <span class="gift-img">
+                        <img src="img/flag.png" alt="">
+                    </span>
+                            <span class="gift-num">X1</span>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix comment-list">
+                        <dt class="fl">
+                            <img src="img/pic4.png" alt="">
+                        </dt>
+                        <dd class="fl">
+                            <span>奥特曼打小怪兽</span>  说： <span>我想离婚可是我不清楚财产是怎么分 割的，求教</span>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix comment-list">
+                        <dt class="fl">
+                            <img src="img/pic4.png" alt="">
+                        </dt>
+                        <dd class="fl">
+                            <span>奥特曼打小怪兽</span>  说： <span>我想离婚可是我不清楚财产是怎么分 割的，求教</span>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix comment-list gift">
+                        <dt class="fl">
+                            <img src="img/pic4.png" alt="">
+                        </dt>
+                        <dd class="fl">
+                            <span>奥特曼打小怪兽</span>  打赏：
+                            <span class="gift-img">
+                        <img class="food" src="img/gift_4.gif" alt="">
+                    </span>
+                            <span class="gift-num">X1</span>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix comment-list">
+                        <dt class="fl">
+                            <img src="img/pic4.png" alt="">
+                        </dt>
+                        <dd class="fl">
+                            <span>奥特曼打小怪兽</span>  说： <span>我想离婚可是我不清楚财产是怎么分 割的，求教</span>
+                        </dd>
+                    </dl>
+
+                </div>
+            </section>
+
+            <div class="comment-input input-animate">
+                <div class="input-text-wrap" ng-click="sendMessage()">
+                    <input type="text" disabled >
+                </div>
+                <span class="input-img"></span>
+            </div>
+            <!--打开软键盘显示的输入框-->
+           <div class="message-box" ng-show="indexInfo.sendMessage" ng-click="setInput2()">
+
+           </div>
+            <div class="comment-input comment-input2" ng-show="indexInfo.sendMessage">
+                <div class="input-text-wrap">
+                    <input type="text" class="sendMessage" ng-model="indexInfo.content" placeholder="发布信息">
+                    <span class="input-img" ng-click="hideMessageBox()"></span>
+                </div>
+            </div>
+
+
+            <div class="action-animate"></div>
+            <div class="bottom-action">
+                <img class="action-order" src="img/order.png" ng-click="makeMeeting()" alt="">
+                <img class="action-suggestion" src="img/suggestion2.png" ng-click="makeQuestion()" alt="">
+                <img class="action-gift" src="img/gift2.png" ng-click="makeGift()" alt="">
+                <img class="action-support" ng-click="makeSupport()" src="img/support2.png" alt="">
+            </div>
+            <!--选取礼物区-->
+            <div class="bottom-action giftArea hide animated" id="wrapper">
+                <div class="scroller">
+                    <dl class="gift-list">
+                        <dt>
+                            <img src="img/gift1.png" alt="">
+                        </dt>
+                        <dd>
+                            鼓掌(10次)
+                        </dd>
+                    </dl>
+                    <dl class="gift-list">
+                        <dt>
+                            <img src="img/gift_two.png" alt="">
+                        </dt>
+                        <dd>
+                            鲜花(50$)
+                        </dd>
+                    </dl>
+                    <dl class="gift-list">
+                        <dt>
+                            <img src="img/gift3.png" alt="">
+                        </dt>
+                        <dd>
+                            锦旗(100$)
+                        </dd>
+                    </dl>
+                    <dl class="gift-list">
+                        <dt>
+                            <img src="img/gift4.png" alt="">
+                        </dt>
+                        <dd>
+                            大餐(200$)
+                        </dd>
+                    </dl>
+                    <dl class="gift-list">
+                        <dt>
+                            <img src="img/gift5.png" alt="">
+                        </dt>
+                        <dd>
+                            跑车(500$)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!--约见律师-->
+        <div class="meeting" ng-show="indexInfo.showMeeting">
+            <div class="meet-bg">
+                <div class="meet-top">
+                    <h3>约见</h3>
+                    <span class="close-btn" ng-click="indexInfo.showMeeting = false"></span>
+                </div>
+
+                <div class="meet-arrange">
+                    <h4>律师日程安排</h4>
+                </div>
+                <p class="meet-money">约见费用： 200一次</p>
+                <div class="meet-input">
+                    <div class="input-one">
+                        <input type="text" placeholder="请输入您的手机号">
+                    </div>
+                    <div class="input-two">
+                        <input type="text" placeholder="请输入您的姓名">
+                    </div>
+                </div>
+                <div class="meet-submit">
+                    <button ng-click="getContactMeet()">立即支付</button>
+                </div>
+            </div>
+        </div>
+
+        <!--付费约见后联系小助理-->
+        <div class="contactManager" ng-show="indexInfo.showCompleteMeeting">
+            <div class="meet-bg">
+                <div class="meet-top">
+                    <h3>约见</h3>
+                </div>
+
+                <div class="meet-arrange">
+                    <div class="qrcode">
+                        <img src="img/qrcode.png" alt="">
+                    </div>
+                </div>
+                <div class="meet-submit">
+                    <button ng-click="getCompleteMeet()">确定</button>
+                </div>
+
+                <div class="complete-msg">
+                    <p>亲!您已经付费完成了，不要忘了</p>
+                    <p>扫码加我们的小助理哦！</p>
+                </div>
+            </div>
+        </div>
+
+        <!--付费提问-->
+        <div class="putQuestion question" ng-show="indexInfo.showPutQuestion">
+            <div class="meet-bg">
+                <div class="meet-top">
+                    <h3>提问</h3>
+                    <span class="close-btn" ng-click="indexInfo.showPutQuestion = false"></span>
+                </div>
+
+                <div class="meet-arrange">
+                    <div class="qrcode">
+                        <input type="text" placeholder="请输入您的手机号">
+                    </div>
+                </div>
+                <div class="meet-submit">
+                    <button ng-click="getContactQuestion()">立即支付</button>
+                </div>
+            </div>
+        </div>
+
+        <!--付费提问后联系小助理-->
+        <div class="contactManager" ng-show="indexInfo.showCompleteQuestion">
+            <div class="meet-bg">
+                <div class="meet-top">
+                    <h3>提问</h3>
+                </div>
+
+                <div class="meet-arrange">
+                    <div class="qrcode">
+                        <img src="img/qrcode.png" alt="">
+                    </div>
+                </div>
+                <div class="meet-submit">
+                    <button ng-click="getCompleteQuestion()">确定</button>
+                </div>
+
+                <div class="complete-msg">
+                    <p>亲!您已经付费完成了，不要忘了</p>
+                    <p>扫码加我们的小助理哦！</p>
+                </div>
+            </div>
+        </div>
+
+        <!--分享弹窗-->
+        <div class="share" ng-show="indexInfo.showShare">
+            <section class="head-image">
+                <img src="img/share_img.png" alt="">
+                <span class="close-btn" ng-click="indexInfo.showShare = false"></span>
+            </section>
+
+            <section class="head-content">
+                <h3>洗羊羊与大灰狼</h3>
+                <p>XXX律师</p>
+                <p>正在直播，很好看的</p>
+                <p>我正在观看</p>
+                <p>快来吧</p>
+            </section>
+
+            <div class="head-slide"></div>
+
+            <div class="head-qr">
+                <img src="img/head_qr.png" alt="">
+                <button class="head-save" ng-click="saveImg()">保存图片</button>
+            </div>
+        </div>
+    </div>
+
+<script src="js/libyys-flexible.js"></script>
+<script src="js/jquery.1.11.3.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/layer_mobile/layer.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

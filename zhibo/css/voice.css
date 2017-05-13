@@ -1,0 +1,93 @@
+.voice-content {
+  text-align: center;
+}
+.voice-content .title {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.voice-content .title input {
+  display: inline-block;
+  width: 6.2rem;
+  border: 1px solid #e4e6e9;
+  border-radius: 0.1rem;
+  height: 0.6rem;
+  padding-left: 0.2rem;
+  color: #000;
+  padding-right: 0.1rem;
+  font-size: 0.25rem;
+}
+.voice-content .voice-img {
+  display: none;
+  position: relative;
+  margin-top: 2.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+.voice-content .voice-img img {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.voice-content .voice-img .img-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+}
+.voice-content .voice-img .voice-desc {
+  margin-top: 0.5rem;
+  font-size: 0.26rem;
+  color: #888;
+}
+.voice-content .sendVoice {
+  background: #eb6100;
+  padding: 0.1rem 0.2rem;
+  color: #ffffff;
+  font-size: 0.28rem;
+  border-radius: 0.1rem;
+  width: 2.5rem;
+  margin-top: 2rem;
+}
+.voice-content .test-voice {
+  margin-top: 2.5rem;
+  text-align: left;
+  padding: 16px;
+}
+.voice-content .test-voice .head-img {
+  vertical-align: top;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.08rem;
+}
+.voice-content .test-voice .voice-msg {
+  font-size: 0;
+  display: inline-block;
+  position: relative;
+}
+.voice-content .test-voice .voice-msg .voice-content-bg {
+  display: inline-block;
+  margin-top: 0.15rem;
+  margin-left: 0.2rem;
+  width: 2.8rem;
+  height: 0.5rem;
+  background: #23f2ff;
+  border-radius: 0.2rem;
+}
+.voice-content .test-voice .voice-msg .read-flag {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.2rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  background: #f00;
+  border-radius: 50%;
+}
+.voice-content .test-voice .voice-opt {
+  float: right;
+  line-height: 0.8rem;
+  margin-right: 0.2rem;
+}

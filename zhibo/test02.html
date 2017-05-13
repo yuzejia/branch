@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+<ul>
+    <li ng-repeat="item in items track by $index" repeat-finish="repeatFinish(items.length)">
+        {{item}}
+    </li>
+</ul>
+
+<button ng-click="add()">add</button>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.directive('repeatFinish', function ($timeout) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attr) {
+                if (scope.$last == true) {
+                    console.log('ng-repeat循环结束');
+                    //执行循环完毕后的相关逻辑代码
+                    $timeout(function () {
+                        scope.$eval(attr.repeatFinish);
+                    }, 300);
+                }
+            }
+        };
+    });
+
+    app.controller('myCtrl', ['$scope', function ($scope) {
+        $scope.items = [1, 2, 3, 4];
+        $scope.count = 5;
+        $scope.repeatFinish = function (num) {
+            alert(num);
+        };
+        $scope.add = function () {
+            $scope.items.push($scope.count++);
+        };
+    }]);
+</script>
+</body>
+</html>

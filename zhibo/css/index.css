@@ -1,0 +1,1040 @@
+body {
+  font: normal normal 12px Arial, Helvetica, '微软雅黑', '黑体';
+  color: #666;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  font-family: helvetica;
+  background-color: #fff;
+  display: block;
+}
+.main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /*约见律师*/
+  /*分享弹层*/
+}
+.main .topHeader {
+  position: absolute;
+  top: 0;
+  background: #222222;
+  height: 1.78rem;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  clear: both;
+}
+.main .topHeader .head-main {
+  width: 2.9rem;
+  height: 1.15rem;
+  float: left;
+  border: 1px solid #434343;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  border-radius: 23px;
+}
+.main .topHeader .head-main .head-img {
+  height: 0.7rem;
+  width: 100%;
+  border: 1px solid #434343;
+  border-radius: 23px;
+  background: linear-gradient(to bottom, #3b3b3b, #222222);
+  padding-left: 0.1rem;
+}
+.main .topHeader .head-main .head-img .img1 {
+  width: 0.60rem;
+  height: 0.60rem;
+  border-radius: 50%;
+  float: left;
+  margin-top: 0.02rem;
+  margin-left: -0.05rem;
+}
+.main .topHeader .head-main .head-img .img2 {
+  width: 0.54rem;
+  height: 0.54rem;
+  margin-top: 0.05rem;
+  margin-right: 0.06rem;
+}
+.main .topHeader .head-main .head-img .head-name {
+  width: 1.5rem;
+  height: 0.7rem;
+  float: left;
+}
+.main .topHeader .head-main .head-img .head-name span {
+  display: block;
+  font-size: 0.22rem;
+  line-height: 0.35rem;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 0.07rem;
+}
+.main .topHeader .head-main .head-img .head-name .head-btn {
+  margin-left: 0.06rem;
+  border: 0.01rem solid #ffc600;
+  border-radius: 0.05rem;
+  font-size: 0.14rem;
+  text-align: center;
+  color: #ffc600;
+}
+.main .topHeader .head-main .head-img .head-name .head-btn.blue {
+  border-color: #438ff7;
+  color: #438ff7;
+}
+.main .topHeader .head-main p {
+  text-align: center;
+  color: #ffffff;
+  float: left;
+  width: 100%;
+  font-size: 0.2rem;
+  line-height: 0.4rem;
+}
+.main .topHeader .head-online {
+  position: relative;
+  text-align: center;
+  border: 1px solid #6a6a6a;
+  border-radius: 50%;
+  width: 0.76rem;
+  height: 0.76rem;
+  color: #ffc600;
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+  font-size: 0.18rem;
+}
+.main .topHeader .head-online span {
+  display: inline-block;
+  width: 0.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.main .topHeader .head-list {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  width: 2.93rem;
+  height: 1.58rem;
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+  overflow: hidden;
+}
+.main .topHeader .head-list .wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 0.7rem;
+}
+.main .topHeader .head-list .wrapper .scroller2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 5.5rem;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.main .topHeader .head-list .wrapper .head-guest {
+  width: 5.5rem;
+  clear: both;
+  overflow: hidden;
+}
+.main .topHeader .head-list .wrapper .head-guest li {
+  position: relative;
+  float: left;
+  margin-right: 0.25rem;
+}
+.main .topHeader .head-list .wrapper .head-guest li .guest-side1 {
+  width: 0.22rem;
+  height: 0.22rem;
+  position: absolute;
+  background: url('../img/pic1.png') no-repeat;
+  background-size: cover;
+  right: -0.1rem;
+  bottom: 0.1rem;
+}
+.main .topHeader .head-list .wrapper .head-guest li .guest-side2 {
+  width: 0.22rem;
+  height: 0.22rem;
+  position: absolute;
+  background: url('../img/pic2.png') no-repeat;
+  background-size: cover;
+  right: -0.1rem;
+  bottom: 0.1rem;
+}
+.main .topHeader .head-list .wrapper .head-guest li .guest-side3 {
+  width: 0.22rem;
+  height: 0.22rem;
+  position: absolute;
+  background: url('../img/pic3.png') no-repeat;
+  background-size: cover;
+  right: -0.1rem;
+  bottom: 0.1rem;
+}
+.main .topHeader .head-list .wrapper .head-guest li img {
+  display: inline-block;
+  width: 0.66rem;
+  height: 0.66rem;
+  border-radius: 50%;
+}
+.main .topHeader .head-list .wrapper .head-guest li:last-child {
+  margin-right: 0;
+}
+.main .topHeader .head-list .head-flowers {
+  float: right;
+  width: 2.32rem;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  border-radius: 35px;
+  background: #3c3c3c;
+  margin-top: 0.25rem;
+  padding-left: 0.1rem;
+}
+.main .topHeader .head-list .head-flowers .flower-bg {
+  float: left;
+  width: 0.28rem;
+  height: 0.28rem;
+  margin-top: 0.05rem;
+  background: url("../img/money.png") no-repeat;
+  background-size: cover;
+}
+.main .topHeader .head-list .head-flowers span {
+  float: left;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  color: #ffcc00;
+  font-size: 0.18rem;
+  margin-left: 0.08rem;
+}
+.main .topHeader .head-enter {
+  margin-top: 0.2rem;
+  width: 0.48rem;
+  text-align: center;
+}
+.main .topHeader .head-enter img {
+  display: inline-block;
+  margin-top: 0.21rem;
+  width: 0.3rem;
+  height: 0.21rem;
+}
+.main .topTwo {
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 0.6rem;
+  background: url("../img/rect-bg.png") no-repeat;
+  line-height: 0.72rem;
+  background-size: 100% 120%;
+}
+.main .topTwo .topTwo-watch {
+  position: absolute;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.main .topTwo .topTwo-watch .topTwo-bg {
+  position: relative;
+  top: 0.03rem;
+  width: 0.26rem;
+  height: 0.26rem;
+  display: inline-block;
+  background: url("../img/lingsheng.png") left center no-repeat;
+  background-size: cover;
+}
+.main .bottomFooter {
+  width: 100%;
+  height: 4.66rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #070709, #37322d);
+  z-index: 5;
+  margin-top: 0;
+  padding-top: 0.2rem;
+  padding-left: 0.08rem;
+}
+.main .bottomFooter #comment {
+  width: 100%;
+  height: 3rem;
+  overflow: auto;
+  position: relative;
+}
+.main .bottomFooter .data-list {
+  width: 100%;
+}
+.main .bottomFooter .comment-list {
+  margin-bottom: 0.15rem;
+  width: 5.5rem;
+}
+.main .bottomFooter .comment-list dt {
+  display: inline-block;
+  height: 100%;
+}
+.main .bottomFooter .comment-list dt img {
+  display: inline-block;
+  width: 0.68rem;
+  height: 0.68rem;
+  border-radius: 50%;
+}
+.main .bottomFooter .comment-list dd {
+  margin-top: 0.15rem;
+  margin-left: 0.24rem;
+  width: 4.54rem;
+  color: #ffc600;
+  font-size: 0.24rem;
+}
+.main .bottomFooter .welcome {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+}
+.main .bottomFooter .welcome dd {
+  padding-left: 0.92rem;
+  width: 100%;
+  margin-left: 0;
+  color: #f37f03;
+}
+.main .bottomFooter .welcome dd .welcome-one {
+  display: inline-block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.main .bottomFooter .notice dd {
+  color: #ffffff;
+  font-weight: normal;
+}
+.main .bottomFooter .comment-list.gift {
+  margin-bottom: 0;
+}
+.main .bottomFooter .comment-list.gift dd {
+  font-size: 0.25rem;
+}
+.main .bottomFooter .comment-list.gift dd .gift-img {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: translate(0, -20%);
+  -moz-transform: translate(0, -20%);
+  -ms-transform: translate(0, -20%);
+  -o-transform: translate(0, -20%);
+  transform: translate(0, -20%);
+  font-size: 0;
+}
+.main .bottomFooter .comment-list.gift dd .gift-img img {
+  display: inline-block;
+  width: 0.77rem;
+  height: 0.98rem;
+}
+.main .bottomFooter .comment-list.gift dd .gift-img img.car {
+  width: 1.2rem;
+  height: 0.58rem;
+}
+.main .bottomFooter .comment-list.gift dd .gift-img img.flower,
+.main .bottomFooter .comment-list.gift dd .gift-img img.food {
+  width: 0.88rem;
+  height: 0.88rem;
+}
+.main .bottomFooter .comment-list.gift dd .gift-num {
+  color: #ffc600;
+  font-size: 0.27rem;
+  font-weight: bolder;
+  text-shadow: #ffffff 1px 0 0,#ffffff 0 1px 0;
+}
+.main .bottomFooter .comment-input {
+  position: absolute;
+  width: 3.6rem;
+  height: 0.78rem;
+  border-radius: 0.35rem;
+  border: 0.15rem solid #303132;
+  bottom: 0.09rem;
+}
+.main .bottomFooter .comment-input .input-text-wrap {
+  width: 3.3rem;
+  background-color: #5b5958;
+  height: 0.46rem;
+  display: block;
+  border-radius: 0.35rem;
+}
+.main .bottomFooter .comment-input input {
+  width: 2.75rem;
+  background-color: transparent;
+  height: 0.46rem;
+  display: block;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 0.2rem;
+  padding-left: 0.2rem;
+  animation-fill-mode: forwards;
+}
+.main .bottomFooter .comment-input input::-webkit-input-placeholder {
+  font-size: 0.25rem;
+  color: #e3e3ee;
+  letter-spacing: 0.01rem;
+}
+.main .bottomFooter .comment-input .input-img {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.24rem;
+  background: url("../img/message.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.2rem;
+}
+.main .bottomFooter .message-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.main .bottomFooter .comment-input.comment-input2 {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 0.98rem;
+  bottom:0;
+  /*bottom: 4.88rem;*/
+  left: 0;
+  right: 0;
+  border-radius: 0;
+}
+.main .bottomFooter .comment-input.comment-input2 .input-text-wrap {
+  width: 100%;
+  height: 0.68rem;
+  border-radius: 0;
+}
+.main .bottomFooter .comment-input.comment-input2 input {
+  z-index: 100;
+  width: 6.5rem;
+  height: 100%;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.25rem;
+  padding-left: 0.2rem;
+}
+.main .bottomFooter .comment-input.comment-input2 .input-img {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.4rem;
+  background: url("../img/message.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0.15rem;
+  right: 0.2rem;
+}
+.main .bottomFooter .action-animate {
+  position: absolute;
+  width: 0.87rem;
+  height: 0.87rem;
+  right: 0.1rem;
+  bottom: 0.1rem;
+}
+.main .bottomFooter .action-animate img {
+  width: 0.45rem;
+  height: 0.45rem;
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  z-index: 5;
+}
+.main .bottomFooter .bottom-action {
+  position: absolute;
+  bottom: 0.09rem;
+  right: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+}
+.main .bottomFooter .bottom-action img {
+  width: 0.77rem;
+  height: 0.77rem;
+}
+.main .bottomFooter .bottom-action .action-order {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 0;
+}
+.main .bottomFooter .bottom-action .action-gift {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 0;
+}
+.main .bottomFooter .bottom-action .action-suggestion {
+  position: absolute;
+  bottom: 0.81rem;
+  right: 0.78rem;
+}
+.main .bottomFooter .bottom-action .action-support {
+  position: absolute;
+  width: 0.87rem;
+  height: 0.87rem;
+  bottom: 0;
+  right: 0;
+}
+.main .bottomFooter .bottom-action.giftArea {
+  width: 6.5rem;
+  height: 1rem;
+  background: #3c3c3c;
+  overflow: hidden;
+  left: 0.05rem;
+  bottom: 0.2rem;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  border-radius: 0.35rem;
+}
+.main .bottomFooter .bottom-action.giftArea .scroller {
+  position: absolute;
+  border-radius: 0.35rem;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 6.6rem;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.main .bottomFooter .bottom-action.giftArea .gift-list {
+  overflow: hidden;
+  float: left;
+  height: 100%;
+}
+.main .bottomFooter .bottom-action.giftArea .gift-list dd {
+  float: left;
+  padding-top: 0.3rem;
+  width: 0.5rem;
+  font-size: 0.16rem;
+  color: #ffffff;
+  text-align: center;
+}
+.main .bottomFooter .bottom-action.giftArea .gift-list dt {
+  float: left;
+  padding-top: 0.1rem;
+}
+.main .bottomFooter .bottom-action.giftArea .gift-list dt img {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.main .meeting,
+.main .contactManager,
+.main .putQuestion {
+  position: absolute;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../img/meeting-bg.png");
+}
+.main .meeting .meet-bg,
+.main .contactManager .meet-bg,
+.main .putQuestion .meet-bg {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.main .meeting .meet-top,
+.main .contactManager .meet-top,
+.main .putQuestion .meet-top {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0.15rem auto;
+  background: url("../img/meet2.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.main .meeting .meet-top h3,
+.main .contactManager .meet-top h3,
+.main .putQuestion .meet-top h3 {
+  text-align: center;
+  line-height: 2.25rem;
+  font-size: 0.3rem;
+  color: #eacb76;
+}
+.main .meeting .meet-top .close-btn,
+.main .contactManager .meet-top .close-btn,
+.main .putQuestion .meet-top .close-btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../img/close.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0.2rem;
+  right: -2.3rem;
+}
+.main .meeting .meet-arrange,
+.main .contactManager .meet-arrange,
+.main .putQuestion .meet-arrange {
+  width: 5.74rem;
+  height: 3.46rem;
+  margin: 0.36rem auto;
+  background: url("../img/meet3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.main .meeting .meet-arrange h4,
+.main .contactManager .meet-arrange h4,
+.main .putQuestion .meet-arrange h4 {
+  text-align: center;
+  color: #eacb76;
+  font-size: 0.22rem;
+  padding-top: 0.25rem;
+}
+.main .meeting .meet-money,
+.main .contactManager .meet-money,
+.main .putQuestion .meet-money {
+  text-align: center;
+  font-size: 0.25rem;
+  color: #fefcf6;
+  text-shadow: #eacb76 1px 0 0,#eacb76 0 1px 0;
+}
+.main .meeting .meet-input,
+.main .contactManager .meet-input,
+.main .putQuestion .meet-input {
+  width: 4rem;
+  margin: 1.03rem auto 0;
+  text-align: center;
+}
+.main .meeting .meet-input input::-webkit-input-placeholder,
+.main .contactManager .meet-input input::-webkit-input-placeholder,
+.main .putQuestion .meet-input input::-webkit-input-placeholder {
+  font-size: 0.24rem;
+  color: #716239;
+  letter-spacing: 0.01rem;
+  text-align: center;
+  font-weight: bold;
+}
+.main .meeting .meet-input .input-one,
+.main .contactManager .meet-input .input-one,
+.main .putQuestion .meet-input .input-one {
+  border-top: 1px solid #eacb76;
+  border-bottom: 1px solid #eacb76;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.main .meeting .meet-input .input-one input,
+.main .contactManager .meet-input .input-one input,
+.main .putQuestion .meet-input .input-one input {
+  border: none;
+  background: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.main .meeting .meet-input .input-two,
+.main .contactManager .meet-input .input-two,
+.main .putQuestion .meet-input .input-two {
+  border-bottom: 1px solid #eacb76;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.main .meeting .meet-input .input-two input,
+.main .contactManager .meet-input .input-two input,
+.main .putQuestion .meet-input .input-two input {
+  border: none;
+  background: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.main .meeting .meet-submit,
+.main .contactManager .meet-submit,
+.main .putQuestion .meet-submit {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.main .meeting .meet-submit button,
+.main .contactManager .meet-submit button,
+.main .putQuestion .meet-submit button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.65rem;
+  line-height: 0.65rem;
+  color: #eacb76;
+  font-size: 0.23rem;
+  text-align: center;
+  font-weight: bold;
+  background: #333333;
+  letter-spacing: 0.01rem;
+  border-radius: 0.1rem;
+  margin: auto;
+}
+.main .contactManager,
+.main .putQuestion {
+  z-index: 8;
+}
+.main .contactManager .meet-arrange,
+.main .putQuestion .meet-arrange {
+  width: 5.7rem;
+  height: 5rem;
+  margin: 0.36rem auto;
+  background: url("../img/meet4.png") no-repeat;
+  background-size: 100% 100%;
+}
+.main .contactManager .meet-arrange .qrcode,
+.main .putQuestion .meet-arrange .qrcode {
+  text-align: center;
+  padding-top: 0.53rem;
+}
+.main .contactManager .meet-arrange .qrcode img,
+.main .putQuestion .meet-arrange .qrcode img {
+  display: inline-block;
+  width: 3.96rem;
+  height: 3.96rem;
+}
+.main .contactManager .complete-msg,
+.main .putQuestion .complete-msg {
+  margin-top: 0.5rem;
+}
+.main .contactManager .complete-msg p,
+.main .putQuestion .complete-msg p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.3rem;
+  letter-spacing: 0.03rem;
+  line-height: 0.6rem;
+}
+.main .putQuestion.question .meet-top {
+  margin-top: 0.5rem;
+}
+.main .putQuestion.question .meet-top .close-btn {
+  top: 0.2rem;
+}
+.main .putQuestion.question .meet-arrange {
+  width: 5.74rem;
+  height: 3.13rem;
+  line-height: 3.13rem;
+  margin: 0.66rem auto;
+  background: url("../img/meet5.png") no-repeat;
+  background-size: 100% 100%;
+}
+.main .putQuestion.question .meet-arrange .qrcode {
+  text-align: center;
+  padding-top: 0;
+}
+.main .putQuestion.question .meet-arrange .qrcode input {
+  display: inline-block;
+  width: 3.2rem;
+  height: 0.6rem;
+  text-align: center;
+  border: 0.03rem solid #eacb76;
+  border-radius: 0.1rem;
+  background: transparent;
+  color: #fff;
+  font-size: 0.24rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+.main .putQuestion.question .meet-arrange .qrcode input::-webkit-input-placeholder {
+  font-size: 0.22rem;
+  color: #ffffff;
+  letter-spacing: 0.01rem;
+  text-align: center;
+  font-weight: normal;
+}
+.main .putQuestion.question .meet-submit {
+  margin-top: 2rem;
+}
+.main .putQuestion.question .complete-msg {
+  width: 3.84rem;
+  margin: 0 auto;
+}
+.main .putQuestion.question .complete-msg p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.3rem;
+  letter-spacing: 0.03rem;
+  line-height: 0.6rem;
+}
+.main .share {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  position: absolute;
+  overflow: hidden;
+  background: #ffffff;
+}
+.main .share .head-image {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.58rem;
+  position: relative;
+}
+.main .share .head-image img {
+  display: inline-block;
+  width: 2.51rem;
+  height: 2.51rem;
+  border-radius: 50%;
+}
+.main .share .head-image .close-btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../img/close.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -0.4rem;
+  right: 0.2rem;
+}
+.main .share .head-content {
+  text-align: center;
+}
+.main .share .head-content h3 {
+  font-size: 0.23rem;
+  color: #3c3c3c;
+  letter-spacing: 0.01rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.main .share .head-content p {
+  line-height: 0.4rem;
+  color: #3c3c3c;
+  font-weight: bold;
+}
+.main .share .head-slide {
+  width: 4.68rem;
+  margin: 0.4rem auto;
+  height: 2px;
+  background: #b1b1b1;
+}
+.main .share .head-qr {
+  display: block;
+  text-align: center;
+}
+.main .share .head-qr img {
+  width: 3.39rem;
+  height: 3.39rem;
+  display: block;
+  margin: 0 auto;
+}
+.main .share .head-qr .head-save {
+  display: inline-block;
+  width: 1.38rem;
+  line-height: 0.52rem;
+  margin-top: 0.5rem;
+  background: #ffffff;
+  border: 2px solid #707070;
+  border-radius: 0.08rem;
+  font-size: 0.24rem;
+  color: #3c3c3c;
+}
+.player,
+#container {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.inke-video-wrap {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.inke-video-wrap video {
+  border: 0;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  background: #000;
+  background-color: rgba(0, 0, 0, 0);
+  left: 0;
+  top: 0;
+}
+.inke-video-wrap .i-v-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+.inke-video-wrap .i-v-mask .i-poster {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.inke-video-wrap .i-v-mask .i-play-btn {
+  width: 1.64rem;
+  height: 1.64rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  display: block;
+  background: url(//img2.inke.cn/MTQ4MjQwNDI2MzU2NyMyOTAjanBn.jpg) no-repeat;
+  background-size: 100% auto;
+}
+.inke-video-wrap .i-play-btn2 {
+  display: none;
+  width: 1.64rem;
+  height: 1.64rem;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background: url(//img2.inke.cn/MTQ4MjQwNDI2MzU2NyMyOTAjanBn.jpg) no-repeat;
+  background-size: 100% auto;
+}
+/*再点击一次退出*/
+.alert-box {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  z-index: 14;
+  width: 3rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  margin-left: -1.5rem;
+  margin-top: 0.3rem;
+  color: #fff;
+  font-size: 0.25rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0.1rem;
+  border: 1px solid #000000;
+}
+/*layer弹出层*/
+.layui-m-layermain {
+  z-index: 9;
+}
+/*点击礼物，输入框动画*/
+@keyframes circle1 {
+  from {
+    border-radius: 0.35rem;
+    width: 3.6rem;
+  }
+  to {
+    width: 0.78rem;
+    border-radius: 50%;
+  }
+}
+@keyframes circle2 {
+  from {
+    width: 3.3rem;
+    border-radius: 0.35rem;
+    height: 0.46rem;
+  }
+  to {
+    width: 0.5rem;
+    border-radius: 50%;
+    height: 0.5rem;
+  }
+}
+@keyframes circle3 {
+  from {
+    width: 2.75rem;
+    height: 0.46rem;
+    padding-left: 0.2rem;
+  }
+  to {
+    width: 0;
+    height: 0;
+    padding-left: 0;
+  }
+}
+@keyframes circle4 {
+  from {
+    right: 0.2rem;
+  }
+  to {
+    right: 0.08rem;
+  }
+}
+/*点击输入框，进行恢复动画*/
+@keyframes circle5 {
+  to {
+    border-radius: 0.35rem;
+    width: 3.6rem;
+  }
+  from {
+    width: 0.78rem;
+    border-radius: 50%;
+  }
+}
+@keyframes circle6 {
+  to {
+    width: 3.3rem;
+    border-radius: 0.35rem;
+    height: 0.46rem;
+  }
+  from {
+    width: 0.5rem;
+    border-radius: 50%;
+    height: 0.5rem;
+  }
+}
+@keyframes circle7 {
+  to {
+    width: 2.75rem;
+    height: 0.46rem;
+    padding-left: 0.2rem;
+  }
+  from {
+    width: 0;
+    height: 0;
+    padding-left: 0;
+  }
+}
+@keyframes circle8 {
+  to {
+    right: 0.2rem;
+  }
+  from {
+    right: 0.08rem;
+  }
+}
