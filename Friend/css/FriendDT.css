@@ -37,15 +37,25 @@
 	border-radius: 0.1rem;
 	text-align: center;
 	background: #FFFFFF;
+	font-size: 0.3rem;
 }
-
-.FriendDT .footer{
+.FriendDT .content .message i{
+	display: inline-block;
+    width: 0.35rem;
+}
+.FriendDT .content .message img{
 	width: 100%;
-	height: 1rem;
+	vertical-align: sub;
+	
+}
+.FriendDT .footer{
+	width: 7.5rem;
+	height: 1.2rem;
 	background: #FFFFFF;
 	border-top: 1px solid #B1B1B1;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
+	padding: 0.1rem 0;
 	
 }
 .FriendDT .footer div{
@@ -53,4 +63,11 @@
 	width: 25%;
 	float: left;
 	display: block;
+}
+.FriendDT .footer div img{
+    width: 0.6rem;
+}
+.FriendDT .footer div p{
+	font-size: 0.3rem;
+	color: #b3b3b3;
 }
