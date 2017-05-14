@@ -1,38 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <title>全部关注</title>
+    <title>friend</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/friend_attention.css">
-
-    <link rel="stylesheet" href="css/ionic.min.css">
-
+    <link rel="stylesheet" href="css/Attention.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!--<link rel="stylesheet" href="css/ionic.min.css">-->
 </head>
-<body class="scope">
+<body class="scope" ng-controller="myFriend">
     <div class="Friend">
         <div class="list">
             <div class="item item-divider">全部关注</div>
-            <a class="item item-avatar" href="#">
-                <img src="img/head.png">
-                <h2 >标题控</h2>
-                <p>欢迎大家关注我</p>
-            </a>
-            <a class="item item-avatar" href="#">
-                <img src="img/head_qr.png">
-                <h2 >隔壁老王</h2>
-                <p>隔壁老王在练腰</p>
-            </a>
-            <a class="item item-avatar item-icon-right" href="#">
-                <img src="img/head.png">
-                <h2 >不二马大叔</h2>
-                <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-                <i class="icon "></i>
-            </a>
+            <div class="item item-avatar" ng-click="lays()">
+                <div class="fl">
+                    <img src="img/head.png">
+                </div>
+               <div class="fl">
+                   <h2 >标题控</h2>
+                   <p>欢迎大家关注我</p>
+               </div>
+                <div class="huDong fr">
+                    <img src="img/hudong.png" alt="">
+                </div>
+            </div>
+            <div class="item item-avatar" href="#">
+                <div class="fl">
+                    <img src="img/head.png">
+                </div>
+                <div class="fl">
+                    <h2 >起个名字</h2>
+                    <p>欢迎大家关注我关注我关注我关注我</p>
+                </div>
+            </div>
+        </div>
+        <!--遮罩层-->
+        <div class="Fmodel"></div>
+        <!--底部弹窗-->
+        <div class="lays" ng-show="lays2">
+            <div class="lay1">私信</div>
+            <div ng-click="cancelAttention()" class="lay2">取消关注</div>
+            <div ng-click="cancel()" class="lay3">取消</div>
+        </div>
+        <!--取消关注-->
+        <div class="cancelAttention">
+            <img src="img/head_qr.png" alt="">
+            <p class="">确定取消关注吗？</p>
+            <div class="select">
+                <div>取消</div>
+                <div>确定</div>
+            </div>
         </div>
     </div>
 
     <script src="js/libyys-flexible.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/jquery.1.11.3.js"></script>
+    <script src="js/app/friendAttention.js"></script>
 </body>
 </html>
