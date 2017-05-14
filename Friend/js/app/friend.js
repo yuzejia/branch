@@ -25,7 +25,7 @@ app.controller("myFriend",["$scope","$location",function($scope,$location){
 		var aaa = a.substring(0,aa);
 		var aaaa = aaa+"/friendAttention.html";
 		console.log(window.location)
-//		window.location.href = aaaa;
+		window.location.href = aaaa;
 		
 	}
 }])
