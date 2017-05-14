@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/FriendDT.css" />
 </head>
-<body class="scope">
-	<div class="FriendDT ">
+<body class="scope" ng-controller="myFriend">
+	<div class="FriendDT">
 	    <div class="header">
 	    	<img src="img/head.png" alt="" />
 	    	<h2>我的名字</h2>
@@ -25,7 +25,7 @@
 	    </div>
 	    
 	    <div class="footer">
-	    	<div>
+	    	<div ng-click="AttentionHref()">
 	    		<img src="img/xingxing2.png"/>
 	    		<p>动态</p>
 	    	</div>
@@ -47,5 +47,6 @@
   <script src="js/libyys-flexible.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/jquery.1.11.3.js"></script>
+    <script src="js/app/friend.js"></script>
 </body>
 </html>
