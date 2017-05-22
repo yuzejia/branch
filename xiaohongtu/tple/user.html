@@ -1,0 +1,70 @@
+<div class="" ng-controller="userCtrl">
+	
+
+<div class="bar br-header bar-light">
+	<a href="#/Friends" class="button button-icon ion-android-person"></a>
+	
+	<button class="button button-icon ion-android-settings"></button>
+</div>
+<ion-content class="has-header">
+	<div class="row">
+		<div class="col-20">
+			<img src=""/>
+		</div>
+		<div class="col-20">
+			关注
+		</div>
+		<div class="col-20">
+			粉丝
+		</div>
+		<div class="col-20">
+			被赞
+		</div>
+		<div class="col-20">
+			被收藏
+		</div>
+	</div>
+	
+	<div class="list">
+		<div class="list">
+			  <div class="item item-divider">
+			    Candy Bars
+			  </div>
+			  <a class="item item-button-right" href="#">
+			    <p>一一得一</p>
+			    <button class="button">个人资料</button>
+			  </a>
+		</div>
+		<div class="row">
+			<div class="col-25 text-center">
+				购物车
+			</div>
+			<div class="col-25 text-center">
+				订单
+			</div>
+			<div class="col-25 text-center">
+				薯劵
+			</div>
+			<div class="col-25 text-center">
+				心愿单
+			</div>
+		</div>
+	</div>
+	 <div has-bouncing="false" class="has-header">
+		 <div style="display:flex;width:100%;">
+		  <div style="flex:1;text-align: center;" class="tab_default" ng-repeat="d in tabNames" ng-click="activeSlide($index)" ng-class="slectIndex==$index ? 'tab_select' : '' ">
+		   {{d}}
+		   <div class="arrow-top" style="left:{{15+$index*33}}%" ng-show="slectIndex==$index"></div>
+		  </div> 
+		 </div> 
+		 <ion-slide-box on-slide-changed="slideChanged(index)" active-slide="slideIndex" does-continue="false" show-pager="false">
+		  <ion-slide ng-repeat="p in pages">
+		   <div ng-include="p"></div>
+		  </ion-slide>
+	 </ion-slide-box>
+ </div>
+	
+	
+</ion-content>
+
+</div>

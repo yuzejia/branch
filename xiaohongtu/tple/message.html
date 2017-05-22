@@ -1,0 +1,53 @@
+<div class="" ng-controller="messageCtrl">
+	
+
+
+
+<div class="bar br-header bar-assertive">
+	<h3 class="title">消息</h3>
+	<a href="#/Service" class="button button">客服</a>
+</div>
+<!--<div class="message">
+  		<ion-tabs class="tabs-top tabs-produce  tabs-color-active-positive">
+				 <ion-tab
+				    title="动态"
+				    on-select="TabGuanLi(0)"
+				    on-deselect="onTabDeselected()">
+				  
+				 		<div class="list has-top">
+				 			这是动态页面
+				 		</div>
+				  </ion-tab>
+				  <ion-tab
+				    title="关于你"
+				    on-select="TabGuanLi(0)"
+				    on-deselect="onTabDeselected()">
+				  		 <div class="list has-top">
+				 			这是关于页面
+				 		</div>
+				  </ion-tab>
+				  <ion-tab
+				    title="通知"
+				   
+				    on-select="TabGuanLi(0)"
+				    on-deselect="onTabDeselected()">
+				   		 
+					  </ion-tab>
+	  </ion-tabs>
+ </div>-->
+ 
+	 <ion-content has-bouncing="false" class="has-header">
+		 <div style="display:flex;width:100%;">
+		  <div style="flex:1;text-align: center;" class="tab_default" ng-repeat="d in tabNames" ng-click="activeSlide($index)" ng-class="slectIndex==$index ? 'tab_select' : '' ">
+		   {{d}}
+		   <div class="arrow-top" style="left:{{15+$index*33}}%" ng-show="slectIndex==$index"></div>
+		  </div> 
+		 </div> 
+		 <ion-slide-box on-slide-changed="slideChanged(index)" active-slide="slideIndex" does-continue="false" show-pager="false">
+		  <ion-slide ng-repeat="p in pages track by $index">
+		   <div ng-include="p"></div>
+		  </ion-slide>
+	 </ion-slide-box>
+ </ion-content>
+
+</div>

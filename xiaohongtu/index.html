@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>小红书</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic/ionic.min.css"/>
+		<style type="text/css">
+		a{
+			text-decoration: none;
+			color:#000000;
+		}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.prTop{
+			position: relative;
+			top: 10px;
+		}
+			.nav-content{
+				width: 400px;
+				overflow: hidden;
+			}
+			.navs{
+				width: 600px;
+			}
+			.navs li{
+				padding: 5px 10px;
+				float: left;
+			}
+			.bar-nav{
+				border: 1px solid #E0E0E0;
+			}
+			.has-top{
+				top: 88px;
+			}
+			
+			
+			#container{
+				-webkit-column-width:160px;/*chrome内核*/
+				   -moz-column-width:160px;/*ff*/
+				    -ms-column-width:160px;/*ie*/
+				     -o-column-width:160px;/* 欧朋*/
+				        column-width:160px;
+			}
+			#container .box{
+				padding: 10px;
+			}
+			
+			.active{
+				border-bottom: 1px solid;
+			}
+			#container img{width:100%}
+			.tab-nav{
+				background: #FFF;
+			}
+			.border-left{
+				border-left: crimson;
+			}
+			.border-right{
+				border-right: crimson;
+			}
+			.message .tab-item-active{
+				border-bottom: 1px solid;
+			}
+		/*-------------message Tabs 切换----------------------------------------*/
+					.tab_default{ 
+			 /*border-bottom:solid 1px #F2F2F2;*/
+			 padding:6px 0 0;
+			
+			}
+			/*.tab_select{
+			 border-bottom:solid 1px #3E89F5;
+			 box-shadow:0 -3px 8px #C1D3F0 inset;
+			}*/
+			.arrow-top {
+				
+			
+			 /*position: absolute;*/
+			 /*width: 0;
+			 height: 0; */
+			 /*top:80px;*/ 
+			 margin-top: 6px;
+			 border-bottom: 1px solid rgb(228,33,18);
+			 /*border-right-color:transparent;
+			 border-left-color: transparent;
+			 border-top-color: transparent;*/
+			}
+			.arrow-back{
+				background: red;
+			}
+			/*.arrow-top:after {
+			 content:'';
+			 position:absolute;
+			 width: 0;
+			 height: 0; 
+			 border: 12px solid #fff;
+			 right: -12px;
+			 bottom: -13px;
+			 border-right-color:transparent;
+			 border-left-color: transparent;
+			 border-top-color: transparent;
+			}*/
+			/*----------------发现--------------------------------*/
+			.fx-li li{
+				width: 20%;
+				min-height:150px;
+			}
+			.fx-li li p:first-child{
+				overflow: hidden;
+				height: 120px;
+			}
+			.fx-li li img{
+				width: 100%;
+			}
+			/*/-----------------------------类别-----------------------*/
+			.category li{
+				display: block;
+				width:100%;
+				height: 60px;
+				text-align: center;
+			}
+			/*折叠*/
+			.list .item.item-accordion {
+				  line-height: 38px;
+				  padding-top: 0;
+				  padding-bottom: 0;
+				  transition: 0.09s all linear;
+				}
+				.list .item.item-accordion.ng-hide {
+				  line-height: 0px;
+				}
+				.list .item.item-accordion.ng-hide-add,
+				.list .item.item-accordion.ng-hide-remove {
+				  display: block !important;
+			}
+		</style>
+	</head>
+	<body>
+		<ion-nav-view></ion-nav-view>
+		<script src="js/lid/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lid/ionic/ionic.min.js" ></script>
+		<script src="js/lid/ionic/ionic.bundle.js" ></script>
+		<script src="js/lid/ionic/ionic-angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lid/ionic/ng-Cordova.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			angular.module("myApp",["ionic","ngCordova"])
+			.controller("mainCtrl",["$scope",'$ionicHistory','$http',function($scope,$ionicHistory,$http){
+				$http.jsonp("http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?"+"callback=JSON_CALLBACK")
+				.success(function(res){
+					
+					console.log(res)
+				})
+				$scope.goback=function(){
+					$ionicHistory.goBack();
+				}
+				
+			}])
+//服务----------------------------------
+			.config(["$stateProvider","$urlRouterProvider","$ionicConfigProvider",function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
+//阻止安卓上tabs导航跑到顶部--------------------------
+				$ionicConfigProvider.platform.android.tabs.style('standard');
+				$ionicConfigProvider.platform.android.tabs.position('standard');
+//------------------------------------------------------------
+					$stateProvider
+					.state("tabs",{
+						url:"/tabs",
+						templateUrl:'tple/tabs.html'
+					})
+					.state("tabs.home",{
+						url:'/home',
+						views:{
+						"home":{templateUrl:"tple/home.html"}
+					}
+					})
+					.state("tabs.find",{
+						url:"/find",
+						views:{
+							"find":{templateUrl:"tple/find.html"}
+						}
+					})
+					.state("tabs.shopping",{
+						url:'/shopping',
+						views:{
+							"shopping":{templateUrl:"tple/shopping.html"}
+						}
+					})
+					.state("tabs.message",{
+						url:"/message",
+						views:{
+							"message":{templateUrl:"tple/message.html"}
+						}
+					})
+					.state("tabs.user",{
+						url:"/user",
+						views:{
+							"user":{templateUrl:"tple/user.html"}
+						}
+					})
+//类别-----------------
+					.state("category",{
+						url:"/category",
+						templateUrl:"tple/category.html"
+					})
+//客服-----------------
+					.state("Service",{
+						url:"/Service",
+						templateUrl:"tple/CustomerService/CustomerService.html"
+					})
+					
+					.state("order",{
+						url:"/order",
+						templateUrl:"tple/CustomerService/order.html"
+					})
+					
+//好友----------------
+					.state("Friends",{
+						url:"/Friends",
+						templateUrl:"tple/Friends/Friends.html"
+					})
+//获取不到时，自动跳转到tabs页面-------------------------------------
+					$urlRouterProvider
+					.otherwise("/tabs")
+			}])
+			.controller("homeCtrl",["$scope","$ionicSlideBoxDelegate","$cordovaCamera",function($scope,$ionicSlideBoxDelegate,$cordovaCamera){
+//调用摄像机------------------------------
+	
+				
+				$scope.takePhoto=function(){
+		            var options = {  
+		              destinationType:Camera.DestinationType.FILE_URI,  
+		              sourceType: Camera.PictureSourceType.CAMERA,  
+		            } 
+		  
+		            $cordovaCamera.getPicture(options).then(function(imageURI) {
+		              alert(imageURI); 
+		              $scope.imageSrc= imageURI;
+		            }, function(err) {  
+		              // error  
+		            });  
+   				};
+				
+//---------------------------------------------------------	
+
+				$scope.tabNames=['推荐','关注','男人','护肤','居家','时尚','美食','运动','彩妆','母婴'];
+						$scope.slectIndex=0;
+						$scope.activeSlide=function(index){//点击时候触发
+						 $scope.slectIndex=index;
+						 $ionicSlideBoxDelegate.slide(index);
+						};
+						$scope.slideChanged=function(index){//滑动时候触发
+						 $scope.slectIndex=index;
+						};
+						$scope.pages=["tple/find/tab1.html","tple/find/tab2.html","tple/find/tab3.html","tple/find/tab4.html","tple/find/tab5.html","tple/find/tab6.html","tple/find/tab7.html","tple/find/tab8.html","tple/find/tab9.html"];
+			}])
+//messageCtrl 消息页面------------------------------			
+			.controller("messageCtrl",["$scope","$ionicSlideBoxDelegate",function($scope,$ionicSlideBoxDelegate){
+				$scope.tabNames=['动态','关于你','通知'];
+						$scope.slectIndex=0;
+						$scope.activeSlide=function(index){//点击时候触发
+						 $scope.slectIndex=index;
+						 $ionicSlideBoxDelegate.slide(index);
+						};
+						$scope.slideChanged=function(index){//滑动时候触发
+						 $scope.slectIndex=index;
+						};
+						$scope.pages=["tple/message/tab01.html","tple/message/tab01.html","tple/message/tab01.html"];
+			}])
+			.controller("categoryCtrl",["$scope","$ionicSlideBoxDelegate",function($scope,$ionicSlideBoxDelegate){
+				$scope.tabNames=['护肤','彩妆','个人护理','母婴','保健品','家居','家电数码','包包','配饰','服饰','鞋子','美食'];
+						$scope.slectIndex=0;
+						$scope.activeSlide=function(index){//点击时候触发
+						 $scope.slectIndex=index;
+						 $ionicSlideBoxDelegate.slide(index);
+						};
+						$scope.slideChanged=function(index){//滑动时候触发
+						 $scope.slectIndex=index;
+						};
+						$scope.pages=["tple/message/tab01.html","tple/message/tab02.html","tple/message/tab03.html"];
+			}])
+//user 个人页面Ctrl------------------------------	
+			.controller("userCtrl",["$scope","$ionicSlideBoxDelegate",function($scope,$ionicSlideBoxDelegate){
+				$scope.tabNames=['笔记','专辑'];
+						$scope.slectIndex=0;
+						$scope.activeSlide=function(index){//点击时候触发
+						 $scope.slectIndex=index;
+						 $ionicSlideBoxDelegate.slide(index);
+						};
+						$scope.slideChanged=function(index){//滑动时候触发
+						 $scope.slectIndex=index;
+						};
+						$scope.pages=["tple/user/user1.html","tple/user/user2.html"];
+			}])
+			.controller("FrientdsCtrl",["$scope","$ionicSlideBoxDelegate",function($scope,$ionicSlideBoxDelegate){
+				$scope.tabNames=['推荐','兴趣','附近'];
+						$scope.slectIndex=0;
+						$scope.activeSlide=function(index){//点击时候触发
+						 $scope.slectIndex=index;
+						 $ionicSlideBoxDelegate.slide(index);
+						};
+						$scope.slideChanged=function(index){//滑动时候触发
+						 $scope.slectIndex=index;
+						};
+						$scope.pages=["tple/Friends/Frientds1.html","tple/Friends/Frientds2.html","tple/Friends/Frientds3.html"];
+			}])
+			.controller("serviceCtrl",["$scope","$ionicListDelegate",function($scope,$ionicListDelegate){
+				 $scope.items=["什么时候发货","发货了但还没有收到"]
+				 $scope.showDeleteButtons = function() {
+    			$ionicListDelegate.showDelete(true);
+ 				 };
+ 				 $scope.groups ={
+ 				 	"name":[
+ 				 		{item:"修改订单地址",
+ 				 		items:["快递公司的系统不支持修改地址和电话，建议找其他人代收"]
+ 				 		},
+ 				 		{item:"取消订单",
+ 				 		items:["快递公司的系统不支持修改地址和电话，建议找其他人代收"]
+ 				 		},
+ 				 		{item:"其他订单修改问题"},
+ 				 	]
+ 				 }
+ 				 $scope.groupsa=$scope.groups.name
+ 				 	console.log($scope.groups.name)
+//				  for (var i=0; i<5; i++) {
+//				    $scope.groups[i] = {
+//				      name: i,
+//				      items: [],
+//				      show: false
+//				    };
+//					    for (var j=0; j<3; j++) {
+//					      $scope.groups[i].items.push(i + '-' + j);
+//					    }
+//					  } 
+				$scope.groups = 
+  
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    group.show = !group.show;
+  };
+  $scope.isGroupShown = function(group) {
+    return group.show;
+  };
+  
+
+			}]);
+		</script>
+		
+		<script type="text/javascript">
+		$("#container div").click(function(){
+			alert(2345)
+		})
+		
+//				var width = 50%, height = 300PX;
+//				$('.box img').each(function(){
+//				// 随机图片的高宽，如果大小一样，就没必要用瀑布流了
+//				width = Math.floor(Math.random() * 100) + 300;
+//				height = Math.floor(Math.random() * 500) + 300;
+//				$(this).attr('src', 'http://jb51.net/'+ height +'/' + width);
+//				});
+			</script>
+			
+	</body>
+</html>
