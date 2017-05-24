@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+    <script src="js/libyys-flexible.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/travelHome.css">
+    <style>
+
+    </style>
+</head>
+<body class="scope">
+<div class="travel">
+    <div class="Xq">
+        <a href="javascript:history.go(-1);"><img  class="Left" src="img/Left1.png" alt=""></a>
+        详情
+    </div>
+    <div class="content_XQ">
+            <div>
+                <img class="XQ_B" src="img/xiangqB.png" alt="">
+            </div>
+        <div class="XQ_con">
+            <div>
+                <p class="XQ_con_1">团名：英美出国游</p>
+                <p><s>原价：￥5886</s></p>
+                <p class="XQ_con_1">特价：￥521</p>
+            </div>
+            <div>
+                <p>0天2小时15分13秒</p>
+                <p>王宝宝</p>
+                <p>13545215345</p>
+            </div>
+            <div>
+                <a href="baoming.html">
+                <img src="img/gouwu.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="XQ_con2">
+            <div>
+                <p class="title">景点简介</p>
+                <div class="XQ_con2_1">
+                    <div class="fl">
+                            <img src="img/u=3078336511,3371836423&fm=23&gp=0.jpg" alt="">
+                    </div>
+                    <div class="fr">
+                        1703年至1705年，白金汉和诺曼比公爵约翰·谢菲尔德在此兴建了一处大型镇厅建筑“白金汉宫”，构成了今天的主体建筑，1761年，乔治三世获得该府邸，并作为一处私人寝宫。此后宫殿的扩建工程持续超过了75年，主要由建筑师约翰·纳西和爱德华·布罗尔主持，为中央庭院构筑了三侧建筑。1837年，维多利亚女王登基后，白金汉宫成为英王正式宫寝。19世纪末20世纪初，宫殿公共立面修建，形成延续至今天白金汉宫形象。二战期间，宫殿礼拜堂遭一枚德国炸弹袭击而毁；在其址上建立的女王画廊于1962年向公众开放，展示皇家收藏品。现在的白金汉宫对外开放参观，每天清晨都会进行著名的禁卫军交接典礼，成为英国王室文化的一大景观。
+                    </div>
+                </div>
+                <p class="title">行程安排</p>
+                <div class="XQ_con2_2">
+                   <div class="">
+
+                   </div>
+                </div>
+                <p class="title">费用说明</p>
+                <div class="XQ_con2_2">
+                    <div class="">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <a href="myIndent.html">
+                <p><img width="20" src="img/dingdan1.png" alt=""></p>
+                <p>订单</p>
+            </a>
+        </div>
+        <div>
+            <a style="color: #000" href="javascript:0;">
+                <p><img width="20" src="img/home.png" alt=""></p>
+                主页
+            </a>
+        </div>
+        <div>
+            <a href="danku.html">
+                <p><img width="20" src="img/danku1.png" alt=""></p>
+                单库
+            </a>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.1.11.3.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        if(top > 20){
+            $('.Xq').addClass('backA')
+        }else {
+            $('.Xq').removeClass('backA')
+        }
+        console.log(top)
+
+    })
+    $('input').focus(function () {
+        $('.footer').hide()
+    })
+    $('input').blur(function () {
+        $('.footer').show()
+    })
+
+</script>
+</body>
+</html>

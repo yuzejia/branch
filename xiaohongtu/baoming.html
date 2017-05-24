@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报名</title>
+    <script src="js/libyys-flexible.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/travelHome.css">
+    <style>
+
+    </style>
+</head>
+<body class="scope">
+<div class="travel">
+    <header>
+        <a href="javascript:history.go(-1);"><img  class="Left" src="img/Left1.png" alt=""></a>
+        报名
+    </header>
+    <div class="content content_BM">
+        <div class="contentBM1 content_baoming">
+            <div class="Bm_one">
+                <p class="Xname">线路名称：123</p>
+                <p>尾单号：2423423</p>
+                <p>出发时间：5月13号</p>
+            </div>
+            <div class="Bm_input">
+                <p><input  type="number" placeholder="请输入你的参团人数"></p>
+                <p><input type="text" placeholder="请输入你的姓名"></p>
+                <p><input type="number" placeholder="请输入你的联系方式"></p>
+                <p><input type="number" placeholder="请输入你的验证码"></p>
+            </div>
+        </div>
+        <div class="pay">
+            <div class="W_pay">
+                微信支付
+                <p>WECHAT PAYMENT</p>
+            </div>
+            <div class="Z_pay">
+                支付宝支付
+                <P>PAY WITH ALI-PAY</P>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div>
+            <a href="myIndent.html">
+                <p><img width="20" src="img/dingdan1.png" alt=""></p>
+                <p>订单</p>
+            </a>
+        </div>
+        <div>
+            <a style="color: #000" href="javascript:0;">
+                <p><img width="20" src="img/home.png" alt=""></p>
+                主页
+            </a>
+        </div>
+        <div>
+            <a href="danku.html">
+                <p><img width="20" src="img/danku1.png" alt=""></p>
+                单库
+            </a>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.1.11.3.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+
+    $('input').focus(function () {
+        $('.footer').hide()
+    })
+    $('input').blur(function () {
+        $('.footer').show()
+    })
+
+</script>
+</body>
+</html>
