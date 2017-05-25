@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="css/travelHome.css">
-    <style>
-
-    </style>
 </head>
 <body class="scope">
 <div class="travel">
@@ -25,10 +22,10 @@
                 <p>出发时间：5月13号</p>
             </div>
             <div class="Bm_input">
-                <p><input  type="number" placeholder="请输入你的参团人数"></p>
-                <p><input type="text" placeholder="请输入你的姓名"></p>
-                <p><input type="number" placeholder="请输入你的联系方式"></p>
-                <p><input type="number" placeholder="请输入你的验证码"></p>
+                <p><input  type="number"  placeholder="请输入你的参团人数"></p>
+                <p><input  type="text" placeholder="请输入你的姓名"></p>
+                <p><input  type="number" placeholder="请输入你的联系方式"></p>
+                <p><input  type="number" placeholder="请输入你的验证码"></p>
             </div>
         </div>
         <div class="pay">
@@ -51,7 +48,6 @@
         </div>
 
     </div>
-
 
     <div class="footer">
         <div>
@@ -78,12 +74,21 @@
 <script src="js/swiper-3.4.2.min.js"></script>
 <script>
 
+var values = '';
+/*获取获焦的placeholder值*/
     $('input').focus(function () {
-        $('.footer').hide()
-    })
+        $('.footer').hide();
+            return values = $(this).attr('placeholder');
+    });
+/*失焦后添加placeholder值*/
     $('input').blur(function () {
+        $(this).attr('placeholder',values);
         $('.footer').show()
+    });
+    $('input').focus(function () {
+        $(this).attr('placeholder','')
     })
+
 
 </script>
 </body>

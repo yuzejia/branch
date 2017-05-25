@@ -36,9 +36,10 @@
     <header>
         <a href="javascript:history.go(-1);"><img  class="Left" src="img/Left1.png" alt=""></a>
         单库
-        <a href="JavaScript:0;" class="right shaixuan" style="width: 0.6rem;font-size: 0.3rem"> 筛选 </a>
+        <a href="JavaScript:0;" class="right shaixuan" style="font-size: 0.25rem"> 筛选 </a>
     </header>
     <div class="content">
+<!--筛选-->
         <div style="display: none" class="filtrate">
             <div class="filt_list">
                 <div>时间 <i><img src="img/sanjiao.png" alt=""></i> </div>
@@ -78,8 +79,7 @@
                </div></div>
             </div>
         </div>
-
-
+<!--瀑布流-->
         <div class="container">
             <div class="box">
                 <a href="xiangqing.html">
@@ -216,8 +216,6 @@
         </div>
         <div style="width: 100%; padding-bottom: 1rem"></div>
     </div>
-
-
     <div class="footer">
         <div>
             <a href="indentJilv.html">
@@ -243,10 +241,6 @@
 <script src="js/pubu.js"></script>
 <script src="js/fengzhuang.js"></script>
 <script>
-//    tabs('.filt_list','.tabs');
-//    tanChu('.shaixuan','.filtrate','.container');
-
-
 /*筛选*/
     $('.shaixuan').click(function () {
         $('.filtrate').toggle()
@@ -257,7 +251,6 @@ $('.tabs>div').hide();
         $('.tabs>div').eq(index).siblings().hide();
         $('.tabs>div').eq(index).toggle();
     });
-
 /*瀑布流*/
     $(window).load(function(){
         waterfall();

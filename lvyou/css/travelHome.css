@@ -19,7 +19,7 @@ html , body  , .travel{
     left:0.2rem;
 }
 .travel header .right{
-    width:0.4rem;
+    width:0.6rem;
     position: absolute;
     right:0.2rem;
     color: #fff;
@@ -210,7 +210,7 @@ html , body  , .travel{
 .travel .content .con2 .con2_1 .con2_1_left{
     background: #4f82ed;
     height:100%;
-    padding:0.1rem;
+    padding:0.05rem;
     border-top-left-radius: 0.1rem;
     border-bottom-left-radius: 0.1rem;
     color: #fff;
@@ -225,7 +225,7 @@ html , body  , .travel{
 .travel .content .con2 .con2_1 .con2_1_right{
     overflow: hidden;
     margin-left: 0.05rem;
-    max-width:58%;
+    max-width:60%;
     text-align: center;
     padding-top: 0.1rem;
 }
@@ -305,7 +305,7 @@ html , body  , .travel{
 
 }
 .travel .content .con3_1 .con3_footer .fl{
-    line-height: 0.6rem;
+    line-height: 0.7rem;
     font-size: 0.25rem;
 }
 .travel .content .con3_1 .con3_footer .fl img{
