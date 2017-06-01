@@ -84,7 +84,7 @@ html , body  , .travel{
     background-size: 100%;
 }
 .travel .content_BM .contentBM1 , .contentBM2{
-    overflow: hidden;
+    /*overflow: hidden;*/
     border:1px solid #d4d4d4;
     border-radius: 0.2rem;
     color: #4f82ed;
@@ -130,7 +130,7 @@ html , body  , .travel{
     padding-right: 0.2rem;
 }
 .travel .content .contentDan .fl img{
-    width:4rem;
+    width:3.5rem;
     height:100%;
     border:1px solid #d4d4d4;
     border-top-right-radius: 50%;
@@ -178,7 +178,7 @@ html , body  , .travel{
    border-bottom:1px solid #a5a5a5;
     font-size: 0.3rem;
     color:  #4f82ed;
-    padding-top: 0.1rem;
+    padding-top: 0.2rem;
     position: relative;
 }
 .travel .content .pay div a{
@@ -302,7 +302,6 @@ html , body  , .travel{
     border-bottom-right-radius: 0.1rem;
     font-size: 0.3rem;
     text-align: center;
-
 }
 .travel .content .con3_1 .con3_footer .fl{
     line-height: 0.7rem;
@@ -340,10 +339,7 @@ html , body  , .travel{
     padding:0.1rem 0.2rem;
     flex:1;
     text-align: center;
-    margin:0.1rem 0.3rem;
-    border-radius:0.1rem;
-    background: #546d8b;
-    color: #fff;
+    color: #666;
     font-size: 0.3rem;
 }
 .travel .content .filtrate .filt_list div img{
@@ -352,9 +348,7 @@ html , body  , .travel{
 }
 .travel .content .filtrate .tabs{
     width: 100%;
-    height: 1.6rem;
     position: relative;
-    overflow: hidden;
 }
 .travel .content .filtrate .tabs>div{
     width: 100%;
@@ -375,7 +369,6 @@ html , body  , .travel{
     text-align: center;
     margin:0.1rem;
     border-radius:0.1rem;
-    background: #bcc6d1;
     color: #000;
     font-size: 0.3rem;
     padding:0.1rem;
@@ -384,30 +377,39 @@ html , body  , .travel{
 .travel .content .filtrate .tabs .tab_2 div{
     text-align: center;
     margin:0.1rem;
-    border-radius:0.1rem;
-    background: #bcc6d1;
-    color: #000;
+    border:1px solid #fff;
+    background: #eee;
+    color: #666;
     font-size: 0.3rem;
     padding:0.1rem;
 
 }
 .travel .content .filtrate .tabs .tab_3 div{
     text-align: center;
-    margin:0.1rem;
-    border-radius:0.1rem;
-    background: #bcc6d1;
-    color: #000;
-    font-size: 0.3rem;
+    margin: 0.1rem;
+    background: #eee;
+    color: #666;
+    border:1px solid #fff;
+    font-size: 0.28rem;
     padding:0.05rem 0.2rem;
 }
+.travel .content .filtrate .tabs .tab_2 .activeS{
+    color:#4f82ed;
+    border:1px solid #4f82ed;
+}
+.travel .content .filtrate .tabs .tab_3 .activeS{
+color:#4f82ed;
+border:1px solid #4f82ed;
+}
 .travel .container .box .pic{
+    width:3.5rem;
     position: relative;
 }
 .travel .container .box .Dtitle_s{
     overflow: hidden;
 }
 .travel .container .box .Dtitle{
-    width:2.1rem;
+    width:1.9rem;
     margin-top:0.2rem;
     font-size: 0.25rem;
     color: #4f82ed;
@@ -493,7 +495,7 @@ html , body  , .travel{
 .content_XQ .XQ_con{
     padding:0 0.2rem;
     display: flex;
-    height: 2rem;
+    min-height: 2rem;
     margin-top: -0.06rem;
 }
 .content_XQ .XQ_con>div{

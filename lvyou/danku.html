@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <title>单库</title>
     <script src="js/libyys-flexible.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="css/travelHome.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
     <style>
         .container{
             position: relative;
@@ -42,19 +47,19 @@
 <!--筛选-->
         <div style="display: none" class="filtrate">
             <div class="filt_list">
-                <div>时间 <i><img src="img/sanjiao.png" alt=""></i> </div>
+                <div>出发时间 <i><img src="img/sanjiao.png" alt=""></i> </div>
                 <div>价位 <i><img src="img/sanjiao.png" alt=""></i> </div>
                 <div>地域 <i><img src="img/sanjiao.png" alt=""></i> </div>
             </div>
             <div class="tabs">
-                <div> <div class="tab tab_1">
-                    <div>一天</div>
-                    <div>两天</div>
-                    <div>三天</div>
-                    <div>四天</div>
-                    <div>五天</div>
-                    <div>六天</div>
-                </div></div>
+                <div>
+                    <div class="tab tab_1">
+                        <div>
+                           <input style="color:#4f82ed;" class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly>出发
+                        </div>
+
+                    </div>
+                </div>
                 <div> <div class="tab tab_2">
                     <div>100以内</div>
                     <div>100-300</div>
@@ -79,141 +84,187 @@
                </div></div>
             </div>
         </div>
-<!--瀑布流-->
-        <div class="container">
-            <div class="box">
-                <a href="xiangqing.html">
-                <div class="pic">
-                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                    <div class="Dtitle_s">
-                        <div class="Dtitle fl">新疆双飞两日游</div>
-                        <div class="fr Dtitle_price" >￥500</div>
+
+        <div class="grid grid--type-c">
+            <div class="grid__sizer"></div>
+            <div class="container">
+                <div class="box">
+                      <div class="grid__item">
+                        <a href="xiangqing.html">
+                            <div class="pic">
+                                <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                <div class="Dtitle_s">
+                                    <div class="Dtitle fl">新疆双飞两日游</div>
+                                    <div class="fr Dtitle_price" >￥500</div>
+                                </div>
+                                <div class="box_footer">
+                                    <div>
+                                        <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                        0天2小时5分
+                                    </div>
+                                    <div></div>
+                                    <div><i><img src="img/my.png" alt=""></i>6</div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="box_footer">
-                        <div>
-                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                            0天2小时5分
+                      <div class="grid__item">
+                                <a href="xiangqing.html">
+                                    <div class="pic">
+                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                        <div class="Dtitle_s">
+                                            <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
+                                            <div class="fr Dtitle_price" >￥500</div>
+                                        </div>
+                                        <div class="box_footer">
+                                            <div>
+                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                                0天2小时5分
+                                            </div>
+                                            <div></div>
+                                            <div><i><img src="img/my.png" alt=""></i>6</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                      <div class="grid__item">
+                                <a href="xiangqing.html">
+                                    <div class="pic">
+                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                        <div class="Dtitle_s">
+                                            <div class="Dtitle fl">新疆双飞两日游</div>
+                                            <div class="fr Dtitle_price" >￥500</div>
+                                        </div>
+                                        <div class="box_footer">
+                                            <div>
+                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                                0天2小时5分
+                                            </div>
+                                            <div></div>
+                                            <div><i><img src="img/my.png" alt=""></i>6</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                      <div class="grid__item">
+                                <a href="xiangqing.html">
+                                    <div class="pic">
+                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                        <div class="Dtitle_s">
+                                            <div class="Dtitle fl">新疆双飞两日游</div>
+                                            <div class="fr Dtitle_price" >￥500</div>
+                                        </div>
+                                        <div class="box_footer">
+                                            <div>
+                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                                0天2小时5分
+                                            </div>
+                                            <div></div>
+                                            <div><i><img src="img/my.png" alt=""></i>6</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                      <div class="grid__item">
+                                <a href="xiangqing.html">
+                                    <div class="pic">
+                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                        <div class="Dtitle_s">
+                                            <div class="Dtitle fl">新疆双飞两日游</div>
+                                            <div class="fr Dtitle_price" >￥500</div>
+                                        </div>
+                                        <div class="box_footer">
+                                            <div>
+                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                                0天2小时5分
+                                            </div>
+                                            <div></div>
+                                            <div><i><img src="img/my.png" alt=""></i>6</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                      <div class="grid__item">
+                            <a href="xiangqing.html">
+                                <div class="pic">
+                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                    <div class="Dtitle_s">
+                                        <div class="Dtitle fl">新疆双飞两日游</div>
+                                        <div class="fr Dtitle_price" >￥500</div>
+                                    </div>
+                                    <div class="box_footer">
+                                        <div>
+                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                            0天2小时5分
+                                        </div>
+                                        <div></div>
+                                        <div><i><img src="img/my.png" alt=""></i>6</div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div></div>
-                        <div><i><img src="img/my.png" alt=""></i>6</div>
-                    </div>
+                      <div class="grid__item">
+                            <a href="xiangqing.html">
+                                <div class="pic">
+                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                    <div class="Dtitle_s">
+                                        <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
+                                        <div class="fr Dtitle_price" >￥500</div>
+                                    </div>
+                                    <div class="box_footer">
+                                        <div>
+                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                            0天2小时5分
+                                        </div>
+                                        <div></div>
+                                        <div><i><img src="img/my.png" alt=""></i>6</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                      <div class="grid__item">
+                            <a href="xiangqing.html">
+                                <div class="pic">
+                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                    <div class="Dtitle_s">
+                                        <div class="Dtitle fl">新疆双飞两日游</div>
+                                        <div class="fr Dtitle_price" >￥500</div>
+                                    </div>
+                                    <div class="box_footer">
+                                        <div>
+                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                            0天2小时5分
+                                        </div>
+                                        <div></div>
+                                        <div><i><img src="img/my.png" alt=""></i>6</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                      <div class="grid__item">
+                            <a href="xiangqing.html">
+                                <div class="pic">
+                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
+                                    <div class="Dtitle_s">
+                                        <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
+                                        <div class="fr Dtitle_price" >￥500</div>
+                                    </div>
+                                    <div class="box_footer">
+                                        <div>
+                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
+                                            0天2小时5分
+                                        </div>
+                                        <div></div>
+                                        <div><i><img src="img/my.png" alt=""></i>6</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                 </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i class="time"><img width="15"  src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i class="time"><img width="15"  src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i><img width="15" style="vertical-align: middle;margin-right: 0.1rem" src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i><img width="15" style="vertical-align: middle;margin-right: 0.1rem" src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i><img width="15" style="vertical-align: middle;margin-right: 0.1rem" src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i><img width="15" style="vertical-align: middle;margin-right: 0.1rem" src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="box">
-                <a href="xiangqing.html">
-                    <div class="pic">
-                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                        <div class="Dtitle_s">
-                            <div class="Dtitle fl">新疆双飞两日游</div>
-                            <div class="fr Dtitle_price" >￥500</div>
-                        </div>
-                        <div class="box_footer">
-                            <div> <i><img width="15" style="vertical-align: middle;margin-right: 0.1rem" src="img/timeRed.png" alt=""></i> 0天2小时5分</div>
-                            <div></div>
-                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div style="display: block;height: 2rem;width: 100%"></div>
+             </div>
         </div>
+
+
         <div style="width: 100%; padding-bottom: 1rem"></div>
     </div>
     <div class="footer">
@@ -240,53 +291,68 @@
 <script src="js/swiper-3.4.2.min.js"></script>
 <script src="js/pubu.js"></script>
 <script src="js/fengzhuang.js"></script>
+<script src="js/pubu/anime.min.js"></script>
+<script src="js/pubu/imagesloaded.pkgd.min.js"></script>
+<script src="js/pubu/main.js"></script>
+<script src="js/pubu/masonry.pkgd.min.js"></script>
+<script src="js/jedate/jedate.js"></script>
 <script>
 /*筛选*/
     $('.shaixuan').click(function () {
-        $('.filtrate').toggle()
-    })
+        $('.filtrate').toggle();
+    });
+
 $('.tabs>div').hide();
+$('.filt_list>div').eq(0).css('color','#4f82ed');
+//$('.tabs>div').eq(0).show();
     $('.filt_list>div').click(function () {
        var index = $(this).index();
+        $('.filt_list>div').css('color','#666')
+       $(this).css('color','#4f82ed');
         $('.tabs>div').eq(index).siblings().hide();
         $('.tabs>div').eq(index).toggle();
     });
-/*瀑布流*/
-    $(window).load(function(){
-        waterfall();
+
+    $('.tab>div').on('click',function () {
+        $('.tab>div').removeClass('activeS')
+        $(this).addClass('activeS')
     });
-    function waterfall(){
-        var oBox = $(".container>div");//获取所有的直接子元素
-        var w = oBox.eq(0).outerWidth();//获取一张图片的宽度
-        var vW = $(window).width();//获取可视区域的宽度
-        var cols = parseInt(vW / w);//得到列数
-//        $(".container").css({"width":cols * w + "px","margin":"0 auto"});
-        var hArr = [];
-        oBox.each(function(i,ele){
-            var h = $(this).outerHeight();//获取所有的div的高度
-            if(i < cols){  //下标小于列数时  第一行
-                hArr[i] = h;  //把第一行所有的高度放到数组里
-//					hArr.push(h);
-//					console.log(hArr);
-                $(ele).css({"position":"absolute","top":0 + "px","left":i * w + "px"});
-            }else{
-                var minH = Math.min.apply(null,hArr);//求数组中的最小高度
-                var minIndex = getIndex(minH);//最小高度的下标
-//					console.log(minIndex)
-                $(ele).css({"position":"absolute","top":minH + "px","left":minIndex * w + "px"});
-                hArr[minIndex] = hArr[minIndex] + $(ele).outerHeight();
-            }
-        });
-        function getIndex(m){
-            for(var j = 0;j <= hArr.length-1;j++){
-                if(hArr[j] == m){
-                    return j;
-                }
-            }
-        }
+
+filt('.filt_list','.grid')
+    function filt(a,b) {
+       $(a).children().click(function () {
+           var index = $(this).index();
+           if(index ==0){
+               $(b).animate({marginTop:'80px'})
+           }else {
+               if (index ==1){
+                   $(b).animate({marginTop:'120px'})
+               }else {
+                   $(b).animate({marginTop:'100px'})
+               }
+           }
+       });
+        $('.shaixuan').click(function () {
+            $('.grid').animate({marginTop:'0'})
+        })
+
+
     }
 
 
+    
 </script>
+<script type="text/javascript">
+    //jeDate.skin('gray');
+    jeDate({
+        dateCell:"#dateinfo",
+        format:"YYYY年MM月DD日",
+        isinitVal:true,
+        isTime:true, //isClear:false,
+        minDate:"2014-09-19 00:00:00",
+        okfun:function(val){alert(val)}
+    })
+</script>
+
 </body>
 </html>
