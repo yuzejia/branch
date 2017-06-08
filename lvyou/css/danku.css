@@ -1,0 +1,209 @@
+.danku .footer{
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top:1px solid #d4d4d4;
+    background: #fff;
+}
+.danku .footer div{
+    float: left;
+    width:33.3%;
+    text-align: center;
+    padding:0.1rem;
+    font-size: 0.25rem;
+
+}
+.danku .footer div a {
+    color: #fe4e03;
+}
+.danku .footer div a img{
+    width:0.4rem;
+}
+/*热门尾单*/
+
+.danku .con3_content{
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+.danku .con3{
+    overflow: hidden;
+}
+.danku .con3 .con3_top{
+    padding-left: 0.1rem;
+    overflow: hidden;
+    border-bottom:1px solid #e1e1e1;
+    padding-top: 0.1rem;
+    background: #ffffff;
+}
+.danku .con3 .con3_top img{
+    width: 2rem;
+}
+.danku.con3_content{
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+.danku .con3_content>div{
+    position: relative;
+    width: 47%;
+    min-height: 4rem;
+    margin:0.1rem;
+}
+.danku .con3_content .con3_cont_top{
+    padding:0.1rem;
+    padding-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.6;
+    color: #ffffff;
+    font-size: 0.25rem;
+}
+.danku .con3_content .con3_cont_top span:nth-of-type(1){
+    padding:0.1rem;
+    width: 1rem;
+    height:100% ;
+    background: #fdc418;
+    color: #000;
+}
+.danku .con3_content .con3_cont_top span:nth-of-type(2){
+    padding:0.1rem;
+    width: 1rem;
+    height:100% ;
+    background: #000;
+}
+.danku .con3_content .con3_cont_bottom{
+    overflow: hidden;
+    opacity: 0.6;
+    color: #000;
+    padding:0.05rem 0.05rem;
+}
+.con3_content .con3_cont_bottom div:nth-of-type(1){
+    font-size: 0.25rem;
+    color: #000;
+    font-weight: bolder;
+}
+.danku .con3_content .con3_cont_bottom div:nth-of-type(1){
+    color: #000;
+    font-weight: bolder;
+}
+.danku .con3_content .con3_cont_bottom .con3_price{
+    margin-top: 0.2rem;
+}
+.danku .con3_content .con3_cont_bottom .con3_price p:nth-of-type(1){
+    font-size: 0.3rem;
+    color: darkred;
+    font-weight: bolder;
+}
+.danku .con3_content .con3_cont_bottom .con3_price p{
+    font-size: 0.25rem;
+}
+.danku .con3_content .con3_cont_bottom .con3_price p:nth-of-type(2) img{
+    width: 0.3rem;
+    vertical-align: bottom;
+}
+.danku .con3_content .con3_cont_img{
+    width:100%;
+    height: 3rem;
+}
+
+.danku .con3_content .con3_cont_img img{
+    width:100%;
+    height: 100%;
+}
+
+/*筛选*/
+.danku  .filtrate{
+    width:100%;
+    z-index: 99;
+    position: fixed;
+    top:0;
+    border-radius: 0.1rem;
+
+}
+.danku  .filtrate .filt_list{
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0.05rem 0.05rem #666;
+
+}
+.danku  .filtrate .filt_list .tab_active{
+  border-bottom: 3px solid #0c95b9;
+    color: #0c95b9;
+}
+.danku  .filtrate .filt_list div{
+    padding:0.2rem;
+    flex:1;
+    text-align: center;
+    color: #666;
+    font-size: 0.3rem;
+}
+.danku  .filtrate .filt_list div img{
+    margin-left: 0.2rem;
+    margin-bottom: 0.03rem;
+}
+.danku  .filtrate .tabs{
+    width: 100%;
+    position: relative;
+
+}
+.danku  .filtrate .tabs>div{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background: #fff;
+    border-bottom: #d4d4d4;
+    box-shadow: 0 0.05rem 0.05rem #666;
+
+}
+.danku  .filtrate .tabs .tab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.danku  .filtrate .tabs .tab_1 div{
+    text-align: center;
+    margin:0.1rem;
+    border-radius:0.1rem;
+    color: #000;
+    font-size: 0.3rem;
+    padding:0.1rem;
+
+}
+.danku  .filtrate .tabs .tab_2 div{
+    text-align: center;
+    margin:0.1rem;
+    border:1px solid #fff;
+    background: #eee;
+    color: #666;
+    font-size: 0.3rem;
+    padding:0.1rem;
+
+}
+.danku  .filtrate .tabs .tab_3 div{
+    text-align: center;
+    margin: 0.1rem;
+    background: #eee;
+    color: #666;
+    border:1px solid #fff;
+    font-size: 0.28rem;
+    padding:0.05rem 0.2rem;
+}
+.danku  .filtrate .tabs .tab_2 .activeS{
+    color:#fff;
+    background-color: #0c95b9;
+}
+.danku  .filtrate .tabs .tab_3 .activeS{
+    color:#fff;
+    background-color: #0c95b9;
+}
+.danku .content{
+    padding-bottom: 1rem;
+    margin-top: 0.8rem;
+}

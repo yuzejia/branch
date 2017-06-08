@@ -1,582 +1,292 @@
-html , body  , .travel{
-    height:100%;
-}
-.travel header{
-    z-index: 99;
-    width:100%;
-    position: fixed;
-    top:0;
-    left:0;
-    padding:0.2rem;
-    font-size: 0.3rem;
-    color: #FFF;
-    background: #5189e9;
-    text-align: center;
-}
-.travel header .Left{
-    width:0.4rem;
-    position: absolute;
-    left:0.2rem;
-}
-.travel header .right{
-    width:0.6rem;
-    position: absolute;
-    right:0.2rem;
-    color: #fff;
-}
-.travel .content{
-    padding-top: 0.7rem;
-    padding-bottom: 1rem;
-}
-.travel .conentMy{
-    min-height: 13rem;
-    padding: 0.8rem 0.2rem 1rem;
+    html , body  , .travel{
+        height:100%;
+    }
+    .travel header{
+        z-index: 99;
+        width:100%;
+        position: fixed;
+        top:0;
+        left:0;
+        padding:0.2rem;
+        font-size: 0.3rem;
+        color: #FFF;
+        background: #5189e9;
+        text-align: center;
+    }
+    .travel header .Left{
+        width:0.4rem;
+        position: absolute;
+        left:0.2rem;
+    }
+    .travel header .right{
+        width:0.6rem;
+        position: absolute;
+        right:0.2rem;
+        color: #fff;
+    }
+    .travel .content{
+        padding-bottom: 1rem;
+    }
+    .travel .conentMy{
+        min-height: 13rem;
+        padding: 0.8rem 0.2rem 1rem;
 
-}
-.travel .content .title{
-    padding-left: 0.5rem;
-    margin: 0.2rem 0;
-    font-size: 0.3rem;
-    font-weight: bolder;
-    color: #4f82ed;
-    border-left: 0.1rem solid #4f82ed;
-}
-.travel .footer{
-    z-index: 99;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    border-top:1px solid #d4d4d4;
-    background: #fff;
-}
-.travel .footer div{
-    float: left;
-    width:33.3%;
-    text-align: center;
-    padding:0.1rem;
-    font-size: 0.25rem;
+    }
+    .travel .footer{
+        z-index: 99;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-top:1px solid #d4d4d4;
+        background: #fff;
+    }
+    .travel .footer div{
+        float: left;
+        width:33.3%;
+        text-align: center;
+        padding:0.1rem;
+        font-size: 0.25rem;
 
-}
-.travel .footer div a {
-    color: #4f82ed;
-}
-.travel .footer div a img{
-    width:0.4rem;
-}
-    /*报名成功*/
+    }
+    .travel .footer div a {
+        color: #fe4e03;
+    }
+    .travel .footer div a img{
+        width:0.4rem;
+    }
+/*秒杀抢购*/
+    .slideTxtBox{
+        /*margin-top: 0.1rem;*/
+        width: 5.2rem;
+    }
+    .slideTxtBox .bd ul{ padding:15px;  zoom:1;  }
+    .slideTxtBox .bd li{
+        width:100%;
+        height:0.5rem;
+        text-align: center;
+        overflow: hidden;
+        font-size: 0.25rem;
+        color: #000;
+        margin-left: 0.1rem;
+    }
+    .slideTxtBox .bd li a{
+        font-size: 0.2rem;
+        color: #000;
+    }
+    .con1 .swiper-container {
+        width: 100%;
+        height:4rem;
+    }
+    .con1 .swiper-container img{
+        width: 100%;
+        height: 100%;
+    }
 
-.travel .content_BM{
-    padding:0.8rem 0.2rem 1rem 0.2rem;
-    text-align: center;
-}
-.travel .content_BM p{
-    text-align: center;
-}
-.travel .content_BM .contentBM1{
-    background-image: url("../img/baomcc.png");
-    background-size: 100%;
-}
-.travel .content_BM .contentBM1 .conBM_X{
-    width:3rem;
-    margin:0 auto;
-    background-image: url("../img/baomc.png");
-    background-size: 100%;
-}
-.travel .content_BM .contentBM1 , .contentBM2{
-    /*overflow: hidden;*/
-    border:1px solid #d4d4d4;
-    border-radius: 0.2rem;
-    color: #4f82ed;
-    margin-top: 0.2rem;
-    text-align: center;
-}
+/*---------------------------------*/
+    .ovH{
+        overflow: hidden;
+    }
+    .travel .title img{
+        width: 2rem;
+    }
+    .travel .con2{
+        overflow: hidden;
+    }
+    .travel .con2 .con2_top{
+        padding-left: 0.1rem;
+        overflow: hidden;
+        height: 0.7rem;
+        border-bottom:1px solid #e1e1e1;
+        padding-top: 0.1rem;
+        background: #ffffff;
+    }
+    .travel .con2 .slideTxtBox .bd li i{
+        margin:0.22rem 0 0 0.3rem;
+        width: 0.1rem;
+        height: 0.1rem;
+        display: block;
+        float: left;
+        border-radius: 50%;
+        background: red;
+    }
+    .travel .con2 .slideTxtBox .bd li span:nth-of-type(1){
+        width: 3.5rem;
+        display: inline-block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+       margin-top: 0.1rem;
+    }
+    .travel .con2 .slideTxtBox .bd li span:nth-of-type(2){
+        font-size: 0.4rem;
+        color: darkred;
+        vertical-align: top;
+    }
+    /*秒杀尾单*/
+    .travel .con2{
+        overflow: hidden;
 
-.travel .content .contentBM1 h1{
-    margin-top:0.3rem;
-    font-size: 0.4rem;
-}
-.travel .content .contentBM1 h1:nth-of-type(2){
-    margin-top: 0.1rem;
-    font-size: 0.4rem;
-}
-.travel .content .contentBM1 h3{
-    margin:0.6rem ;
-    font-size: 0.3rem;
-}
-.travel .content .contentBM1 p{
-    margin:0.2rem;
-    font-size: 0.25rem;
-}
-.travel .content .contentBM2 p{
-    font-size: 0.3rem;
-    padding:0.4rem;
-    color: #000;
-}
-.travel .content .contentBM2 p:nth-of-type(2){
-    padding-top: 0rem;
-}
-.travel .content .contentDan{
-    position: relative;
-    color: #000;
-    height:5.5rem;
-    font-weight: bolder;
-    padding-right: 0.2rem;
-}
-.travel .content .contentDan .Dan_2{
-    text-align: right;
-}
-.travel .content .contentDan .Dan_2 h1{
-    padding-right: 0.2rem;
-}
-.travel .content .contentDan .fl img{
-    width:3.5rem;
-    height:100%;
-    border:1px solid #d4d4d4;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    box-shadow: 0.05rem 0 0.2rem #dddddd;
-}
-.travel .content .contentDan h1:nth-of-type(2){
-    margin-bottom: 0.6rem;
-}
-/*报名*/
-.travel .content .content_baoming{
-    background: url("../img/baoming.png");
-    padding:0.8rem 0 0.2rem 0;
-    border-bottom:1px solid #a5a5a5;
-}
-.travel .content .content_baoming .Xname{
-    font-size: 0.3rem;
-}
-.travel .content .content_baoming .Bm_one p{
-    font-weight: bolder;
-    font-size: 0.3rem;
-}
-.travel .content .content_baoming .Bm_input p{
-    margin:0.3rem;
-}
-.travel .content .content_baoming input{
-    text-align: center;
-    color: #fff;
-    background: #4f82ed;
-    border-radius: 0.4rem;
-    padding: 0.1rem 0.2rem;
-    opacity: 0.5;
-    font-size: 0.3rem;
-}
-.travel .content .content_baoming input::-webkit-input-placeholder{
-    color:#fff !important;
-}
-.travel .content .pay div{
-    background: url("../img/baoming.png") center no-repeat;
-    width:100%;
-    margin:0.4rem 0;
-    height: 1rem;
-    border:1px solid #d4d4d4;
-    border-radius: 0.2rem;
-   border-bottom:1px solid #a5a5a5;
-    font-size: 0.3rem;
-    color:  #4f82ed;
-    padding-top: 0.2rem;
-    position: relative;
-}
-.travel .content .pay div a{
-    color:  #4f82ed;
-}
-.travel .content .pay div a img{
-    width: 0.6rem;
-    position: absolute;
-    top:0.2rem;
-    left: 0.2rem;
-}
-.travel .content .pay div P{
-    font-size: 0.25rem;
-}
+    }
+    .travel .con2_content{
+        display: flex;
+        flex-wrap: wrap;
+        background: #ffffff;
+    }
+    .travel .con2_content>div{
+        position: relative;
+       width: 47%;
+        height: 3rem;
+        margin:0.1rem;
+    }
 
-/*轮播内容 秒杀抢购*/
-.travel .content .con2 .con2_s{
-}
-.travel .content .con2 .con2_1{
-    display: block;
-    float: left;
-    width: 48%;
-    height:100%;
-    margin:0.05rem;
-    border-radius: 0.1rem;
-    background: #fff;
-    border:1px solid #d4d4d4;
-}
-.travel .content .con2 .con2_1 .con2_1_left{
-    background: #4f82ed;
-    height:100%;
-    padding:0.05rem;
-    border-top-left-radius: 0.1rem;
-    border-bottom-left-radius: 0.1rem;
-    color: #fff;
+    .travel .con2_content .con2_cont_top{
+        padding: 0.1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color:rgba(0,0,0,0.6) ;
+        color: #ffffff;
+        font-size: 0.25rem;
+    }
+    .travel .con2_content .con2_cont_bottom{
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        overflow: hidden;
+        background-color:rgba(0,0,0,0.6);
+        color: #ffffff;
+        padding:0.05rem 0.1rem;
+    }
+    .travel .con2_content .con2_cont_bottom div:nth-of-type(1) p:nth-of-type(1){
+     font-size: 0.3rem;
+        border-bottom:1px solid #fff;
+        font-weight: bolder;
+        padding-bottom: 0.07rem;
+    }
+    .travel .con2_content .con2_cont_bottom div:nth-of-type(1) p:nth-of-type(1) span{
+        margin:0 0.05rem;
+    }
+    .travel .con2_content .con2_cont_bottom div:nth-of-type(1) p:nth-of-type(2){
+        color: #aeaeae;
+        font-size: 0.25rem;
+        margin-top: 0.05rem;
+    }
+    .travel .con2_content .con2_cont_bottom div:nth-of-type(2) img{
+        width: 0.3rem;
+        vertical-align: sub;
+        margin-right: 0.02rem;
+    }
+    .travel .con2_content .con2_cont_bottom div:nth-of-type(2) p:nth-of-type(1){
+        color: #aeaeae;
+        margin-top: 0.1rem;
+        font-size: 0.25rem;
 
-}
-.travel .content .con2 .con2_1 .con2_1_left img{
-    width:0.2rem;
-    vertical-align: middle;
-    margin:0.05rem;
-    margin-right: 0.2rem;
-}
-.travel .content .con2 .con2_1 .con2_1_right{
-    overflow: hidden;
-    margin-left: 0.05rem;
-    max-width:60%;
-    text-align: center;
-    padding-top: 0.1rem;
-}
-.travel .content .con2 .con2_1 .con2_1_right nobr{
-    width: 2rem;
-    display: inline-block;
-    font-size: 0.25rem;
-    font-weight: bolder;
-    color: #4f82ed;
-    margin-top: 0.1rem;
-    padding:0.1rem 0;
-    border-bottom:1px solid;
-}
-.travel .content .con2 .con2_1 .con2_1_right span{
-    margin:0.1rem;
-}
-.travel .content .con2 .con2_1 .con2_1_left p{
-    font-size: 0.2rem;
-    font-weight: bolder;
-}
-.travel .content .con2 .con2_1 .con2_1_left p:nth-of-type(2){
-    margin-top: 0.3rem;
-}
-.travel .content .con2 .con2_1 .con2_1_left .con2_jage:after{
-    content: '';
-    width: 0.4rem;
-    display: block;
-    margin-left: 0.4rem;
-    position: relative;
-    top: 0.1rem;
-    /* margin-top: 0.2rem; */
-    border: 1px solid;
-}
-.travel .content .con2 .con2_1 .con2_1_left p s{
-    line-height: 0.5rem;
-    font-size: 0.2rem;
-    font-weight: normal;
-    color: #DADADA;
-}
-.travel .content .con2 .con2_1 .con2_1_left .con2_jage{
-    font-size: 0.4rem;
-    font-weight: bolder;
-    margin: 0 0.1rem 0.1rem 0;
-}
+    }
+    .travel .con2_content .con2_cont_bottom div:nth-of-type(2) p:nth-of-type(2) span{
+        font-size: 0.35rem;
+        color: #dffc22;
+        font-weight: bolder;
+    }
+    .travel .con2_content .con2_cont_img{
+        width:100%;
+        height: 100%;
+    }
+    .travel .con2_content .con2_cont_img img{
+        width:100%;
+        height: 100%;
+    }
+    /*热门尾单*/
+    .travel .con3{
+        overflow: hidden;
+    }
+    .travel .con3 .con3_top{
+        padding-left: 0.1rem;
+        overflow: hidden;
+        border-bottom:1px solid #e1e1e1;
+        padding-top: 0.1rem;
+        background: #ffffff;
+    }
+    .travel .con3 .con3_top img{
+        width: 2rem;
+    }
+    .con3_content{
+        display: flex;
+        flex-wrap: wrap;
+        background: #ffffff;
+    }
+    .travel .con3_content>div{
+        position: relative;
+        width: 47%;
+        min-height: 4rem;
+        margin:0.1rem;
+    }
+    .travel .con3_content .con3_cont_top{
+        padding:0.1rem;
+        padding-left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.6;
+        color: #ffffff;
+        font-size: 0.25rem;
+    }
+    .travel .con3_content .con3_cont_top span:nth-of-type(1){
+        padding:0.1rem;
+        width: 1rem;
+        height:100% ;
+        background: #fdc418;
+        color: #000;
+    }
 
-/*热门尾单*/
-.travel .content .con3_1{
-    display: block;
-    height: 3.5rem;
-    border:1px solid;
-    position: relative;
-    margin: 0.1rem 0.1rem 0.3rem 0.1rem;
-    border-radius: 0.1rem;
-}
-.travel .content .con3_1 .con3_1_1{
-    height: 2.5rem
-}
-.travel .content .con3_1 .con3_1_1 img{
-    height: 100%;width: 100%
-}
-.travel .content .con3_1 .con3_right{
-   font-size: 0.25rem;
-    font-weight: bolder;
-}
-.travel .content .con3_1 .con3_footer{
-    padding:0.2rem;
-    width:100%;
-    position: absolute;
-    bottom: 0;
-    height: 1rem;
-    background: #4f82ed;
-    color: #fff;
-    border-bottom-left-radius: 0.1rem;
-    border-bottom-right-radius: 0.1rem;
-    font-size: 0.3rem;
-    text-align: center;
-}
-.travel .content .con3_1 .con3_footer .fl{
-    line-height: 0.7rem;
-    font-size: 0.25rem;
-}
-.travel .content .con3_1 .con3_footer .fl img{
-    vertical-align:middle;
-    width:0.3rem;
-}
-.travel .content .con3_1 .con3_footer .fr s{
-    font-size: 0.2rem;
-    margin-left: 0.2rem;
-    color: #d6d6d6;
-}
+    .travel .con3_content .con3_cont_top span:nth-of-type(2){
+        padding:0.1rem;
+        width: 1rem;
+        height:100% ;
+        background: #000;
+    }
+    .travel .con3_content .con3_cont_bottom{
+        overflow: hidden;
+        opacity: 0.6;
+        color: #000;
+        padding:0.05rem 0.05rem;
+    }
+    .travel .con3_content .con3_cont_bottom div:nth-of-type(1){
+        color: #000;
+        font-weight: bolder;
+        font-size: 0.25rem;
+    }
+    .travel .con3_content .con3_cont_bottom .con3_price{
+        margin-top: 0.2rem;
+    }
+    .travel .con3_content .con3_cont_bottom .con3_price p:nth-of-type(1){
+        font-size: 0.35rem;
+        color: darkred;
+        font-weight: bolder;
+    }
+    .travel .con3_content .con3_cont_bottom .con3_price p:nth-of-type(2){
+        margin-top: 0.05rem;
+        font-size: 0.25rem;
+    }
+    .travel .con3_content .con3_cont_bottom .con3_price p:nth-of-type(2) img{
+        width: 0.3rem;
+        vertical-align: bottom;
+    }
+    .travel .con3_content .con3_cont_img{
+        width:100%;
+        height: 3rem;
+    }
 
-/*单库*/
-.travel .content .filtrate{
-    width:100%;
-    z-index: 99;
-    position: fixed;
-    top:0.7rem;
-    border-radius: 0.1rem;
+    .travel .con3_content .con3_cont_img img{
+        width:100%;
+        height: 100%;
+    }
+    .travel .con3 .more{
+        padding:0.2rem;
+        text-align: center;
+        font-size: 0.25rem,;
 
-}
-.travel .content .filtrate .filt_list{
-    display: flex;
-    background: #fff;
-    box-shadow: 0 0.05rem 0.05rem #666;
-
-}
-.travel .content .filtrate .filt_list .tab_active{
-    background: #4f82ed;
-}
-.travel .content .filtrate .filt_list div{
-    padding:0.1rem 0.2rem;
-    flex:1;
-    text-align: center;
-    color: #666;
-    font-size: 0.3rem;
-}
-.travel .content .filtrate .filt_list div img{
-    margin-left: 0.2rem;
-    margin-bottom: 0.03rem;
-}
-.travel .content .filtrate .tabs{
-    width: 100%;
-    position: relative;
-}
-.travel .content .filtrate .tabs>div{
-    width: 100%;
-    position: absolute;
-    top:0;
-    left:0;
-    background: #fff;
-    border-bottom: #d4d4d4;
-    box-shadow: 0 0.05rem 0.05rem #666;
-}
-.travel .content .filtrate .tabs .tab{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.travel .content .filtrate .tabs .tab_1 div{
-    flex: 1;
-    text-align: center;
-    margin:0.1rem;
-    border-radius:0.1rem;
-    color: #000;
-    font-size: 0.3rem;
-    padding:0.1rem;
-
-}
-.travel .content .filtrate .tabs .tab_2 div{
-    text-align: center;
-    margin:0.1rem;
-    border:1px solid #fff;
-    background: #eee;
-    color: #666;
-    font-size: 0.3rem;
-    padding:0.1rem;
-
-}
-.travel .content .filtrate .tabs .tab_3 div{
-    text-align: center;
-    margin: 0.1rem;
-    background: #eee;
-    color: #666;
-    border:1px solid #fff;
-    font-size: 0.28rem;
-    padding:0.05rem 0.2rem;
-}
-.travel .content .filtrate .tabs .tab_2 .activeS{
-    color:#4f82ed;
-    border:1px solid #4f82ed;
-}
-.travel .content .filtrate .tabs .tab_3 .activeS{
-color:#4f82ed;
-border:1px solid #4f82ed;
-}
-.travel .container .box .pic{
-    width:3.5rem;
-    position: relative;
-}
-.travel .container .box .Dtitle_s{
-    overflow: hidden;
-}
-.travel .container .box .Dtitle{
-    width:1.9rem;
-    margin-top:0.2rem;
-    font-size: 0.25rem;
-    color: #4f82ed;
-    font-weight: bolder;
-}
-.travel .container .box .Dtitle_s .Dtitle_price{
-    margin-top: 0.15rem;
-    font-size: 0.3rem;
-    color: #fec515;
-    font-weight: bolder;
-}
-.travel .container .box .box_footer{
-
-    padding-top:0.25rem;
-    width:100%;
-    height: 0.6rem;
-    line-height: 0.6rem;
-}
-.travel .content .box .box_footer div{
-    text-align: center;
-    float: left;
-}
-.travel .content .box .box_footer div .time img{
-    vertical-align: middle;
-    margin-right: 0.1rem;
-    margin-top: -0.08rem;
-}
-.travel .content .box .box_footer div:nth-of-type(1){
-    color: red;
-    font-size: 0.25rem;
-}
-.travel .content .box .box_footer div:nth-of-type(2){
-    color: red;
-    margin:0 0.3rem;
-}
-
-.travel .content .box .box_footer div:nth-of-type(3){
-    background:#4f82ed ;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width:1rem;
-    height: 0.6rem;
-    line-height: 0.7rem;
-    font-size: 0.3rem;
-    color: #fff;
-}
-.travel .content .box .box_footer div:nth-of-type(3) img{
-    vertical-align: middle;
-    margin-right: 0.1rem;
-    margin-top: -0.08rem;
-    width: 0.25rem;
-}
-/*详情*/
-.travel .content_XQ{
-    padding-bottom: 1rem;
-}
-.travel .backA{
-    background:#4f82ed ;
-}
-.travel .Xq{
-    z-index: 99;
-    width:100%;
-    position: fixed;
-    top:0;
-    left:0;
-    padding:0.2rem;
-    font-size: 0.3rem;
-    color: #FFF;
-
-    text-align: center;
-}
-.travel .Xq .Left{
-    width:0.4rem;
-    position: absolute;
-    left:0.2rem;
-}
-.content_XQ .XQ_B{
-    width:100%;
-    height: 4rem;
-    z-index: 99;
-}
-.content_XQ .XQ_con{
-    padding:0 0.2rem;
-    display: flex;
-    min-height: 2rem;
-    margin-top: -0.06rem;
-}
-.content_XQ .XQ_con>div{
-    flex:1;
-    background: #d4d4d4;
-    padding-left:0.2rem;
-    border-bottom-right-radius: 0.15rem;
-    border-bottom-left-radius: 0.15rem;
-}
-.content_XQ .XQ_con>div p{
-    margin:0.2rem 0;
-    color: #fff;
-    font-size: 0.25rem;
-}
-.content_XQ .XQ_con>div:nth-of-type(1) .XQ_con_1{
-    font-size: 0.3rem;
-    font-weight: bolder;
-}
-.content_XQ .XQ_con>div:nth-of-type(1) .XQ_con_3{
-    color: #b8bbd3;
-}
-.content_XQ .XQ_con>div:nth-of-type(1) .XQ_con_2{
-    font-size: 0.4rem;
-    font-weight: bolder;
-}
-.content_XQ .XQ_con>div:nth-of-type(1){
-    background: -webkit-linear-gradient(left, #5c79f9 0%, #57a9f1 100%);
-}
-.content_XQ .XQ_con>div:nth-of-type(2){
-    margin:0 0.2rem;
-    flex-grow: 1;
-    background: -webkit-linear-gradient(left, #539ed7 0%, #56f5be 100%);
-}
-.content_XQ .XQ_con>div:nth-of-type(3){
-    padding-top: 0.6rem;
-    padding-left:0.2rem;
-    flex-grow: 0.3;
-    background: -webkit-linear-gradient(left, #50c7a4 0%, #56f5be 100%);
-}
-.content_XQ .XQ_con2{
-    overflow: hidden;
-    margin:0.2rem;
-    padding: 0.2rem;
-    padding-top:0;
-    border:1px solid #d4d4d4;
-    border-radius: 0.1rem;
-    box-shadow: 0 0 0.25rem #86a4f9;
-}
-.content_XQ .XQ_con2 .XQ_con2_1 {
-overflow: hidden;
-
-}
-.content_XQ .XQ_con2 .XQ_con2_1 .fl img{
-    width:100%;
-    height:100%;
-    box-shadow: 0 0 0.1rem #d4d4d4;
-    border-radius:0.2rem;
-}
-.content_XQ .XQ_con2 .title{
-    border-left: 0.1rem solid;
-    margin:0.1rem 0;
-    padding:0.1rem 0 0.1rem 0.6rem;
-    font-size: 0.3rem;
-    color: #4f82ed;
-    font-weight: bolder;
-
-}
-.content_XQ .XQ_con2 .XQ_con2_1 div{
-    padding:0.2rem;
-    width:50%;
-    height:3.5rem;
-    overflow: hidden;
-}
-.content_XQ .XQ_con2 .XQ_con2_1 .fr{
-    color: #4f82ed;
-    line-height: 0.42rem;
-    font-size: 0.2rem;
-}
-.content_XQ .XQ_con2 .XQ_con2_2>div{
-    padding:0.2rem;
-    width:100%;
-    min-height:3.5rem;
-    border:1px solid;
-}
+    }

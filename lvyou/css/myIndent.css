@@ -1,6 +1,6 @@
 html , body  , .myIndent{
     height:100%;
-    background: #666666;
+    background: url("../img/10-14042P1243V27.jpg");
 }
 .myIndent header{
     z-index: 99;
@@ -37,13 +37,13 @@ html , body  , .myIndent{
 
 }
 .myIndent .footer div a{
-    color: #4f82ed;
+    color: #fe4e03;
 }
 .myIndent .footer div a img{
     width:0.4rem;
 }
 .myIndent .content{
-    padding: 0.8rem 0 1rem 0;
+    padding-bottom:1rem;
 }
 .myIndent .content .item{
 
@@ -59,7 +59,7 @@ html , body  , .myIndent{
     width: 84%;
     height: 1rem;
     background: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     padding:0.2rem;
     padding-left: 0.4rem;
 }
@@ -74,7 +74,10 @@ html , body  , .myIndent{
     line-height: 1rem;
     border-radius: 50%;
 }
-
+.myIndent .content .item .right img{
+    width: 0.3rem;
+    vertical-align: sub;
+}
 .myIndent .content .item .left div:nth-of-type(1){
     font-size: 0.2rem;
     line-height: 0.35rem;

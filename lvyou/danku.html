@@ -2,357 +2,387 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <title>单库</title>
     <script src="js/libyys-flexible.js"></script>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
-    <link rel="stylesheet" href="css/travelHome.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
-
+    <link rel="stylesheet" href="css/danku.css">
     <style>
-        .container{
-            position: relative;
-        }
-        .box{
-            float: left;
-            /*width:50%;*/
-            margin-top: 0.05rem;
-            padding:0.1rem;
-            padding:15px 0 0 10px;
-        }
-        .pic{
-            padding:10px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 6px #ccc;
-        }
-        .container .pic1{
-            width:3rem;
-            height: 150px;
-            border-radius: 0.1rem;
-        }
+
     </style>
 </head>
 <body class="scope">
-<div class="travel">
-    <header>
-        <a href="javascript:history.go(-1);"><img  class="Left" src="img/Left1.png" alt=""></a>
-        单库
-        <a href="JavaScript:0;" class="right shaixuan" style="font-size: 0.25rem"> 筛选 </a>
-    </header>
-    <div class="content">
-<!--筛选-->
-        <div style="display: none" class="filtrate">
-            <div class="filt_list">
-                <div>出发时间 <i><img src="img/sanjiao.png" alt=""></i> </div>
-                <div>价位 <i><img src="img/sanjiao.png" alt=""></i> </div>
-                <div>地域 <i><img src="img/sanjiao.png" alt=""></i> </div>
-            </div>
-            <div class="tabs">
-                <div>
-                    <div class="tab tab_1">
-                        <div>
-                           <input style="color:#4f82ed;" class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly>出发
-                        </div>
-
-                    </div>
-                </div>
-                <div> <div class="tab tab_2">
-                    <div>100以内</div>
-                    <div>100-300</div>
-                    <div>300-500</div>
-                    <div>500-1000</div>
-                    <div>1000-2000</div>
-                    <div>2000以上</div>
-                </div></div>
-                <div> <div class="tab tab_3">
-                   <div>河南</div>
-                   <div>西安</div>
-                   <div>西藏</div>
-                   <div>上海</div>
-                   <div>黑龙江</div>
-                   <div>江苏</div>
-                   <div>河南</div>
-                   <div>西安</div>
-                   <div>西藏</div>
-                   <div>上海</div>
-                   <div>黑龙江</div>
-                   <div>江苏</div>
-               </div></div>
-            </div>
+<div class="danku">
+    <!--筛选-->
+    <div style="" class="filtrate">
+        <div class="filt_list">
+            <div>出发时间 </div>
+            <div class="">价位  </div>
         </div>
-
-        <div class="grid grid--type-c">
-            <div class="grid__sizer"></div>
-            <div class="container">
-                <div class="box">
-                      <div class="grid__item">
-                        <a href="xiangqing.html">
-                            <div class="pic">
-                                <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                <div class="Dtitle_s">
-                                    <div class="Dtitle fl">新疆双飞两日游</div>
-                                    <div class="fr Dtitle_price" >￥500</div>
-                                </div>
-                                <div class="box_footer">
-                                    <div>
-                                        <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                        0天2小时5分
-                                    </div>
-                                    <div></div>
-                                    <div><i><img src="img/my.png" alt=""></i>6</div>
-                                </div>
-                            </div>
-                        </a>
+        <div class="tabs">
+             <div>
+                <div class=" tab_1">
+                    <div>
+                        <input style="color:#4f82ed;" class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly>出发
                     </div>
-                      <div class="grid__item">
-                                <a href="xiangqing.html">
-                                    <div class="pic">
-                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                        <div class="Dtitle_s">
-                                            <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
-                                            <div class="fr Dtitle_price" >￥500</div>
-                                        </div>
-                                        <div class="box_footer">
-                                            <div>
-                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                                0天2小时5分
-                                            </div>
-                                            <div></div>
-                                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                      <div class="grid__item">
-                                <a href="xiangqing.html">
-                                    <div class="pic">
-                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                        <div class="Dtitle_s">
-                                            <div class="Dtitle fl">新疆双飞两日游</div>
-                                            <div class="fr Dtitle_price" >￥500</div>
-                                        </div>
-                                        <div class="box_footer">
-                                            <div>
-                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                                0天2小时5分
-                                            </div>
-                                            <div></div>
-                                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                      <div class="grid__item">
-                                <a href="xiangqing.html">
-                                    <div class="pic">
-                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                        <div class="Dtitle_s">
-                                            <div class="Dtitle fl">新疆双飞两日游</div>
-                                            <div class="fr Dtitle_price" >￥500</div>
-                                        </div>
-                                        <div class="box_footer">
-                                            <div>
-                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                                0天2小时5分
-                                            </div>
-                                            <div></div>
-                                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                      <div class="grid__item">
-                                <a href="xiangqing.html">
-                                    <div class="pic">
-                                        <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                        <div class="Dtitle_s">
-                                            <div class="Dtitle fl">新疆双飞两日游</div>
-                                            <div class="fr Dtitle_price" >￥500</div>
-                                        </div>
-                                        <div class="box_footer">
-                                            <div>
-                                                <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                                0天2小时5分
-                                            </div>
-                                            <div></div>
-                                            <div><i><img src="img/my.png" alt=""></i>6</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                      <div class="grid__item">
-                            <a href="xiangqing.html">
-                                <div class="pic">
-                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                    <div class="Dtitle_s">
-                                        <div class="Dtitle fl">新疆双飞两日游</div>
-                                        <div class="fr Dtitle_price" >￥500</div>
-                                    </div>
-                                    <div class="box_footer">
-                                        <div>
-                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                            0天2小时5分
-                                        </div>
-                                        <div></div>
-                                        <div><i><img src="img/my.png" alt=""></i>6</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                      <div class="grid__item">
-                            <a href="xiangqing.html">
-                                <div class="pic">
-                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                    <div class="Dtitle_s">
-                                        <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
-                                        <div class="fr Dtitle_price" >￥500</div>
-                                    </div>
-                                    <div class="box_footer">
-                                        <div>
-                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                            0天2小时5分
-                                        </div>
-                                        <div></div>
-                                        <div><i><img src="img/my.png" alt=""></i>6</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                      <div class="grid__item">
-                            <a href="xiangqing.html">
-                                <div class="pic">
-                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                    <div class="Dtitle_s">
-                                        <div class="Dtitle fl">新疆双飞两日游</div>
-                                        <div class="fr Dtitle_price" >￥500</div>
-                                    </div>
-                                    <div class="box_footer">
-                                        <div>
-                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                            0天2小时5分
-                                        </div>
-                                        <div></div>
-                                        <div><i><img src="img/my.png" alt=""></i>6</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                      <div class="grid__item">
-                            <a href="xiangqing.html">
-                                <div class="pic">
-                                    <img class="pic1" src="img/u=506330584,1735364885&fm=23&gp=0.jpg" alt="" />
-                                    <div class="Dtitle_s">
-                                        <div class="Dtitle fl">新疆双飞两日游双飞两日游</div>
-                                        <div class="fr Dtitle_price" >￥500</div>
-                                    </div>
-                                    <div class="box_footer">
-                                        <div>
-                                            <i class="time"><img width="15" src="img/timeRed.png" alt=""></i>
-                                            0天2小时5分
-                                        </div>
-                                        <div></div>
-                                        <div><i><img src="img/my.png" alt=""></i>6</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
+
                 </div>
+            </div>
+             <div>
+                 <div class="tab tab_2">
+                <div>100以内</div>
+                <div>100-300</div>
+                <div>300-500</div>
+                <div>500-1000</div>
+                <div>1000-2000</div>
+                <div>2000以上</div>
+            </div>
              </div>
         </div>
-
-
-        <div style="width: 100%; padding-bottom: 1rem"></div>
     </div>
+    <!--热门尾单-->
+    <div class="content">
+        <div class="con3">
+            <div class="con3_content danku_content">
+                <div>
+                        <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                             【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="particulars.html">
+                        <div class="con3_cont_top">
+                            <span>郑州</span><span>6天跟团</span>
+                        </div>
+                        <div class="con3_cont_img">
+                            <img src="img/u=4186807976,1707145605&fm=23&gp=0.jpg" alt="">
+                        </div>
+                        <div class="con3_cont_bottom">
+                            <div class="ovH">
+                                【中青旅】全国直飞美国塞班岛五星酒店自由行旅游
+                            </div>
+                            <div class="ovH con3_price">
+                                <p class="fl">￥<span>3600</span></p>
+                                <p class="fr"><i><img width="15" src="img/time.png" alt=""></i>22时55分44秒</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--底部导航-->
     <div class="footer">
         <div>
             <a href="indentJilv.html">
-                <p><img width="20" src="img/dingdan1.png" alt=""></p>
-                <p>订单</p>
-            </a>
+               <p><img width="20" src="img/02.png" alt=""></p>
+               <p>订单</p>
+        </a>
         </div>
         <div>
             <a  href="index.html">
-                <p><img width="20" src="img/home1.png" alt=""></p>
-                主页
-            </a>
+            <p><img width="20" src="img/04.png" alt=""></p>
+            主页
+        </a>
         </div>
         <div>
-            <a style="color: #000;" href="javascript:0;">
-            <p><img width="20" src="img/danku.png" alt=""></p>
-            <a  style="color: #000" href="danku.html">单库</a>
+            <a style="color: #000" href="danku.html">
+            <p><img width="20" src="img/05.png" alt=""></p>
+               单库
+            </a>
         </div>
     </div>
 </div>
 <script src="js/jquery.1.11.3.js"></script>
 <script src="js/swiper-3.4.2.min.js"></script>
-<script src="js/pubu.js"></script>
-<script src="js/fengzhuang.js"></script>
-<script src="js/pubu/anime.min.js"></script>
-<script src="js/pubu/imagesloaded.pkgd.min.js"></script>
-<script src="js/pubu/main.js"></script>
-<script src="js/pubu/masonry.pkgd.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.js"></script>
 <script src="js/jedate/jedate.js"></script>
+<script src="js/app/index.js"></script>
+<script src="js/fengzhuang.js"></script>
 <script>
-/*筛选*/
-    $('.shaixuan').click(function () {
-        $('.filtrate').toggle();
-    });
-
-$('.tabs>div').hide();
-$('.filt_list>div').eq(0).css('color','#4f82ed');
-//$('.tabs>div').eq(0).show();
-    $('.filt_list>div').click(function () {
-       var index = $(this).index();
-        $('.filt_list>div').css('color','#666')
-       $(this).css('color','#4f82ed');
-        $('.tabs>div').eq(index).siblings().hide();
-        $('.tabs>div').eq(index).toggle();
-    });
-
-    $('.tab>div').on('click',function () {
-        $('.tab>div').removeClass('activeS')
-        $(this).addClass('activeS')
-    });
-
-filt('.filt_list','.grid')
-    function filt(a,b) {
-       $(a).children().click(function () {
-           var index = $(this).index();
-           if(index ==0){
-               $(b).animate({marginTop:'80px'})
-           }else {
-               if (index ==1){
-                   $(b).animate({marginTop:'120px'})
-               }else {
-                   $(b).animate({marginTop:'100px'})
-               }
-           }
-       });
-        $('.shaixuan').click(function () {
-            $('.grid').animate({marginTop:'0'})
-        })
-
-
+jeDate({
+    dateCell:"#dateinfo",
+    format:"YYYY年MM月DD日",
+    isinitVal:true,
+    isTime:true, //isClear:false,
+    minDate:"2014-09-19 00:00:00",
+    okfun:function(val){alert(val)}
+})
+$(window).scroll(function () {
+    console.log($(this).scrollTop())
+    var sm=$(this).scrollTop()+$(window).height();
+    var conH = $('.danku_content').height()
+    if(sm>conH+89){
+        alert("到底了")
     }
-
-
-    
+})
 </script>
-<script type="text/javascript">
-    //jeDate.skin('gray');
-    jeDate({
-        dateCell:"#dateinfo",
-        format:"YYYY年MM月DD日",
-        isinitVal:true,
-        isTime:true, //isClear:false,
-        minDate:"2014-09-19 00:00:00",
-        okfun:function(val){alert(val)}
-    })
-</script>
-
 </body>
 </html>
