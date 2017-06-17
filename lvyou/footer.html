@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="footer">
+    <div>
+        <a href="javascript:;">
+            <p><img width="20" custom="01.png" src="~/Content/img/02.png" alt=""></p>
+            <p>订单</p>
+        </a>
+    </div>
+    <div>
+        <a href="javascript:;">
+            <p><img width="20" custom="03.png" src="~/Content/img/04.png" alt=""></p>
+            主页
+        </a>
+    </div>
+    <div>
+        <a href="javascript:;">
+            <p><img width="20" custom="05.png" src="~/Content/img/06.png" alt=""></p>
+            单库
+        </a>
+    </div>
+</div>
+
+
+    <script type="text/javascript">
+    var urlstr = location.href;
+    $(".footer div a").each(function () {
+        if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+            $(this).css("color", "#000");
+            var domTag = $(this).find("p").find("img");
+            domTag.attr("src", "/Content/img/" + $(this).find("p").find("img").attr("custom"));
+        } else {
+//            $(this).css("color", "#fe4e03");
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -16,7 +16,7 @@
 
 }
 .danku .footer div a {
-    color: #fe4e03;
+    color: #000;
 }
 .danku .footer div a img{
     width:0.4rem;
@@ -59,22 +59,21 @@
     top: 0;
     left: 0;
     width: 100%;
-    opacity: 0.6;
     color: #ffffff;
     font-size: 0.25rem;
 }
 .danku .con3_content .con3_cont_top span:nth-of-type(1){
-    padding:0.1rem;
+    padding:0.1rem 0.05rem;
     width: 1rem;
     height:100% ;
-    background: #fdc418;
+    background: rgba(253,196,24,0.6);
     color: #000;
 }
 .danku .con3_content .con3_cont_top span:nth-of-type(2){
-    padding:0.1rem;
+    padding:0.1rem 0.05rem;
     width: 1rem;
     height:100% ;
-    background: #000;
+    background: rgba(0,0,0,0.6);
 }
 .danku .con3_content .con3_cont_bottom{
     overflow: hidden;
@@ -90,9 +89,11 @@
 .danku .con3_content .con3_cont_bottom div:nth-of-type(1){
     color: #000;
     font-weight: bolder;
+    height: 0.7rem;
 }
 .danku .con3_content .con3_cont_bottom .con3_price{
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
+    overflow: hidden;
 }
 .danku .con3_content .con3_cont_bottom .con3_price p:nth-of-type(1){
     font-size: 0.3rem;
@@ -110,12 +111,10 @@
     width:100%;
     height: 3rem;
 }
-
 .danku .con3_content .con3_cont_img img{
     width:100%;
     height: 100%;
 }
-
 /*筛选*/
 .danku  .filtrate{
     width:100%;
@@ -123,7 +122,6 @@
     position: fixed;
     top:0;
     border-radius: 0.1rem;
-
 }
 .danku  .filtrate .filt_list{
     display: flex;
@@ -149,7 +147,6 @@
 .danku  .filtrate .tabs{
     width: 100%;
     position: relative;
-
 }
 .danku  .filtrate .tabs>div{
     display: none;
@@ -160,7 +157,6 @@
     background: #fff;
     border-bottom: #d4d4d4;
     box-shadow: 0 0.05rem 0.05rem #666;
-
 }
 .danku  .filtrate .tabs .tab{
     display: flex;
@@ -184,7 +180,6 @@
     color: #666;
     font-size: 0.3rem;
     padding:0.1rem;
-
 }
 .danku  .filtrate .tabs .tab_3 div{
     text-align: center;
@@ -206,4 +201,55 @@
 .danku .content{
     padding-bottom: 1rem;
     margin-top: 0.8rem;
+}
+/*底部加载*/
+.spinner {
+    margin: 0.2rem auto;
+    width: 50px;
+    height: 0.6rem;
+    text-align: center;
+    font-size: 10px;
+}
+.spinner > div {
+    background-color: #666;
+    height: 100%;
+    width: 0.1rem;
+    display: inline-block;
+
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+    20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }  20% {
+           transform: scaleY(1.0);
+           -webkit-transform: scaleY(1.0);
+       }
 }
