@@ -1,0 +1,30 @@
+Git常用命令
+git checkout 分枝名 切换到一个分枝
+git pull 拉取远程仓库最新代码
+git status 查看当前工作区状态如果存在未提交代码或未跟踪代码无法执行前两条命令
+如果存在未提交的更改使用 git reset --hard可以重置当前工作区所有文件到当分枝的原始状态（未跟踪文件无法重置）
+如果存在未跟踪文件且无法执行pull和checkout命令时需要手动删除未跟踪文件 rm 文件路径 删除文件
+如果误删某一个文件可通过 git checkout -- 文件路径 来恢复文件。
+git log  查看当前分枝的提交记录 q键退出
+
+
+
+192.168.1.15
+用户名 admini
+密码 asd123,.
+root命令 sudo su
+项目路径 /var/www/fengwotv
+拉去项目 git pull
+密码 123456
+默认分支为develop
+可以通过文件共享查看服务器文件不过不能修改
+\\192.168.1.15\www\fengmi
+
+
+智慧推后台管理系统
+http://form.fengwotv.com
+用户名admin
+密码111111
+
+
+15136263264
