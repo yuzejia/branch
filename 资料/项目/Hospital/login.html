@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html ng-app="myapp" xmlns:wb="http://open.weibo.com/wb">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body ng-controller="main" class="bg-white">
+		<div class="login_con">
+			
+			<div class="login_top pt10 pb10">
+				<img src="img//login/login01.fw.png"/>
+				<img src="img/login/login02.fw.png" class="fr mt15 mr25" onclick="window.history.back()"/>
+			</div>
+			<div class="pl30 pr30 mb30">
+				<div class="b-border3 pt30 pb25 clearfix">
+					<div class="login_img_con fl">
+						<img src="img/login/login03.fw.png"/>
+					</div>
+					<input type="text" name="" placeholder="输入手机号或邮箱" class="login_inp" id="uname"/>
+				</div>
+			</div>
+			<div class="pl30 pr30">
+				<div class="b-border3 pt30 pb25 clearfix">
+					<div class="login_img_con fl">
+						<img src="img/login/login04.fw.png"/>
+					</div>
+					<input type="password" name="" placeholder="请输入密码" class="login_inp" id="upassword"/>
+				</div>
+			</div>
+			<div class="pl30 pr30 clearfix pb20">
+				<span class="fr color-gray pt15 pb15"><a href="forgot-password.html">忘记密码？</a></span>
+			</div>
+			<div class="pl30 pr30 clearfix mt30">
+				<div class="login_in_btn text-center color-white" ng-click="login()">
+					登  录
+				</div>
+			</div>
+			<div class="pl30 pr30 clearfix mt30">
+				<a href="register.html">
+					<div class="login_in_btn text-center color-white">
+						注  册
+					</div>
+				</a>
+			</div>
+			
+			<div class="pl30 pr30">
+				<div class="login_thirdparty">
+					<div class="hr"></div>
+					<span class="color-gray font-size24 text-center bg-white">第三方登录</span>
+				</div>
+			</div>
+			<div class="pl30 pr30 mt30">
+				<ul class="clearfix login_thirdparty_pic ">
+					<li><img src="img/login/login05.fw.png"/></li>
+					<li><img src="img/login/login06.fw.png" id="qqLoginBtn"/></li>
+					<li><img src="img/login/login07.fw.png" id="wb_connect_btn"/></li>
+				</ul>
+			</div>
+			
+			<!--remind 提示框-->
+			<div class="remind_con">
+				<div class="remind text-center color-white pt15 pb15 pl25 pr25 font-size28">
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<!--<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="1106366246" charset="utf-8"></script>-->
+	
+	<!--微博登录-->
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=659907452&debug=true" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+			app.controller('main',function($scope,$http){
+				
+//				 QC.Login({
+//	                    //btnId：插入按钮的节点id，必选
+//	                    btnId:"qqLoginBtn",
+//	                    //用户需要确认的scope授权项，可选，默认all
+//	                    scope:"all",
+//	                    //按钮尺寸，可用值[A_XL| A_L| A_M| A_S|  B_M| B_S| C_S]，可选，默认B_S
+//	                    size: "B_S"
+//	                }, function(reqData, opts){//登录成功
+//	                    //根据返回数据，更换按钮显示状态方法
+//	                    console.log(reqData);//查看返回数据
+//	                    QC.Login.getMe(function(openId, accessToken){//获取用户的openId
+//	                        console.log('QQOPENID:'+openId);
+//	                        thirdparty(null,null,reqData.figureurl_qq_2,reqData.nickname,1,openId);
+//	                        QC.Login.signOut();//退出QQ登录调用事件
+//	                    });
+//	                }
+//	            );
+				   
+				   
+				    
+				//微博登录
+				WB2.anyWhere(function (W) {
+			        W.widget.connectButton({
+			            id: "wb_connect_btn",
+			            type: '3,2',
+			            callback: {
+			                login: function (o) { //登录后的回调函数
+			　　　　　　　　　　　		console.log(o);
+			                    thirdparty(null,null,o.avatar_hd, o.name ,3, o.id);			//个人方法
+			                    try{
+			                        document.getElementsByClassName('loginout')[0].click();
+			　　　　　　　　　　　　　　　//页面需求，当前页面登录完成之后，不进行跳转，所以模拟点击事件，让微博账号在当前域中退出。不影响下次登录。（元素为微博动态添加）
+			　　　　　　　　　　　　　　　//微博没有提供退出方法。下面的logout为另一种开发模式调用。
+			
+			                    }catch(e){
+			                        console.log(e);
+			                    }
+			                },
+			                logout: function () { //退出后的回调函数
+			                }
+			            }
+			        });
+			    });
+
+
+
+				//提交用户登录数据
+				$scope.login = function(){
+					//提交信息
+					var uname  = document.getElementById('uname').value;
+					var upassword = document.getElementById('upassword').value;
+					//提示框
+					var show = document.querySelector(".remind_con");
+					var showtxt =document.querySelector('.remind');
+					
+					var re3 = new RegExp(/^1(3|4|5|7|8)\d{9}$/)   //电话验证
+					//用户信息提交地址
+					var ur = https+'TPBitz/user/login';
+					if(uname == "" || uname == null){
+						fadeIn(show,400);
+						showtxt.innerHTML = "登录账号不能为空";
+						setTimeout(function(){
+							fadeOut(show,400);
+						},1500);
+						return false;
+					}else{
+						if(upassword == "" || upassword == null){
+							fadeIn(show,400);
+							showtxt.innerHTML = "登录密码不能为空";
+							setTimeout(function(){
+								fadeOut(show,400);
+							},1500);
+							return false;
+						}else{
+							$http({
+								url:ur,
+								method:'post',
+								params:{"loginName":uname,"password":upassword,"roleId":"4"}
+							}).success(function(data){
+								uname = "";			//成功后清空输入框的值
+								upassword = "";
+								//存储token
+								window.localStorage.setItem("toknes",data.list.token);
+								console.log(data)
+//								console.log(data.list.token)
+								fadeIn(show,200);
+								showtxt.innerHTML = data.msg;
+								setTimeout(function(){
+									fadeOut(show,200);
+								},1500);
+								window.history.go(-1);
+							}).error(function(){
+							});
+							
+						};
+					};
+					
+					
+				};
+				
+			
+			});
+	</script>
+</html>

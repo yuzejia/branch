@@ -1,0 +1,26 @@
+.fr{
+    float: right;
+}
+.XLH .col{
+    height:85px;
+}
+.XLH .col span{
+    padding: 20px;
+    background: #eee;
+}
+.XLH .col .ling{
+  margin-left: -20px;
+}
+.XLH .col .ok{
+    padding: 20px 55px;
+    background: #663398;
+    color: #ffffff;
+    font-size: 14px;
+}
+.XLH .inputNum{
+    padding-left: 10px;
+    font-size: 20px;
+}
+.XLH .YZclose{
+    margin-right: 10px;
+}

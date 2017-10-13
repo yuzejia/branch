@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/wsp9.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<div class="bar bar-header bar-clear">
+			<button class="button button-clear ">
+				<i class="ion-ios-arrow-back stable"></i>
+			</button>
+			<button class="button button-clear ">
+				<i class="ion-android-share-alt stable"></i>
+			</button>
+		</div>
+		<div class="content scroll scroll-content has-tabs" style="overflow-y:scroll">
+			<div>
+				<img class="full-image" src="img/w01.png" alt="" />
+			</div>
+			<div class="list">
+				<div class='item wspitem'>
+					<h2 >蔡依林2016play巡回演唱会郑州站<span class="icon ion-ios-star-outline wsp"></span></h2>
+					<p style="font-size:20px;color:#663399;">￥290</p>
+				</div>
+				<div class="item item-divider"></div>
+				<div class="item">
+					<div class="tabs-striped tabs-color-royal tabs-background-light">
+						<div class='tabs'>
+							<a class="tab-item">产品参数</a>
+							<a class="tab-item active">图文详情</a>
+							<a class="tab-item">用户评价</a>
+						</div>
+					</div>
+				</div>
+				<div class="item item-text-wrap" style="padding:0;">
+					<img src="img/w01.png" alt="" class="full-image" height="250px"/>
+					<p>极致惊艳与性感，蔡依林首登郑州，世界巡回演唱会</p>
+					<p>媒体说：他不是天才</p>
+					<p>极致惊艳与性感</p>
+				</div>
+				<div class="item item-divider"></div>
+			</div>
+		</div>		
+			<div class='tabs tabs-bottom tabs-icon-top'>
+				<a class="tab-item assertive">
+					<span class='wspsp'><i class="icon ion-ios-cart-outline "></i></span>
+					购物车
+				</a>
+				<a class="tab-item assertive">
+					<span class='wspsp'><i class="icon ion-ios-chatbubble-outline "></i></span>
+					客服
+				</a>
+				<button class="button button-royal">					
+					加入购物车
+				</button>
+			</div>		
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>

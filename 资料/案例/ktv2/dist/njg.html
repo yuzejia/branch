@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	        body{
+	    	    background-color: #f2f2f2;
+	        }
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">支付结果</h1> 
+	</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+				<ion-item style="margin-bottom: 12px;">
+					<p>小崔 15835241564</p>
+					<p>河南省郑州市金水区全区农业路花园路交叉口招银
+				     <i class="icon ion-chevron-right"></i>
+					</p>
+				    <p>大厦1808</p>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/nt02.fw.png" />
+					<h3>撼森点歌机家庭KTV高清触摸屏卡</h3>
+					<h3>拉OK点唱机一体机套装</h3>
+					<p>数量：x1</p>
+					<p class="royal">
+			    	<i class="icon ion-social-yen royal">299</i>
+			      </p>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/nt01.fw.png" />
+					<h3>撼森点歌机家庭KTV高清触摸屏卡</h3>
+					<h3>拉OK点唱机一体机套装</h3>
+					<p>数量：x1</p>
+					<p class="royal">
+			    	<i class="icon ion-social-yen royal">299</i>
+			      </p>
+				</ion-item>
+				<ion-item>
+					优惠券
+					<span style="float: right;" class="assertive">
+						-5
+					  <i class="ion-ios-arrow-right dark"></i>
+					</span>
+				</ion-item>
+				<ion-item class="item-input">
+					买家留言：<input type="text" placeholder="选填,填写和卖家协商一致的要求。" />
+				</ion-item>
+				<p class="padding">选择支付方式</p>
+				<ion-item class="item-avatar">
+					<img src="img/nj02.png" />
+					<h2>微信支付</h2>
+				</ion-item>
+				<ion-item class="item-avatar">
+					<img src="img/nj01.fw.png" />
+					<h2>支付宝支付</h2>
+				</ion-item>
+			</ion-list>
+			<button class="button button-full light" style="background-color:#663399 ;">确认支付</button>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

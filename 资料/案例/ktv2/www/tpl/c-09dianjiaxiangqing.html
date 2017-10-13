@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录页面</title>
+		<!--<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>-->
+		<style type="text/css">
+		body{
+			font-family: "微软雅黑";
+			background: #F2F2F2;
+		}
+			.c-dianjianav{
+				height: 250px;
+				position: relative;
+			}
+				.c-dianjianav-top{
+					padding: 15px;
+					box-sizing: border-box;
+				}
+				.c-dianjianav-top img:first-child{
+					width: 45px;
+					
+				}
+				.c-dianjianav-top img:last-child{
+					width: 45px;
+					float: right;
+					
+				}
+				.c-dianjianav-bottom{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+    				height: 36%;
+				}
+				.c-dianjianav-bottom img:first-child{
+					width: 100%;
+					height: 100%;
+				}
+				.c-dianjianav-bottom img:last-child{
+					    width: 7%;
+  					  height: 45%;
+					position: absolute;
+					right: 15px;
+					bottom: 10px;
+				}
+				.c-dianjia-posi{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					z-index: -99;
+				}
+				.c-dianjia-posi img{
+					width: 100%;
+					height: 100%;
+				}
+				.c-dianpu-dizhi{
+					padding: 12px;
+					box-sizing: border-box;
+					border-bottom: 1px solid #E1E1E1;
+					margin-bottom: 8px;
+					background: #FFFFFF;
+				}
+				.c-dianpu-dizhi img:first-child{
+					float: left;
+					margin-right: 15px;
+    				margin-top: 4px;
+				}
+				.c-dianpu-dizhi img:last-child{
+					float: right;
+					width: 8%;
+				}
+				.c-dianpu-dizhi p{
+					width: 70%;
+					display: inline-block;
+					margin-bottom: 0px;
+				}
+				.c-tunagou-img{
+					float: left;
+					    width: 5%;	
+				}
+				.c-tunagou-text{
+					display: inline-block;
+					margin-top: 2px;
+					margin-left: 10px;
+				}
+				.c-kkk-list{
+					padding: 15px;
+					box-sizing: border-box;
+					background: #FFFFFF;
+					border-bottom: 1px solid #E1E1E1;
+				}
+				.c-kkk-list img:first-child{
+					width: 24%;
+					float: left;
+				}
+				.c-kkk-list img:last-child{
+					width: 73%;
+				}
+				.c-chakan{
+					padding: 15px;
+					box-sizing: border-box;
+					text-align: center;
+					color: #F15A5A;
+					background: #FFFFFF;
+					margin-bottom: 8px;
+				}
+				.c-cearlist-bottom{
+					margin-bottom: 0;
+				}
+				.c-pinglun{
+					background: #FFFFFF;
+					padding: 15px;
+					box-sizing: border-box;
+					border-bottom: 1px solid #E1E1E1;
+				}
+				.c-pingxin{
+					width: 100%;
+					
+				}
+				.c-shijing-con img{
+					width: 26%;
+    				margin: 3.5px;
+				}
+				.c-chakancear1{
+					margin: 0;
+				}
+				.c-kk-bottom{
+					padding: 10px;
+					box-sizing: border-box;
+					background: #fff;
+					padding-left: 20px;
+					padding-right: 20px;
+					margin-bottom: 8px;
+				}
+				.c-kk-con img:first-child{
+					width: 25%;
+				}
+				.c-kk-con img:last-child{
+					margin-top: 5px;
+					width: 75%;
+	    			float: right;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="content scroll scroll-content" style="overflow-y: scroll;">
+			<div class="c-dianjianav">
+				<div class="c-dianjianav-top">
+					<img src="img/c-051.png" ui-sref="tabs.home"/>
+					<img src="img/c-052.png"/>
+				</div>
+				<div class="c-dianjianav-bottom">
+					<img src="img/c-049.png"/>
+					<img src="img/c-050.png"/>
+				</div>
+				<div class="c-dianjia-posi">
+					<img src="img/c-048.png"/>
+				</div>
+			</div>
+			<div class="c-dianpu-dizhi" ui-sref="tabs.ditu">
+				<img src="img/c-053.png"/>
+				<p>郑州市管城区金水区郑花路1号丹尼斯百货花园店B1楼近农业路</p>
+				<img src="img/c-054.png"/>
+			</div>
+			<div class="list c-cearlist-bottom">
+				<div class="item"><img src="img/c-055.png" class="c-tunagou-img"/><span class="c-tunagou-text">团购（3）</span></div>
+				<div class="c-kkk-list">
+					<img src="img/c-056.png"/>
+					<img src="img/c-044.png"/>
+				</div>
+				<div class="c-kkk-list">
+					<img src="img/c-056.png"/>
+					<img src="img/c-044.png"/>
+				</div>
+				<div class="c-chakan">查看其他1个团购</div>
+			</div>
+			<div class="list">
+				<div class="item">买家点评（910）</div>
+				<div class="c-pinglun" ui-sref="tabs.maijiapingjia">
+					<img src="img/c-057.png" class="c-pingxin"/>
+					<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+					<div class="c-shijing-con">
+						<img src="img/c-058.png"/>
+						<img src="img/c-059.png"/>
+						<img src="img/c-060.png"/>
+					</div>
+				</div>
+				<div class="c-pinglun" ui-sref="tabs.maijiapingjia">
+					<img src="img/c-061.png" class="c-pingxin"/>
+					<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+					<div class="c-shijing-con">
+						<img src="img/c-062.png"/>
+						<img src="img/c-063.png"/>
+						<img src="img/c-064.png"/>
+					</div>
+				</div>
+				<div class="c-chakan c-chakancear1" ui-sref="tabs.maijiapingjia">查看全部532条评价</div>
+				<div class="item item-divider"><img src="img/c-065.png" class="c-tunagou-img"/><span class="c-tunagou-text">附近团购</span></div>
+				<!--团购-->
+				<div class="c-kk-bottom" ui-sref="tabs.tuangou">
+					<div class="c-kk-con">
+						<img src="img/c-018.png"/> 
+						<img src="img/c-043.png"/>
+					</div>
+				</div>
+				<div class="c-kk-bottom" ui-sref="tabs.tuangou">
+					<div class="c-kk-con">
+						<img src="img/c-022.png"/>
+						<img src="img/c-044.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",[])
+		.controller("mian",["$scope",function($scope){
+			
+		}])
+	</script>
+</html>

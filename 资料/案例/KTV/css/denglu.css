@@ -1,0 +1,32 @@
+
+body{
+    background: url("../img/shouye/beijing.fw.png")no-repeat;
+}
+.list-no1{
+    margin-top: 200px;
+    border-radius: 30px;
+}
+.imsg-no1{
+    width: 30px;
+    height:30px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.card .item:last-child, .list-inset .item:last-child{
+    border-radius: 30px;
+}
+.list-no2{
+    border-radius: 30px;
+}
+.btn-no1{
+    border-radius: 30px;
+}
+.fl{
+    color: #ffffff;
+    margin-left: 20px;
+}
+.rl{
+    float: right;
+    color: #ffffff;
+    margin-right: 20px;
+}

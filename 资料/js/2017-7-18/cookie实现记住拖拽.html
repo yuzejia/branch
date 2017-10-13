@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #drag {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background: greenyellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div id="drag">我竟然Σ(っ°Д°;)っ被拖走了!</div>
+</body>
+<script>
+    function addCookie(name, value, iDay) {
+        var oDate = new Date();
+        console.log(oDate);
+        oDate.setDate(oDate.getDate() + iDay);
+        document.cookie = name + '=' + value + '; path=/; expires=' + oDate;
+        console.log(document.cookie)
+    }
+
+    //页面加载的时候调用getCookie方法
+    //获取cookie
+    function getCookie(name) {
+        var arr = document.cookie.split('; ');
+        for(var i = 0; i < arr.length; i++) {
+            var arr2 = arr[i].split('=');
+
+            return(arr2[0] == name) && arr2[1]
+        }
+        return '';
+    }
+
+    window.onload = function() {
+        var oDiv = document.getElementById('drag');
+        drag(oDiv);
+        var move_by = getCookie('move_cood');
+        if(move_by) {
+            var str = eval('(' + move_by + ')');
+            //移动时重新得到物体的距离
+            oDiv.style.left = str[0] + 'px';
+            oDiv.style.top = str[1] + 'px';
+        }
+
+        function drag(obj) {
+            //鼠标落下
+            obj.onmousedown = function(ev) {
+                var oEvent = ev || event; //解决兼容
+
+                var disX = oEvent.clientX - obj.offsetLeft,
+                    disY = oEvent.clientY - obj.offsetTop;
+                //鼠标移动
+                document.onmousemove = function(ev) {
+                    var oEvent = ev || event;
+                    //获取鼠标点击屏幕时的那个点，然后减去被拖拽物体距离左边的一个距离
+                    obj.style.left = oEvent.clientX - disX + 'px';
+                    obj.style.top = oEvent.clientY - disY + 'px';
+                };
+                //鼠标抬起
+                document.onmouseup = function() {
+                    document.onmousemove = null; //当鼠标弹起时不再移动
+                    document.onmouseup = null; //预防鼠标放上去的时候还会移动
+                    //releaseCapture 鼠标的捕获和释放
+                    obj.releaseCapture && obj.releaseCapture();
+
+                    //通过addCookie方法，把物体拖动停止的位置存在了cookie里面
+                    addCookie('move_cood', '[' + obj.offsetLeft + ',' + obj.offsetTop + ']', 10);
+
+                };
+                //捕获鼠标
+                obj.setCapture && obj.setCapture();
+                //阻止选中文字
+                return false;
+            };
+        }
+    };
+</script>
+
+</html>

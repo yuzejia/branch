@@ -1,0 +1,56 @@
+body{
+	font-family: "微软雅黑";
+	background: #eee;
+}
+.list{
+	margin-top: 8px;
+}
+.item{
+	padding: 8px;
+	
+}
+.item-thumbnail-left{
+	margin-bottom: 8px;
+}
+.item b{
+	color: purple;
+	border: 1px solid mediumpurple;
+	font-size: 20%;
+	margin: 0 5px;
+}
+.item p{
+	font-size: 12px;
+	color: #000;
+}
+.tit{
+	font-size: 14px;
+	color: #000;
+	
+}
+.top{
+	float: right;
+}
+.r{
+	padding-left: 90px;
+	
+}
+.m{
+	padding-left: 90px;
+}
+.mm{
+	font-size: 16px;
+}
+.ud{
+	color: #ccc;
+}
+.button-small{
+	float: right;
+	
+}
+
+.button.button-royal.button-outline{
+	color: palevioletred;
+}
+.bou{
+	color: #ccc;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>发布</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/qiantai02.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<style type="text/css">
+			
+		</style>	
+		
+	</head>
+	<body ng-controller="mycon">
+		<ion-header-bar class="jb">
+			<button class="button button-clear icon ion-ios-arrow-back"></button>
+			<h1 class="title fff">发布</h1>
+			<button class="button button-clear">发送</button>
+		</ion-header-bar>
+		<ion-content class="has-header scroll scroll-content gdt">
+			<div class="list">
+			  	<label class="item item-input">
+			    	<textarea class="sty" placeholder="在哪？时间？房间号？联系方式？给大家分享一下吧！" rows="6"></textarea>
+			  	</label>
+			  	<div class="item tjtp">
+			  		<img src="img/tjtu.fw.png" alt="" />
+			  		<p>添加图片</p>
+			  		<span>最多3张</span>
+			  	</div>
+			</div>
+		</ion-content>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var myapp=angular.module("myapp",["ionic"]);
+		myapp.controller("mycon",["$scope",function($scope){
+			
+		}]);
+	</script>
+</html>

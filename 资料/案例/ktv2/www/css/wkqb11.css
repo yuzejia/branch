@@ -1,0 +1,15 @@
+.tab-item{
+	height:50%;
+	max-width:94px;
+	margin-top:10px;
+	line-height:26px;
+}
+a.tab-item{
+	border:1px solid #663399;
+	border-radius:1px;
+	color:#663399;
+}
+a.tab-item:hover{
+	background:#663399;
+	color:#fff;
+}

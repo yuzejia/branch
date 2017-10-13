@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/wdj20.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<ion-header-bar >
+			<button class="button button-clear ">
+				<i class="icon ion-ios-arrow-back assertive"></i>
+			</button>
+			<h1 class="title">代价</h1>
+			<button class="button button-clear button-small button-assertive">
+				关闭
+			</button>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<ion-item style="padding:0  0 10px">
+					<img src="img/wdj20.png" alt="" class="full-image"/>
+					<p class="wdjp"><i class='icon ion-ios-person' style="font-size:25px;color:#ccc"></i></p>
+					<div class="text-center">
+						<h2>附近有<span class="assertive">5</span>位司机随时接驾</h2>
+						<p>最近司机据您<span class="assertive">845米</span></p>
+					</div>
+				</ion-item>
+				<ion-item class="item-icon-left item-icon-right">
+					<i class="icon ion-location assertive"></i>
+					农业路  国贸中心
+					<i class="icon ion-ios-close" style="color:#ddd"></i>
+				</ion-item>
+				<ion-item>
+					
+					<label class="item-input">
+						<i class="icon ion-ios-telephone balanced wico"></i>
+						<input type="text" placeholder="输入手机号"/>
+					</label>
+					
+				</ion-item>
+				<ion-item style="border:none;">
+					<a href="" class="wa">39元起步，查看服务价格</a>
+					<button class="button button-block button-stable">
+						呼叫司机
+					</button>
+				     <!--<label class="checkbox">
+				       <input type="checkbox">
+				     </label>-->
+				     <input type="checkbox" id="myCheck">
+    				<label for="myCheck"></label>
+				    <span class="wsp">已阅读并同意《使用规则与代驾服务协议》</span>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>

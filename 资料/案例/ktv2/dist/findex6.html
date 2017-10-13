@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<script src="js/jquery-1.10.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background: #F2F2F2;
+				font-family: "微软雅黑"
+			}
+			.f2c{
+				color: #FFFFFF;font-family: "微软雅黑"
+			}
+			.f6a img{
+				width: 30%;
+				margin-left: 35%;
+				margin-top: 20%;
+			}
+		</style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style=" background: linear-gradient(to bottom right,#e44bf1, #67329a); ">
+			<button class="button button-clear"><i class="icon  ion-ios-arrow-left f2c"></i></button>
+			<div class="title f2c">我要开店</div>
+
+		</ion-header-bar>
+		<ion-content>
+			<div class="f6a">
+				<img src="img/f6-1.png"/>
+				
+			</div>
+		</ion-content>
+
+	</body>
+	<script type="text/javascript">
+		angular.module("myApp",["ionic"])
+		.controller("myCon",function(){
+			
+		})
+	</script>
+</html>

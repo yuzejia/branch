@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>3条回复</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body class="bg-white" ng-controller="main">
+		<header class="mainH1Title text-center plr">
+			<div class="left_btn">
+				<a onclick="window.history.back()">
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>
+			</div>
+			<span>3</span>条回复
+			<div class="right_btn">
+				<!--<a>
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>-->
+			</div>
+		</header>
+		<div class="diary_text_con reply_con">
+			
+			<div class="ptb30 bg-white details_hui clearfix b-border2">
+				<div class="logo fl mr20">
+					<img src="img/logo.png" ng-src="{{argued.arguedHeadUrl}}"/>
+				</div>
+				<div class="right">
+					<div class="diary_text_con_footer clearfix">
+						<div class="font-size28 color-gray fl" bg-bind="argued.arguedUserName">
+							爱拼一定赢
+						</div>
+						<ul class="rigth fr color-gray font-size24">
+							<li><img src="img/list-pic-08.fw.png"/>  (<span>20</span>)</li>
+							<li><img src="img/list-pic-09.fw.png"/>  (<span ng-bind="argued.commentNum">5</span>)</li>
+						</ul>
+					</div>
+					<div class="time color-gray font-size24">
+						<span ng-bind="argued.commentDate">6</span>天前
+					</div>
+					<div class="money font-size28 color-default pt10 pb10">
+						支持了 <span ng-bind="argued.commentDetail">10000.00</span> 元。
+					</div>
+					<div class="details_reply">
+						<span>查看原项目</span>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="ptb30 bg-white reply clearfix b-border2">
+				<div class="logo fl mr20">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="right">
+					<div class="diary_text_con_footer clearfix">
+						<div class="font-size28 color-gray fl">
+							爱拼一定赢
+						</div>
+						<ul class="rigth fr color-gray font-size24">
+							<li><img src="img/list-pic-08.fw.png"/>  (<span>20</span>)</li>
+						</ul>
+					</div>
+					<div class="time color-gray font-size24">
+						6天前
+					</div>
+					<div class="reply-txt font-size24 color-default pt10 pb10">
+						回复<span>@爱拼一定赢</span>：评论内容全部显示
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="details_fixed bg-white pt10 pb10 pl20 pr20">
+				<input type="text" name="" id="" value="" placeholder="发表评论"/>
+				<span class="text-center color-white font-size24">发送</span>
+		</div>
+			
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+			app.controller('main',function($scope,$location,$http){
+				
+				//获取去字评论列表
+				var urls3 = https+'TPBitz/diarycomment/sublist';
+				
+				//提交评论
+				var urls4 = https+'TPBitz/diarycomment/addfundingsubcmt';
+				
+				//获取本地存储的id
+				var noticeId2 = "";
+		    	var ar = $location.absUrl().split('id=')[1];
+				if (ar) {
+				    noticeId2 = ar
+				}
+				console.log(noticeId2)  		//得到传过来的id
+				//获取子评论信息
+				$http({
+					url:urls3,
+					method:'POST',
+					params:{"contentId":noticeId2}
+				}).success(function(data){
+					
+					console.log(data)
+					
+					$scope.childrendatas = data.list;
+					
+					
+				}).error(function(){
+					
+				});
+				
+				//获取token 判断 是否存在 --不存在跳到登录页面
+				var iftokens = window.localStorage.getItem('toknes');
+				
+				if(iftokens == "" || iftokens == null){
+							fadeIn(show,400);
+							showtxt.innerHTML = "您还没有登录,请先登录";
+							setTimeout(function(){
+								fadeOut(show,400);
+								window.open("login.html","_self");
+							},1800);
+					}else{
+						//判断有没有捐款，没有不能评论
+						
+						
+						
+					};
+				
+			});
+	</script>
+</html>

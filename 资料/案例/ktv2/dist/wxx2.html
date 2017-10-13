@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/wxx2.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<div class="bar bar-header" style="background:#E44BF1">
+			<button class="button button-clear ">
+				<i class="icon ion-ios-arrow-back stable"></i>
+			</button>
+			<h1 class="title stable">信息详情</h1>
+		</div>
+		<div class="content has-header scroll scroll-content" style="overflow-y:scroll">
+			<div class="list">
+				<div class="item item-text-wrap" style="border:none">
+					<div class="item-avatar item-icon-right ">
+						<img src="img/wzt1.jpg" alt="" />
+						<h2>落月摇情、</h2>
+						6分钱
+					</div>
+					<p>晚上7点，酒吧一条街晚上7点，酒吧一条街晚上7点，酒吧一条街晚上7点</p>
+					<ul class="wul">
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+					</ul>	
+					<div style="clear:both;margin:5px"></div>
+					<!--<p class="wp1">已报名人<span class="wspan"><img src="img/wzt1.jpg" alt="" /><img src="img/wzt1.jpg" alt="" /><img src="img/wzt1.jpg" alt="" /><img src="img/wzt1.jpg" alt="" /><img src="img/wzt1.jpg" alt="" /></span></p>-->
+					
+				</div>
+				<div class="item item-divider" style="margin-top:20px"></div>
+				<div class="item ">
+					<span style="font-size:14px"><i class="icon ion-ios-people-outline assertive" style="font-size:20px;margin-right:3px"></i>已报名(2)</span>
+				</div>
+				<div class="item">
+					<div class="item-avatar item-icon-right ">
+						<img src="img/wzt1.jpg" alt="" />
+						<h2 style="line-height:50px;">失去方向的雨、</h2>
+						<p class="icon" style="font-size:16px"></i>8分钱</p>
+					</div>
+					<p>加我一个，晚上8点到，手机：1555555555</p>
+				</div>
+				<div class="item">
+					<div class="item-avatar item-icon-right ">
+						<img src="img/wzt1.jpg" alt="" />
+						<h2 style="line-height:50px;">会飞的雨、</h2>
+						<p class="icon" style="font-size:16px"></i>15分钱</p>
+					</div>
+					<p>加我一个，晚上8点到，手机：1555555555</p>
+				</div>
+				<br />
+				<br />
+				
+			</div>
+			<button class="button button-block" style="background: #663399">
+				<i class="icon ion-ios-personadd-outline stable">我要报名 </i>
+			</button>
+		</div>
+		<!--<div class="bar bar-footer" style="background:#E44BF1">-->
+			
+			<!--<h1 class="title stable">信息详情</h1>-->
+		<!--</div>-->
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+

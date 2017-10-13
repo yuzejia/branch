@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/ws1.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<ion-header-bar style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			
+			<div class="item-input-wrapper" >
+				 		<i class="icon ion-search placeholder-icon"></i>
+				 		<input type="text" placeholder="请输入商家名" width="30px" height="40px"/>				 		
+			 		</div>
+			<button class="button button-clear">
+				<i class="light">取消</i>
+			</button>
+		</ion-header-bar>
+		<ion-content class="text-center" >
+			<img src="img/ws7.fw.png" alt=""  width="80px" style="padding-top:50px">
+			<p style="color:#bbb">没有任何搜索历史</p>
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

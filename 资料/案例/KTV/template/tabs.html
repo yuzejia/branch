@@ -1,0 +1,27 @@
+<ion-tabs class="tabs-icon-top" ng-class="{'tabs-item-hide': $root.hideTabs}">
+    <ion-tab
+            icon-on="ion-ios-home"
+            icon-off="ion-ios-home-outline"
+        title="首页"
+        href="#/tabs/home"
+    >
+<ion-nav-view name="home"></ion-nav-view>
+    </ion-tab>
+    <ion-tab
+            icon-on="ion-android-search"
+            icon-off="ion-android-search"
+            title="消息"
+            href="#/tabs/information"
+    >
+        <ion-nav-view name="information"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab
+            icon-on="ion-email"
+            icon-off="ion-email"
+            title="个人中心"
+            href="#/tabs/user"
+    >
+        <ion-nav-view name="users"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

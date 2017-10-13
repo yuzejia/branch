@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app' >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <script src=js/ionic/ionic.min.js></script>
+    <script src="js/ionic/ionic.bundle.js" ></script>
+    <script src="js/app.js"></script>
+    <style>
+        .DDGL .bar-header{
+            color: #fffff;
+            background: url("images/shangjia/Top.fw.png")no-repeat 100%;
+        }
+        .DDGL .DGcont{
+            margin-top: 140px;
+        }
+        .DDGL .DGcont p{
+            color: #666;
+        }
+        .backE{
+            top:94px;
+            background: #eee;
+        }
+    </style>
+</header>
+<body>
+<div class="DDGL">
+    <div class="bar bar-header">
+        <button class="Fb button button-icon ion-ios-arrow-left" ng-click="goback()"></button>
+        <h1 class="Fb title">订单管理</h1>
+    </div>
+    <div class="tabs-striped tabs-top ">
+        <div class="tabs">
+            <a class="tab-item active" ui-sref="tabs.Order.quanbu({id:2,})"> 全部 </a>
+            <a class="tab-item" ui-sref="tabs.Order.quanbu">待验证 </a>
+            <a class="tab-item" ui-sref="tabs.Order.quanbu">已验证</a>
+            <a class="tab-item" ui-sref="tabs.Order.quanbu({id:1}) ">未完成</a>
+
+        </div>
+    </div>
+<ion-content class="backE">
+    <div ui-view="D2yanzheng">
+        <div class="text-center DGcont">
+            <img width="140px" src="images/shangjia/s17.png" alt="">
+            <p class="text-center">暂无相关订单，等待卖家下单~</p>
+        </div>
+    </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+</div>
+<script>
+    var App = angular.module("app",['ionic'])
+    App.controller("myCtrl",["$scope",function($scope){
+
+    }])
+</script>
+</body>
+</html>

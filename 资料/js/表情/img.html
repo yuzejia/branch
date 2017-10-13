@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input id="put" type="text">
+<div id="divs"></div>
+<div id="gif">
+
+</div>
+<script>
+    var gif = document.getElementById('gif');
+    var divs = document.getElementById('divs');
+    console.log(gif)
+   var li = document.createElement("li");
+    li.innerHTML = '<img src="face/0.gif">';
+    for(let i=0;i<=10;i++){
+        let li = document.createElement("li");
+        let as = "<"+"img src="+"face/"+i+".gif"+">";
+        li.innerHTML =as;
+        gif.appendChild(li);
+    };
+
+var put = document.getElementById('put');
+console.log(put);
+   var lis = gif.getElementsByTagName('li');
+    for(a in lis){
+        lis[a].onclick = function () {
+           var s = this.children;
+           console.log(s[0] )
+        }
+    }
+</script>
+</body>
+</html>

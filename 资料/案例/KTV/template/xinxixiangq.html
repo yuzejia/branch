@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>信息详情</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/qiantai02.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<style type="text/css">
+			
+		</style>	
+		
+	</head>
+	<body ng-controller="mycon">
+		<ion-header-bar class="bj">
+			<button class="button button-clear icon ion-ios-arrow-back"></button>
+			<h1 class="title fff">信息详情</h1>
+		</ion-header-bar>
+		<ion-content class="has-header has-footer scroll scroll-content gdt">
+			<ion-list>
+				<ion-item class="item-avatar it">
+					<img src="img/lyyq.png">
+					<h2>落月摇情、</h2>
+					<p>6分钟前</p>
+				</ion-item>
+				<ion-item class="it2">
+					<div class="item-body padd1">晚上7点，酒吧一条街麦嘎KTV808房间，有神秘惊喜，不见不散！我的微信号：wechat0000。</div>
+					<div class="pic2">
+						<img src="img/tu1.png" alt="" />
+						<img src="img/tu2.png" alt="" />
+						<img src="img/tu3.png" alt="" />
+					</div>
+				</ion-item>
+				<ion-item class="marg">
+					<img src="img/ybm2.fw.png" alt="" />
+					<span>已报名（2）</span>
+				</ion-item>
+				<ion-item class="hs">
+					<div class="item-avatar pding">
+				      	<img src="img/sqdy.fw.png">
+				      	<span>8分钟前</span>
+				      	<h2>失去方向的鱼</h2>
+				    </div>
+				    <p>加我一个!晚上8点左右会到！手机号：15032045678</p> 
+				</ion-item>
+				<ion-item class="hs">
+					<div class="item-avatar pding">
+				      	<img src="img/hfdy.fw.png">
+				      	<span>15分前</span>
+				      	<h2>会飞的鱼</h2>
+				    </div>
+				    <p>联系我！微信号：15863255665</p> 
+				</ion-item>
+			</ion-list>
+		</ion-content>
+		<ion-footer-bar class="dbj">
+			<h1 class="title fff"><i class="icon ion-person-add"></i> 我要报名</h1>
+		</ion-footer-bar>
+		
+		
+	</body>
+	<script type="text/javascript">
+		var myapp=angular.module("myapp",["ionic"]);
+		myapp.controller("mycon",["$scope",function($scope){
+			
+		}]);
+	</script>
+</html>

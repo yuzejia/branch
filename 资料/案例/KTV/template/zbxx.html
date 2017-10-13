@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8" />
+		<title>招标信息</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zbxx.css"/>
+		<script src="js/ionic.bundle.min.js"></script>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar class="bar-royal">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back"></i>
+			</button>
+			<h2 class="title">招标信息</h2>
+			<button class="button button-clear">
+				提交
+			</button>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<ion-item class="item-divider">
+					<ion-tabs class="tab-top tabs-stable">
+						<a href="#" class="tab-item">音响</a>
+						<a href="#" class="tab-item">麦克风</a>
+						<a href="#" class="tab-item">灯光</a>
+						<a href="#" class="tab-item">酒水</a>
+					</ion-tabs>
+				</ion-item>
+				<a class="item item-thumbnail-left" href="#">
+      				<img src="img/z1.png">
+      				<b>碧海蓝天KTV灯光工程招标<span>2015-08-14</span></b>
+      				<p>
+      					河南省郑州市碧海蓝天KTV灯光工程<br>招标。
+      					<button class="button button-royal button-small">
+      						<i class="ion-ribbon-b"></i>
+      						竞标
+      					</button>
+      				</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/z2.png">
+      				<b>麦克风KTV设备招标<span>2015-08-14</span></b>
+      				<p>
+      					郑州市金水区酒吧一条街，麦克风KTV整<br>修，所有KTV设备招标。
+      					<button class="button button-royal button-small">
+      						<i class="ion-ribbon-b"></i>
+      						竞标
+      					</button>
+      				</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/z3.png">
+      				<b>上海量贩式KTV招标<span>2015-08-14</span></b>
+      				<p>
+      					本公司现筹建一将近2000平方的大型量贩式KTV，<br>包厢数量为65个。
+      					<button class="button button-royal button-small">
+      						<i class="ion-ribbon-b"></i>
+      						竞标
+      					</button>
+      				</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/z4.png">
+      				<b>冠雄娱乐<span>2015-08-14</span></b>
+      				<p>
+      					我是深圳冠雄灯光音响工程公司的，我们做专<br>业音响。
+      					<button class="button button-royal button-small">
+      						<i class="ion-ribbon-b"></i>
+      						竞标
+      					</button>
+      				</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/z5.png">
+      				<b>怎样在KTV里运用K歌技巧<span>2015-08-14</span></b>
+      				<p>
+      					要想唱一首歌曲，首先唱歌的人一定要做到<br>声情并茂。
+      					<button class="button button-royal button-small">
+      						<i class="ion-ribbon-b"></i>
+      						竞标
+      					</button>
+      				</p>
+    			</a>
+			</ion-list>
+		</ion-content>
+		<script type="text/javascript">
+			var myApp = angular.module("myApp", ["ionic"]);
+			myApp.controller("myCon", ["$scope", function($scope) {
+
+			}]);
+		</script>
+	</body>
+</html>

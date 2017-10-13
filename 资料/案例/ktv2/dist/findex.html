@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<script src="js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background: #F2F2F2;
+				font-family: "微软雅黑"
+			}
+			#fb{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				z-index: -99;
+			}
+			.fbar{
+				background: rgba(255,255,0,0);
+				color: #FFFFFF;
+			}
+			.fbg{
+				background: rgba(255,255,0,.1);
+				color: #FFFFFF;
+				position: relative;
+				bottom: 0;
+			}
+			.fbg .col img{
+				width: 20px;
+			}
+			.ff{
+				color: #FFFFFF
+			} 
+			.fimg{
+				text-align: center;
+				width: 100%;
+				
+			}
+			.fimg img{
+				position: relative;
+				top: 14%;
+			}
+			.fHH{
+
+				padding-top: 14%;
+			}
+			.f1iw{
+				width: 25px;
+			}
+			.f1iw2{
+				width: 40px;
+			}
+			.fpt{
+				padding-top: 20px;
+			}
+			/*.tab-item{
+				overflow: visible;
+				font-family: "微软雅黑"
+			}*/
+			.fmb{
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body ng-controller="myCon">
+		<div class="bar bar-header fbar">
+			<button class="button button-clear" ui-sref="tabs.yonghu" ><i class="icon ion-ios-arrow-left ff" ></i> </button>
+			<div class="title">个人中心</div>
+			<button class="button button-clear"><img src="img/f1.png"style="width: 20px;"/></button>
+		</div>
+		<div class="content overflow-scroll">
+			<div class="fimg fHH fmb">
+				<img src="img/f1-1.fw.png" id="fb"/>
+					<img src="img/f1-2.fw.png"style="width: 55px;"/><br />
+				<p class="ff">我是歌手</p>
+				<div class="row fbg">
+					<div class="col">
+						<img src="img/f1-3.fw.png" alt="" />
+						<span>成为团购商家</span>
+					</div>
+					<div class="col">
+						<img src="img/f1-4.fw.png"/>
+						<span>成为产品卖家</span>
+					</div>
+				</div>
+			</div>
+			<div class="list fmb">
+				<a class="item item-icon-left item-icon-right" href="#">
+				    <i class="icon"><img src="img/f1-5.fw.png" class="f1iw" alt="" /></i>
+				    团购订单
+				    <span class="item-note">
+				      查看全部订单
+				    </span>
+				    <i class="icon button-small ion-ios-arrow-right"></i>
+				 </a>
+
+				<div class="row fimg fpt fmb"style="background: #FFFFFF;">
+					<a href="" class="col-33"><img src="img/f1-6.fw.png" alt="" class="f1iw2"/></a>
+					<a href="" class="col-33"><img src="img/f1-7.fw.png" alt=""  class="f1iw2"/></a>
+					<a href="" class="col-33"><img src="img/f1-8.fw.png" alt=""  class="f1iw2"/></a>
+				</div>
+				<div class="list">
+				<a class="item item-icon-left item-icon-right" href="#">
+				    <i class="icon"><img src="img/f1-5.fw.png" class="f1iw" alt="" /></i>
+				    商品订单
+				    <span class="item-note">
+				      查看全部订单
+				    </span>
+				    <i class="icon button-small ion-ios-arrow-right"></i>
+				 </a>
+
+				<div class="row fimg fpt fmb"style="background: #FFFFFF;">
+					<a href="" class="col-33"><img src="img/f1-6.fw.png" alt="" class="f1iw2"/></a>
+					<a href="" class="col-33"><img src="img/f1-20.png" alt=""  style="width: 43px;"/></a>
+					<a href="" class="col-33"><img src="img/f1-8.fw.png" alt=""  class="f1iw2"/></a>
+				</div>
+				<div class="list">
+					<a class="item item-icon-left item item-icon-right" href="#">
+					    <i class="icon"><img src="img/f1-10.png" alt="" class="f1iw"/></i>
+					    我的卡券
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    <a class="item item-icon-left item item-icon-right" href="#">
+					    <i class="icon"><img src="img/f1-9.fw.png" alt="" class="f1iw"/></i>
+					    我的约K
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    <a class="item item-icon-left item item-icon-right" href="#">
+					    <i class="icon"><img src="img/f1-11.png" alt="" class="f1iw"/></i>
+					    我的收藏
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    <a class="item item-icon-left item item-icon-right" href="#">
+					    <i class="icon"><img src="img/f1-12.png" alt="" class="f1iw"/></i>
+					    我的头条
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    <a class="item item-icon-left item item-icon-right fmb" href="#">
+					    <i class="icon"><img src="img/f1-13.png" alt="" class="f1iw"/></i>
+					    我的关注
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    <div class="list">
+				    	<a class="item item-icon-left item item-icon-right" href="#">
+					    <i class="icon"><img src="img/f1-14.png" alt="" class="f1iw"/></i>
+					    收货地址
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    <a class="item item-icon-left item item-icon-right" href="#">
+					    <i class="icon"><img src="img/f1-15.png" alt="" class="f1iw"/></i>
+					    设置
+					    <i class="icon button-small ion-ios-arrow-right"></i>
+				    </a>
+				    </div>
+				</div>
+				<!--<div class="tabs tabs-icon-top"style="padding-top: 10px;position: fixed;">
+				  <a class="tab-item">
+				    <i class="icon "><img src="img/f1-16.fw.png"class="f1iw" alt="" /></i>
+				    首页
+				  </a>
+				  <a class="tab-item">
+				    <i class="icon"><img src="img/f1-17.fw.png"class="f1iw"/></i>
+				    附近
+				  </a>
+				  <a class="tab-item">
+				    <i class="icon"><img src="img/f1-18.fw.png"class="f1iw"/></i>
+				    购物车
+				  </a>
+				  <a class="tab-item">
+				    <i class="icon "><img src="img/f1-19.fw.png"class="f1iw"/></i>
+				    个人中心
+				  </a>
+				</div>-->
+				<div style="height: 40px;"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		angular.module("myApp",["ionic"])
+		.controller("myCon",function(){
+			
+		})
+	</script>
+</html>

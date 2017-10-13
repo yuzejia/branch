@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>搜索</title>
+		<!--<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>-->
+		<style type="text/css">
+		*{
+			font-family: "微软雅黑";
+		}
+			body{
+				background: #F2F2F2;
+			}
+			.c-posinavbg{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: -99;
+				width: 100%;
+				height: 100%;
+			}
+			.c-posinavbg img{
+				width: 100%;
+				height: 100%;
+			}
+			.c-nav-picsize{
+				width: 24px;
+   				/*margin-top: 6px;*/
+   				float: left;
+   				margin-left: 5px;
+			}
+			.c-navsapn{
+				color: #FFFFFF;
+				display: inline-block;
+				margin-top: 5px;
+				font-size: 18px;
+				margin-left: 5px;
+			}
+			.c-dizhicolor{
+				color: #FFFFFF;
+				margin-right: 10px;
+				font-size: 20px;
+			}
+			.bar.item-input-inset .c-inputopcity{
+				background: rgba(255,255,255,0.4);
+				width: 50%;
+				margin-left: 10px;
+			}
+			.button-clear.button-clear{
+				color: #FFFFFF;
+			}
+			.c-tuangou-color{
+				color: #999999;
+				text-align: center;
+				border-bottom: 1px solid #E1E1E1;
+				background: #FFFFFF;
+				z-index: 10;
+				
+			}
+			.c-tuangou-color span{
+				width: 100%;
+				display: inline-block;
+				border-left: 1px solid #E1E1E1;
+				border-right: 1px solid #E1E1E1;
+			}
+			/*.c-showtunangou1{
+				display: none;
+			}*/
+			.c-zhecheng{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.5);
+				z-index: -1;
+			}
+			.c-saixuan-posi{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.c-kk-bottom{
+				padding: 10px;
+				box-sizing: border-box;
+				background: #fff;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-bottom: 8px;
+			}
+			.c-kk-con img:first-child{
+				width: 25%;
+			}
+			.c-kk-con img:last-child{
+				margin-top: 5px;
+				width: 75%;
+    			float: right;
+			}
+			.c-index{
+				z-index: -5;
+			}
+		</style>
+	</head>
+	<body ng-controller="mian">
+			<div class="bar bar-header">
+				<div class="c-posinavbg"><img src="img/c-027.png"/></div>
+				  <button class="button button-clear icon ion-ios-arrow-left" ui-sref="tabs.home"></button>
+				  <div class="title c-dizhicolor">皇声音响 </div>
+				  <!--<button class="button button-clear">取消</button>-->
+			</div>
+			<ion-content class="has-header">
+				<div class="row c-tuangou-color">
+					<div class="col col-33">全部</div>
+					<div class="col col-33"><span ng-click="istrues()">附近</span></div>
+					<div class="col col-33" ng-click="istrues1()">智能排序</div>
+				</div>
+				<div ng-show="isshow" class="c-saixuan-posi">
+						<div class="item">全部</div>
+						<div class="item">高薪技术开发区</div>
+						<div class="item">二七区</div>
+						<div class="item">中原区</div>
+						<div class="item">新郑市</div>
+						<div class="item">金水区</div>
+						<div class="c-zhecheng" ng-show="isshow"></div>
+
+				</div>
+				<div ng-show="isshow1" class="c-saixuan-posi">
+						<div class="item">好评优先</div>
+						<div class="item">距离最近</div>
+						<div class="item">人气最高</div>
+   						<div class="c-zhecheng" ng-show="isshow1"></div>
+						
+				</div>
+				<div class="list c-index">
+					<div class="c-kk-bottom" ui-sref="tabs.taungouxaingqing">
+						<div class="c-kk-con">
+							<img src="img/c-018.png"/> 
+							<img src="img/c-043.png"/>
+						</div>
+					</div>
+					<div class="c-kk-bottom" ui-sref="tabs.taungouxaingqing" >
+						<div class="c-kk-con">
+							<img src="img/c-022.png"/> 
+							<img src="img/c-044.png"/>
+						</div>
+					</div>
+					<div class="c-kk-bottom" ui-sref="tabs.taungouxaingqing">
+						<div class="c-kk-con">
+							<img src="img/c-021.png"/> 
+							<img src="img/c-043.png"/>
+						</div>
+					</div>
+					<div class="c-kk-bottom" ui-sref="tabs.taungouxaingqing">
+						<div class="c-kk-con">
+							<img src="img/c-022.png"/> 
+							<img src="img/c-044.png"/>
+						</div>
+					</div>
+					<div class="c-kk-bottom" ui-sref="tabs.taungouxaingqing">
+						<div class="c-kk-con">
+							<img src="img/c-018.png"/> 
+							<img src="img/c-043.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="c-kk-bottom" ui-sref="tabs.taungouxaingqing">
+						<div class="c-kk-con">
+							<img src="img/c-021.png"/> 
+							<img src="img/c-043.png"/>
+						</div>
+					</div>
+   			</ion-content>
+   			
+	</body>
+	<script type="text/javascript">
+//		angular.module("myapp",['ionic'])
+//		.controller("mian",["$scope",function($scope){
+//			$scope.isshow = false;
+//			$scope.isshow1 = false;
+//			
+//			$scope.istrues = function(){
+//				$scope.isshow = !$scope.isshow;
+//				if($scope.isshow1){
+//					$scope.isshow = false;
+//				}
+//			}
+//			
+//			$scope.istrues1 = function(){
+//				$scope.isshow1 = !$scope.isshow1;
+//				if($scope.isshow){
+//					$scope.isshow1 = false;
+//				}
+//			}
+//		}])
+		
+	</script>
+</html>

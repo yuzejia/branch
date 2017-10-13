@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<script src="js/jquery-1.10.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background: #F2F2F2;
+				font-family: "微软雅黑"
+			}
+			.f2c{
+				color: #FFFFFF;font-family: "微软雅黑"
+			}
+			.f4in{
+				position: relative;
+				right: 45px;
+				color: #C0C0C0;
+			}
+		</style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style=" background: linear-gradient(to bottom right,#e44bf1, #67329a); ">
+			<button class="button button-clear"><i class="icon  ion-ios-arrow-left f2c"></i></button>
+			<div class="title f2c">修改密码</div>
+			<button class="button button-clear "><span class="f2c">确认</span></button>
+		</ion-header-bar>
+		<ion-content>
+			<div class="list">
+			  <label class="item item-input">
+			    <span class="input-label">当前密码</span>
+			    <input type="text">
+			    <span class="f4in">点击输入</span>
+			  </label>
+			  <label class="item item-input">
+			    <span class="input-label">新密码</span>
+			    <input type="password">
+			    	<span class="f4in">点击输入</span>
+			  </label>
+			  <label class="item item-input">
+			    <span class="input-label">确认新密码</span>
+			    <input type="password">
+			    	<span class="f4in" style="right: 45px;">点击输入</span>
+			  </label>
+			</div>
+		</ion-content>
+
+	</body>
+	<script type="text/javascript">
+		angular.module("myApp",["ionic"])
+		.controller("myCon",function(){
+			
+		})
+	</script>
+</html>

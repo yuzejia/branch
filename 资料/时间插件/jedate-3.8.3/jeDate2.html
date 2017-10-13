@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>jeDate日期控件</title>
+    <script type="text/javascript" src="jedate/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="jedate/jquery.jedate.js"></script>
+    <link type="text/css" rel="stylesheet" href="jedate/skin/jedate.css">
+    <style>
+        .bodys{ padding:50px 0 0 50px;}
+        .datainp{ width:200px; height:30px; border:1px #A5D2EC solid;}
+        .datep{ margin-bottom:40px; line-height:24px; margin-right:15px;}
+    </style>
+</head>
+
+<body class="bodys">
+<div style="width:100%; margin-bottom:50px; overflow:hidden;">
+
+    <ul>
+        <!--<input type="checkbox" formatval="YYYY-MM-DD" onclick="thatcheckbox(this)">-->
+
+
+        <li class="datep"><input class="datainp wicon" id="date05" type="text" placeholder="hh:mm:ss"  readonly></li>
+
+    </ul>
+
+</div>
+
+<script type="text/javascript">
+
+    $("#date05").jeDate({
+        isinitVal:true,
+        //festival:true,
+        //ishmsVal:false,
+        minDate: '2016-06-16 23:59:59',
+        maxDate: $.nowDate({DD:0}),
+        format:"hh:mm:ss",
+        zIndex:3000,
+    })
+
+
+
+
+</script>
+
+</body>
+</html>

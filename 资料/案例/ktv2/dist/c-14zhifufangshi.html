@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="main">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>城市列表</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+		body{
+			background: #F2F2F2;
+		}
+			.c-zhimuposition{
+				position: fixed;
+				right: 2px;
+				top:55px;
+				width: 15px;
+				height: 100%;
+				z-index: 99;
+			}
+			.c-navs{
+				width: 15px;
+				height: 3.5%;
+				text-align: center;
+			}
+			
+			.c-nav-posibg{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -99;
+			}
+			.c-nav-posibg img{
+				width: 100%;
+				height: 100%;
+			}
+			.button-clear.button-clear{
+				color:#FFFFFF;
+			}
+			
+			.c-addcolor{
+				color: #663399;
+				font-size: 20px;
+			}
+			.c-navtextcolor{
+				color:#FFFFFF;
+				font-size: 18px;
+				margin: 0 auto;
+				line-height: 40px;
+			}
+	
+			.c-jiage-dingdan1{
+				margin-top: 8px;
+			}
+			.c-jiage-dingdan1 span{
+				float: right;
+				color: #663399;
+				font-size: 20px;
+			}
+			.c-button-con{
+				padding-left:20px ;
+				padding-right:20px ;
+			}
+			.button.c-tijiaobtn{
+				color: #FFFFFF;
+				background: #663399;
+				border-radius: 5px;
+				margin-top: 25px;
+			}
+			.c-zhifufangshi{
+				width: 100%;
+					
+			}
+			.c-zhifufangshi img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<ion-header-bar>
+			<button class="button button-clear icon ion-ios-arrow-left"></button>
+			<div class="c-navtextcolor">
+				确认订单
+			</div>
+			<div class="c-nav-posibg"><img src="img/c-027.png"/></div>
+		</ion-header-bar>
+		
+		<ion-content class="content has-header scroll scroll-content" style="overflow-y: scroll;">
+				
+				<div class="item c-jiage-dingdan1">麦嘎量贩式KTV158元套餐欢唱时段2选1 <span>￥152</span></div>
+				
+				<div class="item item-divider">选择支付方式</div>
+				<div class="c-zhifufangshi">
+					<img src="img/c-089.png"/>
+				</div>
+				<div class="c-button-con">
+						<button class="button button-block button-royal c-tijiaobtn">确认支付</button>
+				</div>
+			
+		</ion-content>
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",["ionic"])
+		.controller("main",["$scope",function($scope){
+		
+		}])
+	</script>
+</html>

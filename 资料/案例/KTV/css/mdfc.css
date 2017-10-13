@@ -1,0 +1,10 @@
+body{
+	font-family: "微软雅黑";
+	background: #eee;
+}
+.list{
+	margin-top: 10px;
+}
+.item p{
+	white-space: normal;
+}

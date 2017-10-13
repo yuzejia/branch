@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        #input{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        function setCookie(name, value, iDay){
+            var oDate=new Date();
+
+            //用来设置过期时间用的，获取当前时间加上传进来的iDay就是过期时间
+            oDate.setDate(oDate.getDate()+iDay);
+            document.cookie=name+'='+value+';expires='+oDate;
+
+        };
+        function getCookie(name){
+            //多个cookie值是以; 分隔的，用split把cookie分割开并赋值给数组
+            var arr=document.cookie.split('; ');
+
+            for(var i=0;i<arr[i].length;i++){
+                //原来割好的数组是：user=simon，再用split('=')分割成：user simon 这样可以通过arr2[0] arr2[1]来分别获取user和simon
+                var arr2=arr[i].split('=');
+
+                //如果数组的属性名等于传进来的name
+                if(arr2[0]==name){
+                    //就返回属性名对应的值
+                    return arr2[1];
+                }
+                return ''; //没找到就返回空
+            }
+        };
+        function removeCookie(name){
+            //-1就是告诉系统已经过期，系统就会立刻去删除cookie
+            setCookie(name, 1, -1);
+        };
+        window.onload=function(){
+            var form=document.getElementById('form');
+            var user=document.getElementsByName('user')[0];
+            form.onsubmit=function(){
+                setCookie('user', user.value, 14);
+            };
+            user.value=getCookie('user');
+        };
+    </script>
+</head>
+<body>
+<form action="" id="form">
+    <textarea type="text" name="user" id="input"></textarea><br />
+    <input type="submit" value="发表" />
+</form>
+</body>
+</html>

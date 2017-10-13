@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>爱心筹详情</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body ng-controller="main">
+		
+		<header class="mainH1Title text-center plr">
+			<div class="left_btn">
+				<a onclick="window.history.back()">
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>
+			</div>
+			爱心筹详情
+			<div class="right_btn">
+				<!--<a>
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>-->
+			</div>
+		</header>
+		
+		<div class="derails_con" loader>
+			
+			<div class="ptb30 bg-white mb20">
+				
+				<div class="mainH2Title mb30 font-weight" ng-bind="items.crowdTitle">
+					求爱心人士救救我的孩子！！！
+				</div>
+				<p class="color-gray font-size24" bg-bind="items.crowdState">筹款中</p>
+				
+				<div class="aixin_jin_du pt30 progressbar1" progress>
+					
+						<div class="fl progressbar mt15">
+							<span class="progressbar_con fl"></span>
+						</div>
+						<div class="fr clearfix"><span class="fl">{{progress}}</span><span class="ml10 mr10">%</span></div>
+				</div>
+				
+				
+				<div class="color-gray font-size24 fl">目标金额<span class="color-blue" ng-bind="items.crowdMoney">80000</span>元</div>
+				<ul class="derails_list clearfix">
+					<li>
+						<h1><span ng-bind="items.existingMoney">40000</span>元</h1>
+						<p>已筹金额</p>
+					</li>
+					<li>
+						<h1><span ng-bind="items.loveHelpCount">961</span>次</h1>
+						<p>爱心帮助</p>
+					</li>
+					<li>
+						<h1><span ng-bind="items.crowdDeadline">39</span>天</h1>
+						<p>剩余天数</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="derails_title ptb30 bg-white font-size32 color-default font-weight">
+				<span></span>项目详情
+			</div>
+			<div class="ptb30 derails_text bg-white font-size28 clearfix mb20">
+				<span ng-bind="items.crowdDetail">
+					我叫海春宏，家住陕西省宝鸡市眉县宁渠村，我女儿海甜甜年前因高烧不退，在西安儿童医院确诊为“慢性活动性EB病毒”，由于西安儿童医院的医疗设备无法治疗，医生建议我们到北京儿童医院治疗，我跟妻子就带着女儿来到了首都儿研所。3月份办理相关住院手续治疗，起初打抗病毒药剂给孩子治疗，一个多月病情没有好转，治疗方案更改为化疗VP16，以噬血症的治疗方案治疗，到7月份仍然没有好转，病情恶化，除慢性活动性EB病毒，增加了一个系统性淋巴瘤，医生建议造血干细胞移植，否则孩子随时有生命危险。<br>
+					跟医生了解了移植情况以及治疗费用,一直需要30万,后续治疗需要20万,对于一个农村家庭,这简直是一个天文数字！年迈的父母依靠种地，我跟妻子在外打工，一年收入5、6万，这让我们想为孩子治病却力不从心，只好向亲朋好友借钱。东拼西揍之后，在8月24日让孩子进入移植仓治疗。进仓之前孩子一直在发烧，经过10多天的控制,9月14日，输干细胞移植。没多久，因大量用药，孩子肠粘膜损伤大量出血，经过两天的抢救，我们再次从死神手里夺回我们的宝贝。但是因肠粘膜大量出血，紧接着就是拉肚子便血，在这种情况下，每天的治疗费用好几千，治疗至今已经花了80多万，欠医院25万了，我们实在找不到钱给孩子治疗了。走投无路之下，只能向各界爱心人士、爱心企业求助，求你们帮帮甜甜，给孩子一个活下来的机会！
+				</span>
+		
+				<ul class="clearfix mt30 ">
+					<li ng-repeat="pic in items.imageDetails">
+						<img src="img/pic01.png" ng-src="{{pic.url}}"/>
+					</li>
+				</ul>
+			</div>
+			<div class="derails_title ptb30 bg-white font-size32 color-default font-weight">
+				<span></span>发布人
+			</div>
+			<div class="ptb30 bg-white mb20">
+				
+				<div class="derails_publisher clearfix">
+					
+					<div class="publisher_logo fl mr20">
+						<img src="img/logo.png" ng-src="{{items.headUrl}}"/>
+					</div>
+					
+					<div class="publisher_name font-size28 color-default" ng-bind="items.userName">
+						向日葵的生命
+					</div>
+				</div>
+				
+				<div class="derails_statement_text mt20 mb20">
+					<div class="position"></div>
+					<h1>承诺声明</h1>
+					<div class="font-size24 color-gray">
+						承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内容,承诺书内承诺书内容.
+					</div>
+				</div>
+			</div>
+			<div class="derails_title ptb30 bg-white font-size32 color-default font-weight">
+				<span></span>证明资料
+			</div>
+			<div class="ptb30 bg-white pb_none mb20">
+				<div class="derails_suffer font-size28 color-default clearfix mb20">
+					<h1>受助人(患者)：<span ng-bind="items.oauthpatientName">海甜甜</span></h1>
+					
+					<p><img src="img/pic04.png" class="puc"/>身份证明已提交</p>
+					
+					<span class="color-red fl font-size24" ng-if="falg" ng-bind="items.patientAuthState"></span>
+					
+				</div>
+				<div class="derails_suffer font-size28 color-default clearfix mb20">
+					<h1>所患疾病：<span ng-bind="items.oauthpatientDisease">食管恶性肿瘤</span></h1>
+					<p><img src="img/pic04.png" class="puc2"/>诊断证明已提交</p>
+					<p><img src="img/pic04.png" class="puc2"/>诊断医院：<span ng-bind="items.hospitalName">首都儿科研究所</span></p>
+				</div>
+				<div class="derails_suffer derails_suffer-no font-size28 color-default clearfix">
+					<h1>收款人：<span ng-bind="items.oauthpayeeName">海春宏</span>(<span ng-bind="items.relationName">父女</span>)</h1>
+					
+					<p><img src="img/pic05.png" class="puc3"/>身份证明已提交</p>
+					
+					<span class="color-red fl font-size24" ng-if="flag" ng-bind="items.payeeAuthState"></span>
+				</div>
+			</div>
+			<div class="ptb30 derails_support bg-white clearfix">
+				<p class="font-size32 mb20 color-default">已有<span ng-bind="items.verifyDetail.verifyCount">46</span>人为他证实</p>
+				<div class="derails_logo_con">
+					
+					<ul class="clearfix fl">
+						
+						<li ng-repeat="picc in items.verifyDetail.headUrlList | limitTo : 6" >
+							<img src="img/logo.png" ng-src="{{picc}}"/>
+						</li>
+						
+					</ul>
+					<div class="derails_more clearfix fr">
+						
+						<a href="aixin-Personage.html?id={{items.crowdId}}">
+							<div class="derails_more_con fl pt25 mr20">
+								<img src="img/pic06.png"/>
+							</div>
+							<div class="derails_more_con1 pt25 fr">
+								<img src="img/icon/suppot-right.fw.png"/>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="ptb30 bg-white mb20">
+				<a href="confirm.html">
+					<div class="derails_btn text-center color-white">
+						我要为Ta证实
+					</div>
+				</a>
+			</div>
+			
+			<div class="derails_title ptb30 bg-white font-size32 color-default font-weight">
+				<span></span>筹款动态
+			</div>
+			
+			<div class="ptb30 bg-white mb20">
+				<div class="clearfix mb25">
+					<div class="personage_logo_left fl mr20">
+							<img src="img/logo.png" ng-src="{{items.headUrl}}">
+					</div>
+					
+					<div class="derails_dynamic font-size24">
+							<h2 class="mb10 color-default"><span ng-bind="items.userName">向日葵的生命   </span> 发起筹款</h2>
+							<h4 class="color-gray"><span ng-bind="">4</span>天前</h4>
+					</div>
+				</div>
+				<div class="derails_dynamic_text color-default font-size28 clearfix">
+					<div class="personage_logo_left fl mr15 pb10">
+					</div>
+					<p>目标金额: <span ng-bind="items.crowdMoney"> 80000 </span> 元 </p>
+					<p>资金用途: <span> 作医疗费用 </span> </p>
+				</div>
+			</div>
+			
+			<div class="derails_title ptb30 bg-white font-size32 color-default font-weight">
+				<span></span>帮助Ta的人
+			</div>
+			
+			<div class="ptb30 bg-white b-border" ng-repeat="i in fundinglist | limitTo:ss" >
+				<div class="clearfix mb20">
+					<div class="personage_logo_left fl mr20">
+							<img src="img/logo.png" ng-src="{{i.headUrl}}">
+					</div>
+					<div class="derails_Goodperson font-size24 color-gray">
+							<h2 class="mb10" ng-bind="i.userName">爱拼一定赢 </h2>
+							<h4 ><span ng-bind="i.commentDate"></span>天前</h4>
+							
+							
+							<div class="derails_position_pic">
+									<img src="img/pic07.png" ng-click="derails_positn_if()"/>
+							</div>
+							
+					</div>
+				</div>
+				
+				<div class="derails_Goodperson_text color-default font-size28 clearfix" repeat-finish>
+					<!--<div class="personage_logo_left fl mr15 pb10"></div>--> 
+					<p>支持了 <span ng-bind="i.commentDetail"> 100.0 </span> 元 </p>
+					
+					<div class="hui mt10">
+						<a href="reply-money.html?id={{i.commentId}}">
+							<span>
+								共<i ng-bind="i.commentNum"></i>条回复 >
+							</span>
+						</a>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="text-center color-gray mb20 mt20" ng-show='falg2'>Loading data...</div>
+			
+		</div>
+		
+		<!--分享弹出层-->
+		<div class="tan">
+				<div class="tan_bottom">
+					<ul class="mb20 clearfix">
+						<li><img src="img/icon/weixin.fw.png"/><br>微信</li>
+						<li><img src="img/icon/fnqun.fw.png"/><br>朋友圈</li>
+						<li><img src="img/icon/sain.fw.png"/><br>新浪微博</li>
+					</ul>
+					<ul class="mb30 clearfix">
+						<li><img src="img/icon/qq.fw.png"/><br>QQ</li>
+						<li><img src="img/icon/kj.fw.png"/><br>QQ空间</li>
+						<li><img src="img/icon/fx.fw.png"/><br>复制链接</li>
+					</ul>
+					<div class="text-center">
+						<img src="img/icon/no-btn.fw.png" class="no-btn_pic" ng-click="hidemodal($evet)"/>
+					</div>
+				</div>
+			</div>
+			
+			
+		<!--定位-->
+		<div class="derails-fixed bg-white details_txt" ng-show="myshow">
+			<div class="share_pic" ng-click="show()">
+				<img src="img/pic08.png"/>
+				<p>分享</p>
+			</div>
+			<a href="support.html">
+				<div class="bth color-white fr text-center font-size32">
+					帮助Ta
+				</div>
+			</a>
+		</div>
+		
+		
+		<!--评论框-->
+		<div class="details_fixed bg-white pt10 pb10 pl20 pr20 " ng-show="myshow1">
+				<input type="text" name="" id="" value="" placeholder="发表评论" ng-model="datas"/>
+				<span class="text-center color-white font-size24" ng-click='godatas()'>发送</span>
+		</div>
+		<!--透明层 -->
+		<div class="opcity" ng-click="opshow()">
+		</div>
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+		
+		    app.controller('main',function ($scope,$location,$http) {
+		    	
+		    	var noticeId = "";									//获取id
+		    	var ar = $location.absUrl().split('id=')[1];		//用来想服务器发送的用户id 
+				if (ar) {
+				    noticeId = ar
+				};
+				//为他认证--爱心筹id
+				window.localStorage.setItem("aixindetails",noticeId);
+//				var urls = 'json/03.json';									//根据id现实显示的内容
+				var urls = https+'TPBitz/crowdfunding/select';				//详情页面
+				var urls2 = https+'TPBitz/diarycomment/fundinglist';		//评论的分页
+				var model = document.querySelector('.tan');
+				var puc = document.querySelector('.puc');
+				var puc2 = document.querySelector('.puc2');
+				var puc3 = document.querySelector('.puc3');
+				
+				//默认显示
+				$scope.myshow = true;
+				
+				
+		    	//--弹窗
+	    		$scope.show = function(){
+					fadeIn(model,2);
+					document.body.style.overflow='hidden';				//禁止滚动
+	    		};
+	    		$scope.hidemodal = function(){
+					fadeOut(model,2);
+					document.body.style.overflow='scroll';				//继续滚动
+				};
+				
+				$http({				//*页面详情*
+					url:urls,
+					method:'post',
+					params:{"crowdId":noticeId},
+				}).success(function (data) {
+					
+				    	$scope.items = data.list;
+				    	$scope.progress = data.list.progress;
+				    	
+				    	if(data.list.existingMoney == null || data.list.existingMoney == ""){	//判断当前筹集金额
+				    		$scope.items.existingMoney = '0'
+				    	};
+				    	
+				    	if(data.list.identityProveState == true){				//受助人身份证明  - 判断认证
+				    		puc.src = "img/pic04.png";
+				    		puc.parentNode.style.color = "#21CBBD";
+				    		$scope.falg = false;
+				    	}else if(data.list.identityProveState == true){
+				    		puc.src = "img/pic05.png";
+				    		puc.parentNode.style.color = "#999999";
+				    		$scope.falg = true;
+				    	};
+				    	
+				    	if(data.list.diagnosisProveState == true){				//诊断证明提交状态
+				    		puc2.src = "img/pic04.png";
+				    		puc2.parentNode.style.color = "#21CBBD";
+				    		
+				    	}else if(data.list.diagnosisProveState == true){
+				    		
+				    		puc2.src = "img/pic05.png";
+				    		puc2.parentNode.style.color = "#999999";
+				    	};
+				    
+				    	if(data.list.payeeIdentityProveState == true){			//收款人身份提交状态
+				    		puc3.src = "img/pic04.png";
+				    		puc3.parentNode.style.color = "#21CBBD";
+				    		$scope.flag = false;
+				    	}else if(data.list.payeeIdentityProveState == true){
+				    		puc3.src = "img/pic05.png";
+				    		puc3.parentNode.style.color = "#999999";
+				    		$scope.flag = true;
+				    	};
+				});
+				
+				//底部刷新 评论列表
+				var fun = [];
+				var fundinglists;
+				$http({
+					url:urls2,
+					method:'POST',
+					params:{"contentId":noticeId}
+				}).success(function(data){
+					
+						fundinglists = data.list;
+						for(let i=0; i<fundinglists.length;i++){
+				                fun.push(fundinglists[i]);		//便利添加
+				        };
+			            $scope.fundinglist = fun;							//页面便利 替代数组
+			            $scope.ss= 5;										//限制 过滤出的列表数量
+			            $scope.adds = function () {
+			                $scope.ss = $scope.ss+4;						//从新赋值加1条
+			            };
+				});
+				
+				//接收repeat完成事件  -->判断评论列表回复显示
+				$scope.$on('repeatFinishCallback',function(){  
+				    //获取当前便利到的节点的值判断回复节点是否显示
+				    let arrshow = document.querySelectorAll('.hui');
+//				    console.log(arrshow)
+					for(let i=0;i<arrshow.length;i++){
+						if(arrshow[i].children[0].children[0].children[0].innerHTML == 0){
+							arrshow[i].style.display = "none"
+						};
+						
+					}
+				    
+				}); 
+				
+				
+				//评论 判断是否登录--验证token-->判断是否捐款-->发表评论
+				var details_txt = document.querySelector('.details_txt');
+				var details_txt1 = document.querySelector('.details_txt1');
+				var opshow = document.querySelector('.opcity');
+				
+				$scope.derails_positn_if = function(){
+					//获取token 判断 是否存在 --不存在跳到登录页面
+					var iftokens = window.localStorage.getItem('toknes');
+					let addfundingsubcmt = https+"TPBitz/diarycomment/addfundingsubcmt";		//评论提交地址
+					
+					if(iftokens == "" || iftokens == null){
+							fadeIn(show,400);
+							showtxt.innerHTML = "您还没有登录,请先登录";
+							setTimeout(function(){
+								fadeOut(show,400);
+								window.open("login.html","_self");
+							},1800);
+					}else{
+						//判断是否捐款  评论框显示
+						
+						  $scope.myshow = false;
+						  $scope.myshow1 = true;
+						  fadeIn(opshow,1);
+						  
+						  // 判断完成 获取评论内容 发送服务器
+						  $scope.godatas =  function(){
+								let datass = $scope.datas;		//内容
+								
+								
+						  }
+						  
+						  
+						  
+						  
+					};
+				};
+				//点击文档以外的地方隐藏输入框
+					$scope.opshow = function(){
+							$scope.myshow = true;
+							$scope.myshow1 = false;
+ 							fadeOut(opshow,1);
+					};
+				        	
+							
+				
+				
+	        });
+	        
+			//  父控制器执行操作--进度条百分比
+			app.directive('progress',function($location){
+		        return {
+		            link: function(scope,element,attr){
+		                setTimeout(()=>{
+		                	let widthA = element.children()[1].children[0].innerHTML;
+							element.children()[0].children[0].style.width = widthA +"%"
+						},1000)
+		            }
+		        }
+		    });
+		    
+		    //滚动加载评论列表
+		    app.directive("loader",function () {
+		            return {
+		                restrict : 'A',
+		                controller:function ($scope,$timeout,$rootScope) {
+		                    window.addEventListener("scroll",function () {
+		                        var doc_height = document.body.scrollHeight;	//$(document).height()
+		                        var scroll_top = document.body.scrollTop;		//$(document).scrollTop()
+		                        var window_height = window.screen.height;			//$(window).height()
+//		                        console.log(doc_height+"---"+scroll_top+"---"+window_height);
+		                        if(scroll_top == 0){
+		                        	
+		                        }else if(scroll_top + window_height >= doc_height-1){
+		                        	
+		                            $scope.falg2 = true; //提示信息
+		                            $timeout(function () {	//延迟一秒 执行添加事件
+		                               	$scope.adds();
+		                            },500);
+		                            
+		                        }else {
+		                            $scope.falg2 = false;
+		                        }
+		                    },false);
+		                }
+		            }
+		    });
+		    app.directive('repeatFinish',function($timeout){  
+			    return {  
+			        restrict: 'A',
+			        link: function(scope,elem,attr){  
+			            //当前循环至最后一个  
+			            if (scope.$last === true) {  
+			                $timeout(function () {  
+			                    //向父控制器传递事件消息  
+			                    scope.$emit('repeatFinishCallback');  
+			                },100);  
+			            }  
+			        } 
+			    } 
+			}); 
+			
+		
+	</script>
+</html>

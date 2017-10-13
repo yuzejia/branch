@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	    	.padding p{
+	    		text-align: center;
+	    		height: 100px;
+	    		padding-top: 30px;
+	    	}
+	    	.padding p span{
+	    		font-size: 50px;
+	    	}
+	    	.padding button{
+	    		color: #FFFFFF;
+	    		background-color: #663399;
+	    	}
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">账户余额</h1>
+		</ion-header-bar>
+		<ion-content class="has-header has-footer">
+		<ion-list>
+		    <ion-item>
+				<div class="padding">
+				  <p class="royal">
+				     <i class="icon ion-social-yen royal"><span>888</span>.00</i>
+				  </p>
+				  <button class="button button-block">提现</button>
+				</div>
+			</ion-item>
+			<ion-item class="item-icon-left">
+				<i class="icon ion-ios-paper-outline"></i>
+				提现明细
+			</ion-item>
+			<ion-item >
+				提现-进行中
+				<span class="item-note assertive">-100.00</span>
+				<p>2015-01-20</p>
+			</ion-item>
+			<ion-item >
+				提现-进行中
+				<span class="item-note assertive">-100.00</span>
+				<p>2015-01-20</p>
+			</ion-item>
+			<ion-item >
+				提现-进行中
+				<span class="item-note assertive">-200.00</span>
+				<p>2015-01-20</p>
+			</ion-item>
+			<ion-item >
+				提现-完成
+				<span class="item-note assertive">-200.00</span>
+				<p>2015-01-20</p>
+			</ion-item>
+			<ion-item >
+				提现-完成
+				<span class="item-note assertive">-200.00</span>
+				<p>2015-01-20</p>
+			</ion-item>
+			<ion-item >
+				提现-完成
+				<span class="item-note assertive">-200.00</span>
+				<p>2015-01-20</p>
+			</ion-item>
+		</ion-list>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

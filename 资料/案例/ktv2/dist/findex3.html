@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<script src="js/jquery-1.10.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background: #F2F2F2;
+				font-family: "微软雅黑"
+			}
+			.f3i{
+				    width: 40px;
+				    position: absolute;
+				    right: 40px;
+				    top: 5px;
+			}
+			.f2c{
+				color: #FFFFFF;
+			}
+			.f3window{
+				position: fixed;
+				background: rgba(0,0,0,.3);
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+				padding-top: 50%;
+				display: none;
+				
+			}
+			.f3wf{
+				position: relative;
+				background: #663399;
+				border-radius: 20px;
+				width: 60%;
+				margin: 0 auto;
+				padding: 30px;
+				padding-top: 15px;
+			}
+			.f3ww{
+				position: absolute;
+				right: 10%;
+				font-size: 30px;
+				color: #FFFFFF;
+			}
+			.f3wf img{
+				width: 70px;
+			}
+			.f3wf p{
+				color: #FFFFFF;
+			}
+			.f3wf button{
+				margin-top: 10px;
+				width: 90%;
+				height: 25px;
+				border-radius:3px;
+				background-color: #FFFFFF;
+				color: #663399;
+				font-family: "微软雅黑";
+				border: 0px #FFFFFF solid;
+			}
+		</style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style=" background: linear-gradient(to bottom right,#e44bf1, #67329a); ">
+			<button class="button button-clear"><i class="icon  ion-ios-arrow-left f2c"></i></button>
+			<div class="title f2c">个人资料</div>
+		</ion-header-bar>
+		<ion-content>
+			<div class="list">	
+			  <a onclick="tan()"id="a" class="item item-icon-right" href="#">
+			    头像
+			    <span class="item-note">
+			     <img src="img/f1-2.fw.png"class="f3i"/>
+			    </span>
+			    <i class="icon ion-ios-arrow-right"></i>
+			  </a>
+			</div>
+			<div class="list" >
+				<a class="item item-icon-right" href="#">
+			    昵称
+			    <span class="icon"style="font-size: 16px;color: #888888;">我是歌手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon ion-ios-arrow-right"style="color: #444444;"></i></span>
+			  </a>
+			  <a class="item item-icon-right" href="#">
+			    登录密码
+			    <span class="icon"style="font-size: 16px;color: #888888;">修改&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon ion-ios-arrow-right"style="color: #444444;"></i></span>
+			  </a>
+			</div>
+		</ion-content>
+		<div class="f3window">
+			
+			<div class="f3wf"><span class="f3ww" onclick="clo()">×</span>
+				<img src="img/f1-2.fw.png" alt="" />
+				<p>换个头像，换种心情</p>
+				<button>自拍</button><br />
+				<button>从相册里选择</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		angular.module("myApp",["ionic"])
+		.controller("myCon",function(){
+			
+		})
+		
+		function tan(){
+			$(".f3window").fadeIn(600)
+		}
+		function clo(){
+			$(".f3window").fadeOut(600)
+		}
+	</script>
+</html>

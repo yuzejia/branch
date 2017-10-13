@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>组团K歌</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/qiantai02.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<style type="text/css">
+			
+		</style>	
+		
+	</head>
+	<body ng-controller="mycon">
+		<ion-header-bar class="bj">
+			<button class="button button-clear icon ion-ios-arrow-back"></button>
+			<h1 class="title fff">组团K歌</h1>
+			<button class="button button-clear">发布</button>
+		</ion-header-bar>
+		<ion-content class="has-header scroll scroll-content gdt">
+			<ion-list>
+				<ion-item class="item-avatar it">
+					<img src="img/lyyq.png">
+					<h2>落月摇情、</h2>
+					<p>6分钟前</p>
+					<img class="pic1" src="img/bm.png" alt=""/>
+				</ion-item>
+				<ion-item class="it2">
+					<div class="item-body padd1">晚上7点，酒吧一条街麦嘎KTV808房间，有神秘惊喜，不见不散！我的微信号：wechat0000。</div>
+					<div class="pic2">
+						<img src="img/tu1.png" alt="" />
+						<img src="img/tu2.png" alt="" />
+						<img src="img/tu3.png" alt="" />
+					</div>
+					<span class="xtx">
+						已报名5人
+						<i><img src="img/xtx1.fw.png" /></i>
+						<i><img src="img/xtx2.fw.png" /></i>
+						<i><img src="img/xtx3.fw.png" /></i>
+						<i><img src="img/xtx4.fw.png" /></i>
+						<i><img src="img/xtx5.fw.png" /></i>
+					</span>
+				</ion-item>
+				<ion-item class="item-avatar it">
+					<img src="img/zgg.fw.png">
+					<h2>周千千</h2>
+					<p>8分钟前</p>
+					<img class="pic1" src="img/bm.png" alt=""/>
+				</ion-item>
+				<ion-item class="it2">
+					<div class="item-body padd1">今天朋友生日，大家晚上9点快来农业路麦克风KTV666房间一块儿嗨！</div>
+					<div class="pic2">
+						<img src="img/tu4.fw.png" alt="" />
+						<img src="img/tu5.fw.png" alt="" />
+						<img src="img/tu6.fw.png" alt="" />
+					</div>
+					<span class="xtx">
+						已报名7人
+						<i><img src="img/xtx6.fw.png" /></i>
+						<i><img src="img/xtx7.fw.png" /></i>
+						<i><img src="img/xtx8.fw.png" /></i>
+						<i><img src="img/xtx9.fw.png" /></i>
+						<i><img src="img/xtx10.fw.png" /></i>
+						<i><img src="img/sld.fw.png" /></i>
+					</span>
+				</ion-item>
+				
+			</ion-list>
+		</ion-content>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var myapp=angular.module("myapp",["ionic"]);
+		myapp.controller("mycon",["$scope",function($scope){
+			
+		}]);
+	</script>
+</html>

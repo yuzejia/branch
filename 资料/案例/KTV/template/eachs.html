@@ -1,0 +1,46 @@
+<ion-view hide-tabs="true" view-title="搜索">
+    <style>
+        .eachs .bar-header{
+            color: #fffff;
+            background: url("images/shangjia/Top.fw.png")no-repeat 100%;
+        }
+        .eachs .bar-header .button{
+            color: #fff;
+        }
+        .Xposition{
+            width: 100%;
+            position: absolute;
+            top: 44px;
+        }
+        .Xposition>div{
+            width:100%;
+            position: absolute;
+            top:0;
+        }
+    </style>
+<div ng-controller="myEach">
+    <div class="eachs" >
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input ng-keyup="sousuo()" ng-model="texts" ng-focus="eachF()" ng-blur="eachB()" type="search" placeholder="Search">
+            </label>
+            <button class=" button button-clear" ng-click="goback()">
+               取消
+            </button>
+        </div>
+    </div>
+    <ion-content>
+         <div class="Xposition">
+            <div ng-show="eachX">
+                <div class="item item-divider">
+                    清空搜索历史
+                </div>
+                <div ng-click="getT()" class="item " ng-repeat="a in data.result">
+                    {{a[0]}}
+                </div>
+            </div>
+         </div>
+    </ion-content>
+</div>
+    </ion-view>

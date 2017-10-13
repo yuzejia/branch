@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="scope">
+    <!--start**-->
+    <div>
+        <!--top-->
+        <div class="bg01"></div>
+        <!--top-content-->
+        <div class="top-content">
+            <div class="top-city">
+                <span class="city fl">上海</span>
+                <img class="def fl" src="image/kuohao.svg" alt="">
+                <input class="input-search" type="text" placeholder="搜索书名">
+            </div>
+            <div class="top-photo">
+                <div class="photo">
+                    <div class="photo-img fl">
+                        <img src="image/person.png" alt="">
+                    </div>
+                    <div class="photo-p fl">
+                        <p>邢大头</p>
+                        <p>上海 1小时前</p>
+                    </div>
+                    <div class="photo-rl rl">
+                        <p>联系TA</p>
+                    </div>
+                </div>
+                <div class="list-five">
+                    <div class="list-content">
+                        <p>闲置图书（共5本）</p>
+                        <ul>
+                            <li><span>《月亮与六便士》</span></li>
+                            <li><span>《刀锋》</span></li>
+                            <li><span>《维特根斯坦》</span></li>
+                            <ul class="show show1">
+                                <li><span>《三国演义》</span></li>
+                                <li><span>《西游记》</span></li>
+                            </ul>
+                            <p class="rl">
+                                <span class="list-hide">展开</span>
+                                <span class="list-show"></span>
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top-photo">
+                <div class="photo">
+                    <div class="photo-img fl">
+                        <img src="image/person.png" alt="">
+                    </div>
+                    <div class="photo-p fl">
+                        <p>张小头</p>
+                        <p>山东济南 1小时前</p>
+                    </div>
+                    <div class="photo-rl rl">
+                        <p>联系TA</p>
+                    </div>
+                </div>
+                <div class="list-five">
+                    <div class="list-content">
+                        <p>闲置图书（共6本）</p>
+                        <ul>
+                            <li><span>《月亮与六便士》</span></li>
+                            <li><span>《刀锋》</span></li>
+                            <li><span>《维特根斯坦》</span></li>
+                            <ul class="show2 show">
+                                <li><span>《斯通纳》</span></li>
+                                <li><span>《白夜行》</span></li>
+                                <li><span>《暗黑者》</span></li>
+                            </ul>
+                            <p class="rl">
+                                <span class="list-hide2">展开</span>
+                                <span class="list-show"></span>
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--tab-->
+        <div class="tabs">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="">发布图书</a></li>
+                <li><a href="">信息</a></li>
+            </ul>  
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/libyys-flexible.js"></script>
+<script src="js/index.js"></script>
+</body>
+<script>
+    this.selectVoice = function (fn) {
+        $('.img-bg').on('touchstart', function(event){
+            event.preventDefault();
+            $('#talk_btn').attr('src', '/fengmiHome/img/voice2.png');
+            $('.voice-desc').html('正在录音...');
+
+        });
+//松手结束录音
+        $('.img-bg').on('touchend', function(event){
+            event.preventDefault();
+            $('#talk_btn').attr('src', '/fengmiHome/img/voice.png');
+            $('.voice-desc').html('请长按按钮进行录音 记得不能超过一分钟哦！');
+            END = new Date().getTime();
+
+            if((END - START) < 300){
+                END = 0;
+                START = 0;
+                //小于300ms，不录音
+                clearTimeout(recordTimer);
+            }else{
+                wx.stopRecord({
+                    success: function (res) {
+                        $rootScope.$apply(function (){
+                            fn(res.localId);
+                        });
+                    },
+                    fail: function (res) {
+                        alert('录音失败');
+                    }
+                });
+            }
+        });
+        return this;
+    }
+</script>
+</html>

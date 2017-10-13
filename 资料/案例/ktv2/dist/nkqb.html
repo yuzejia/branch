@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	        /*body{
+	        	height: 800px;
+	    	    background-color: #f2f2f2;
+	        }*/
+	        .item{
+	        	border: 1px solid white;
+	        }
+			.tab-item{
+				height:50%;
+				max-width:94px;
+				margin-top:10px;
+				line-height:26px;
+			}
+			a.tab-item{
+				border:1px solid #663399;
+				border-radius:1px;
+				color:#663399;
+			}
+			a.tab-item:hover{
+				background:#663399;
+				color:#fff;
+			}
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">卡券包</h1> 
+	</ion-header-bar>
+			<ion-tabs class="tabs-top">
+				<ion-tab title="可使用(2)">
+					<ion-content class="has-header" style="padding-top: 100px;">
+						<ion-item>
+						   <img class="full-image" src="img/nl01.png" />
+						</ion-item>
+						<ion-item>
+					  	  <img class="full-image" src="img/nl02.png" />
+						</ion-item>
+					</ion-content>		
+				</ion-tab>
+				<ion-tab title="无可用(2)">
+					<ion-content class="">	
+					
+					</ion-content>	
+				</ion-tab>
+			</ion-tabs>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

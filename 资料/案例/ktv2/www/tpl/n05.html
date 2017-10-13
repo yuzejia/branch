@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	        body{
+	    	    background-color: #f2f2f2;
+	        }
+	        
+	    	b{
+	    		border: 1px solid #663399;
+	    		border-radius: 5px;
+	    		color:#663399;
+	    	}
+	    	
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear" ui-sref="tabs.yonghuzhiliao">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">今日订单</h1> 
+	</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+				<ion-item>
+					<i class="icon ion-ios-clock-outline"></i>
+					2015-12-22 22:24
+					<span class="item-note assertive">待发货</span>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/nt02.fw.png" />
+					<h3>憾森点歌机家庭用KTV套装</h3>
+				    <p class="royal" style="padding-top: 20px;">
+				    	<i class="icon ion-social-yen royal"><span style="font-size: 25px;">299</span></i>
+				        <span class="item-note">数量：x1</span> 
+				    </p>
+				</ion-item>
+				<ion-item>
+					<p class="item-note">共计：<i class="icon ion-social-yen royal"><span style="font-size: 20px;">314.00</span></i></p>
+				</ion-item>
+				<ion-item style="margin-bottom:12px;">
+					 <button class="item-note button button-royal button-small">
+				    	<span class="light">立即发货</span>
+				    </button>
+				</ion-item>
+				<ion-item>
+					<i class="icon ion-ios-clock-outline"></i>
+					2015-12-22 22:24
+					<span class="item-note assertive">待发货</span>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/nmm04.fw.png" />
+					<h3>憾森点歌机家庭用KTV套装</h3>
+				    <p class="royal" style="padding-top: 20px;">
+				    	<i class="icon ion-social-yen royal"><span style="font-size: 25px;">299</span></i>
+				        <span class="item-note">数量：x1</span> 
+				    </p>
+				</ion-item>
+				<ion-item>
+					<p class="item-note">共计：<i class="icon ion-social-yen royal"><span style="font-size: 20px;">314.00</span></i></p>
+				</ion-item>
+				<ion-item>
+					 <button class="item-note button button-royal button-small">
+				    	<span class="light">立即发货</span>
+				    </button>
+				</ion-item>
+				
+			</ion-list>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我要报名</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/qiantai02.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<style type="text/css">
+			
+		</style>	
+		
+	</head>
+	<body ng-controller="mycon">
+		<ion-header-bar class="bj">
+			<button class="button button-clear icon ion-ios-arrow-back"></button>
+			<h1 class="title fff">我要报名</h1>
+			<button class="button button-clear">发送</button>
+		</ion-header-bar>
+		<ion-content class="has-header scroll scroll-content gdt">
+			<div class="list">
+			  	<label class="item item-input">
+			    	<textarea class="sty" placeholder="留下联系方式吧！" rows="6"></textarea>
+			  	</label>
+			</div>
+		</ion-content>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var myapp=angular.module("myapp",["ionic"]);
+		myapp.controller("mycon",["$scope",function($scope){
+			
+		}]);
+	</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/ws1.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<ion-header-bar style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			
+			<div class="item-input-wrapper" >
+				 		<i class="icon ion-search placeholder-icon"></i>
+				 		<input type="text" placeholder="请输入器材名" width="30px" height="40px"/>				 		
+			 		</div>
+			<button class="button button-clear">
+				<i class="light">取消</i>
+			</button>
+		</ion-header-bar>
+		<ion-content class="" >
+			<ion-item>
+				<i class="icon ion-android-time"></i>
+				搜索历史
+			</ion-item>
+			<ion-item>
+				
+				话筒<i class="item-note icon ion-ios-arrow-right"></i>
+			</ion-item>
+			<ion-item>
+				
+				啤酒<i class="item-note icon ion-ios-arrow-right"></i>
+			</ion-item>
+			<ion-item>
+				
+				爆米花<i class="item-note icon ion-ios-arrow-right"></i>
+			</ion-item>
+			<ion-item class="assertive text-center">
+				<i class="icon ion-ios-trash-outline"></i>
+				清空搜索记录
+			</ion-item>
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+

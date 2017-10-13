@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/ws1.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<ion-header-bar style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			<button class="button button-clear ">
+				<i class="icon ion-ios-arrow-back stable"></i>
+			</button>
+			<div class="item-input-wrapper" >
+				 		<i class="icon ion-search placeholder-icon"></i>
+				 		<input type="text" placeholder="请输入器材名" width="30px" height="40px"/>				 		
+			 		</div>
+			<button class="button button-clear ">
+			<i class="icon ion-ios-sunny-outline light">21<sup>o</sup>C</i>
+			
+			<i class=' ion-ios-chatbubble-outline light'></i></button>
+		</ion-header-bar>
+		<ion-content overflow-scroll="true">
+			<img src="img/ws2.fw.png" alt="" class="full-image">
+			<ion-list>
+				<div class="row text-center">
+					<div class='col'><img src="img/wa1.fw.png" alt="" width="85%"/>设备装修</div>
+					<div class='col'><img src="img/wa2.fw.png" alt="" width="85%"/>设备工程</div>
+					<div class='col'><img src="img/wa3.fw.png" alt="" width="85%"/>家居饰品</div>
+					<div class='col'><img src="img/wa4.fw.png" alt="" width="85%"/>酒水食品</div>
+				</div>
+				<div class="row text-center">
+					<div class='col'><img src="img/wa5.fw.png" alt="" width="85%"/>经营管理</div>
+					<div class='col'><img src="img/wa6.fw.png" alt="" width="85%"/>商界精英</div>
+					<div class='col'><img src="img/wa7.fw.png" alt="" width="85%"/>人才交流</div>
+					<div class='col'><img src="img/wa8.fw.png" alt="" width="85%"/>招标信息</div>
+				</div>
+				<ion-item>
+					<p>新闻动态：携程公关危机的三大部族   也懂危机公关</p>
+				</ion-item>	
+				<ion-item>
+					<div class='row'>
+						<div class="col">
+							<h2 class="ws1h">限时抢购</h2>
+							<span>04:03:26</span>
+							<p>索爱  CK-M3家用</p>
+							<button class='button button-royal button-small'>立即抢购</button>
+						</div>
+						<div class="col">
+							
+							<img src="img/ws3.fw.png" alt="" width="100px" class="ws1img">
+						</div>
+						<div class="col">
+							<p class="assertive">名店风采</p>
+							<img src="img/ws1.fw.png" alt="" width="100px"/>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item class="item-divider">
+					<i class="icon ion-music-note royal"></i>
+					商界推荐
+				</ion-item>
+				<ion-item class="item-thumbnail-left item-text-wrap">
+					<img src="img/ws5.fw.png" alt="" />
+					<h2 class="padding">家庭用ktv家庭用ktv家庭用ktv家庭用ktv家庭用ktv家庭用ktv</h2>
+					<p><i class="ws1i">￥555</i> <span class="ws1sp">￥158</span><i class="item-note">已售128</i></p>
+				</ion-item>
+				<ion-item class="item-thumbnail-left item-text-wrap">
+					<img src="img/ws6.fw.png" alt="" />
+					<h2 class="padding">家庭用ktv家庭用ktv家庭用ktv家庭用ktv家庭用ktv家庭用ktv</h2>
+					<p><i class="ws1i">￥555</i> <span class="ws1sp">￥158</span><i class="item-note">已售128</i></p>
+				</ion-item>
+			</ion-list>			
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+
+
+
+
+
+

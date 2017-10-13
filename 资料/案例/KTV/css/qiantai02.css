@@ -1,0 +1,142 @@
+body{
+	background: #F2F2F2;
+}
+.gdt{
+	overflow-y: scroll;
+}
+/*组团K歌*/
+.bj{
+	background-color:#E44BF1 ;
+	background-image:  linear-gradient(0deg, #E44BF1, #E44BF1 50%, transparent 50%);
+}
+.button-clear.button-clear{
+	color: #FFFFFF;
+}
+.fff{
+	color: #FFFFFF;
+}
+.pic1{
+	width: 60px;
+	position: absolute;
+	top: 25px;
+	right: 16px;
+}
+.padd1{
+	padding: 0;
+	line-height: 1.5;
+	padding-bottom: 16px;
+}
+.it{
+	border-bottom-style: none;
+}
+.it h2{
+	color: #666666;
+}
+.it2{
+	border-top-style: none;
+	padding-top: 0;
+}
+.pic2 img{
+	width: 90px;
+}
+.xtx{
+	color: #A9A9A9;
+	
+}
+.xtx img{
+	width: 25px;
+	vertical-align: middle;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+/*我要报名*/
+.sty{
+	font-size: 18px;
+	line-height: 1.6;
+}
+.jb{
+	background: linear-gradient(to right, #E44BF1, #6F359F);
+	                                                       
+}
+/*发布*/
+.tjtp{
+	border-style: none;
+}
+.tjtp img{
+	width: 100px;
+	float: left;
+}
+.tjtp p{
+	padding:20px 0 10px 30px;
+	font-size: 18px;
+	color: #999999;
+}
+.tjtp span{
+	padding-left: 30px;
+	color: #999999;
+}
+/*信息详情*/
+.marg{
+	margin-top: 10px;
+}
+.marg img{
+	width: 24px;
+	vertical-align: middle;
+}
+.marg span{
+	margin-left:10px;
+}
+.pding{
+	padding-left: 55px;
+    min-height: 50px;
+}
+.pding span{
+	float: right;
+	line-height: 2;
+	color: #999999;
+}
+
+.pding h2{
+	line-height: 2;
+	color: #666666;
+}
+.hs p{
+	color: #000000;
+}
+.dbj{
+	background-color: #663399;
+}
+/*娱乐资讯*/
+.ylt span{
+	float: right;
+	color: #999999;
+	font-size: 12px;
+}
+.bdnone{
+	border-top-style: none;
+	border-bottom-style: none;
+}
+/*详情*/
+.trans{
+	transform: rotate(-70deg);
+}
+.mycolor2{
+	color:#999;
+	padding-top: 10px;
+}
+.pdbone{
+	padding-bottom: 0;
+}
+.it3{
+	border-top-style: none;
+}
+.tex{
+	text-indent: 2em;
+	line-height: 1.8;
+}
+.it3 p{
+	margin-top: -5px;
+}
+.it3 p:nth-child(3){
+	margin-top: 10px;
+}

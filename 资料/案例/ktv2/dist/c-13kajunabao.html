@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="main">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>城市列表</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+		body{
+			background: #F2F2F2;
+		}
+			.c-zhimuposition{
+				position: fixed;
+				right: 2px;
+				top:55px;
+				width: 15px;
+				height: 100%;
+				z-index: 99;
+			}
+			.c-navs{
+				width: 15px;
+				height: 3.5%;
+				text-align: center;
+			}
+			
+			.c-nav-posibg{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -99;
+			}
+			.c-nav-posibg img{
+				width: 100%;
+				height: 100%;
+			}
+			.button-clear.button-clear{
+				color:#FFFFFF;
+			}
+			
+			.c-addcolor{
+				color: #663399;
+				font-size: 20px;
+			}
+			.c-navtextcolor{
+				color:#FFFFFF;
+				font-size: 18px;
+				margin: 0 auto;
+				line-height: 40px;
+			}
+			.c-text-center{
+				text-align: center;
+				width: 70%;
+				margin: 15px auto;
+				height: 22px;
+			}
+			.c-text-center p:first-child{
+				width: 50%;
+				height: 100%;
+				border: 1px solid #663399;
+				float: left;
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+			}
+			.c-text-center p:last-child{
+				width: 50%;
+				height: 100%;
+				border: 1px solid #663399;
+				border-left: none;
+				float: right;
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+			.c-youhuishow{
+				    width: 100%;
+    				height: 40%;
+    				padding: 12px;
+   					 box-sizing: border-box;
+			}
+			.c-youhuishow img{
+				width: 100%;
+				height: 100%;
+			}
+			.c-youhuishow1{
+				    width: 100%;
+    				height: 40%;
+    				padding: 12px;
+   					 box-sizing: border-box;
+			}
+			.c-youhuishow1 img{
+				width: 100%;
+				height: 100%;
+			}
+			.c-addyiuhuistyle{
+				color: #FFFFFF;
+				background: #663399;
+			}
+		</style>
+	</head>
+	<body>
+		<ion-header-bar>
+			<button class="button button-clear icon ion-ios-arrow-left" ui-sref="tabs.home"></button>
+			<div class="c-navtextcolor">
+				确认订单
+			</div>
+			<div class="c-nav-posibg"><img src="img/c-027.png"/></div>
+		</ion-header-bar>
+		
+		<ion-content class="content has-header scroll scroll-content" style="overflow-y: scroll;">
+				<div class="c-text-center">
+					<p ng-click="yiuhui1()" id="c-idadd1">可使用（2）</p>
+					<p ng-click="yiuhui2()" id="c-idadd2">无可用（2）</p>
+				</div>
+				<div class="c-youhuishow" ng-show="ksjuanbao1">
+					<img src="img/c-077.png"/>
+				</div>
+				<div class="c-youhuishow" ng-show="ksjuanbao2">
+					<img src="img/c-078.png"/>
+				</div>
+		</ion-content>
+	</body>
+	<script type="text/javascript">
+//		angular.module("myapp",["ionic"])
+//		.controller("main",["$scope",function($scope){
+//				
+//			$scope.ksjuanbao1 = true;
+//			$scope.ksjuanbao2 = false;
+//			document.getElementById("c-idadd1").classList.add("c-addyiuhuistyle")
+//			$scope.yiuhui1 = function(){
+//				$scope.ksjuanbao1 = true;
+//				$scope.ksjuanbao2 = false;
+//				document.getElementById("c-idadd1").classList.add("c-addyiuhuistyle")
+//				document.getElementById("c-idadd2").classList.remove("c-addyiuhuistyle")
+//			}
+//			$scope.yiuhui2 = function(){
+//				$scope.ksjuanbao2 = true;
+//				$scope.ksjuanbao1 = false;
+//				document.getElementById("c-idadd2").classList.add("c-addyiuhuistyle")
+//				document.getElementById("c-idadd1").classList.remove("c-addyiuhuistyle")
+//			}
+//		}])
+	</script>
+</html>

@@ -1,0 +1,201 @@
+
+/*--爱心筹--*/
+body{background: #eeeeee;}
+header{height: 0.88rem;line-height: 0.88rem;border-bottom: 1px solid #EEEEEE;background: #FFFFFF;}
+.nav-top{margin-top: 0.88rem;}
+
+.derails_con{margin-top: 0.88rem;}
+.aixin_List_of_details{height: 5.8rem;background: #FFFFFF;}
+.aixin_header_details{height: 1.1rem;line-height: 0.7rem;}
+.aixin_header_logo{width: 0.62rem;height: 0.62rem;}
+.aixin_header_logo img{width: 100%;height: 100%;border-radius: 50%;}
+.aixin_pic_con li{width: 2.26rem;height: 2.25rem;float: left;margin-right: 0.15rem;}
+.aixin_pic_con li:last-child{margin: 0;}
+.aixin_pic_con li img{width: 100%;height: 100%;}
+.aixin_footer li{float: left;width: 25%;border-left: 1px solid #dddddd;}
+.aixin_footer li:first-child{border: 0;}
+/*-进度条-*/
+.aixin_jin_du{height: 0.9rem;}
+.aixin_jin_du span{display: inline-block;width: 20%;text-align: center;}
+.progressbar{float:left;height: 0.06rem; width: 80%;background: #F1F1F1;border-top-left-radius: 0.03rem;border-top-right-radius: 0.03rem;border-bottom-left-radius: 0.03rem;border-bottom-right-radius: 0.03rem;}
+.progressbar_con{width: 0%;height: 0.06rem;background: #21CBBD;transition: ease-in 1.2s; border-top-right-radius: 0.03rem;border-bottom-left-radius: 0.03rem;border-bottom-right-radius: 0.03rem;}
+
+
+/*--爱心人士--*/
+.left_btn{float: left;width: 0.19rem;height:100%;}
+.left_btn a{width: 100%;height:100%;display: block;}
+.left_btn img{width: 100%;height: 0.34rem;}
+
+.personage_con{background: #FFFFFF;border-bottom: 1px solid #EEEEEE;margin-top: 0.88rem;}
+.personage_logo_left{width: 0.78rem;height: 0.78rem;}
+.personage_logo_left img{width: 100%;height: 100%;}
+.personage_logo_right{height: 0.78rem;}
+.personage_logo_right h4{font-weight: normal; font-size: 0.12rem;}
+
+
+/*--支持ta--*/
+.support_con{margin-top: 0.88rem;}
+.support_con .support_money{height: 1.5rem;border-bottom: 1px solid #EEEEEE;}
+.support_con .support_money input{height: 0.8rem;width: 85%; font-size: 0.32rem;text-indent: 0.3rem;margin-right: 0.3rem;}
+.support_con .support_weixin{padding-left: 0.2rem;padding-right: 0.2rem;}
+.support_con .support_weixin_con img{width: 0.6rem;height: 0.45rem;vertical-align: middle;margin-right:0.25rem ;float: left;}
+.support_right_pic{width: 0.19rem;height:100%;}
+.support_right_pic img{width: 100%;height: 0.34rem;vertical-align: middle;}
+.support_text{margin-bottom: 4.6rem;}
+.support_text textarea{width: 100%;height: 1.4rem;}
+.support_btn{width: 6.5rem;height:0.88rem;margin: 0 auto;background: #21CBBD;line-height: 0.88rem;font-size: 0.36rem;border-radius:0.12rem;}
+
+
+/*--为他证实--*/
+.confirm_con{margin-top: 0.88rem;}
+.confirm_con .confirm_list{background: #FFFFFF;border-bottom: 1px solid #EEEEEE;}
+.confirm_con .confirm_list input{text-indent: 0.2rem;width: 50%;margin-top: 0.02rem;font-size: 0.28rem;}
+.confirm_list_right_text img{width: 0.19rem;height: 0.34rem;float: right;margin-left: 0.2rem;margin-top: 0.02rem;}
+.confirm_list_right_text1{padding: 0.2rem;margin-bottom: 2rem;}
+.confirm_list_right_text1 textarea{width: 100%;height: 3rem;background: #EEEEEE;border-radius: 0.1rem;padding: 0.15rem;}
+.confirm_btn{width: 6.5rem;height:0.88rem;margin: 0 auto;background: #21CBBD;line-height: 0.88rem;font-size: 0.36rem;border-radius:0.12rem;}
+
+
+/*--爱心筹-详情--*/
+
+.derails_con{margin-bottom: 2rem;margin-top: 0.88rem;}
+.derails_list{padding: 0.54rem 0 0.24rem 0;}
+.derails_list li{float: left;border-right: 1px solid #DDDDDD;width: 33.3%;text-align: center;}
+.derails_list li:last-child{border: 0;}
+.derails_list li h1{color: #F17B17;font-size: 0.32rem;}
+.derails_list li p{color: #333333;font-size: 0.24rem;}
+.derails_title{border-bottom: 1px solid #EEEEEE;}
+.derails_title span{width: 0.08rem;height: 0.3rem;background: #21CBBD;display: inline-block;margin-right: 0.2rem;float: left;margin-top: 0.08rem;}
+.derails_text{line-height: 0.5rem;}
+.derails_text ul li{width: 1.68rem;height: 1.68rem;float: left;margin: 0.04rem;}
+.derails_text ul li img{width: 100%;height: 100%;}
+.derails_publisher .publisher_logo{width: 0.8rem;height: 0.8rem;}
+.derails_publisher .publisher_logo img{width: 100%;height: 100%;}
+.derails_publisher .publisher_name{height: 0.8rem;line-height: 0.8rem;}
+.derails_statement_text{height: 3rem;background: #F1F1F1;position: relative;padding: 0.2rem;}
+.derails_statement_text .position{width: 0.15rem;height: 0.15rem;transform:rotate(45deg);background: #F1F1F1;position: absolute;top: -0.07rem;left: 0.25rem;}
+.derails_statement_text h1{color: #333333;font-size: 0.28rem;font-weight: normal;margin-bottom: 0.2rem;}
+.derails_suffer{border-bottom: 1px solid #EEEEEE;}
+.derails_suffer h1{font-weight: normal;margin-bottom: 0.2rem;}
+.derails_suffer p img{width: 0.28rem;height: 0.28rem;float: left;margin-top: 0.02rem;margin-right: 0.1rem;}
+.derails_suffer p{color: #21CBBD;margin-bottom: 0.2rem;float: left;margin-right: 0.2rem;font-size: 0.24rem;}
+.derails_suffer-no p{color: #999999}
+.derails_logo_con{height: 0.8rem;}
+.derails_support{border-bottom: 1px solid #EEEEEE;}
+.derails_support ul li{width: 0.8rem;height: 0.8rem;float: left;margin-right: 0.2rem;}
+.derails_support ul li img{width: 100%;height: 100%;}
+.derails_support p span{color: #21CBBD;}
+.derails_more{height: 100%;}
+.derails_more .derails_more_con{height: 100%; width: 0.48rem;display: inline-block;}
+.derails_more .derails_more_con img{width: 100%;height: 0.12rem;}
+.derails_more_con1 img{width: 0.22rem;height: 0.4rem;}
+.derails_btn{width: 4.16rem;height: 0.72rem;margin: 0 auto;background: #21CBBD;line-height: 0.72rem;font-size: 0.28rem;border-radius:0.375rem;}
+.derails_dynamic h2 span{font-size: 0.28rem;}
+.derails_dynamic_text p span{color: #21CBBD;}
+.derails_Goodperson_text p span{color: #FF8F00;}
+.derails_Goodperson_text .hui{padding-left: 0.93rem;}
+.derails_Goodperson_text .hui span{background: #F1F1F1;color: #215DCB; padding: 0.05rem 0;display: block;text-indent: 0.2rem;border-radius: 0.02rem;}
+.derails_Goodperson{position: relative;}
+.derails_position_pic{width: 0.42rem;height: 0.4rem;position: absolute;top: 0.1rem;right: 0.2rem;}
+.derails_position_pic img{width: 100%;height: 100%;}
+
+/*-定位-*/
+.derails-fixed{position: fixed;bottom: 0;left: 0;width: 100%;padding: 0.14rem 0.25rem;}
+.derails-fixed .share_pic{display: inline-block;}
+.derails-fixed .share_pic img{width: 0.38rem;height: 0.38rem;}
+.derails-fixed .share_pic p{font-size: 0.24rem;color: #99999;margin-top: 0.05rem;}
+.derails-fixed .bth{width: 6.21rem;height: 0.78rem;background: #21CBBD;line-height: 0.72rem;border-radius: 0.39rem;}
+
+
+/*--费用清单-null--*/
+.expense_list_null{margin-top: 3.88rem;}
+.expense_list_null .expense_list_null_pic{width:2.06rem;height: 2.06rem;margin: 0 auto;}
+.expense_list_null .expense_list_null_pic img{width: 100%;height: 100%;}
+.expense_list_null .expense_list_null_text{color: #21CCBE;font-size: 0.3rem;}
+
+/*--抗病时光--*/
+.expense_list_con{margin-top: 0.88rem;}
+.expense_list_con .time{border-bottom: 0.03rem solid #21CBBD;width: 3rem;text-align: right;font-size: 0.36rem;line-height: 0.6rem;}
+.expense_list_con .expense_list_pic_list li{float:left;width: 24.2%;height: 1.85rem;margin-bottom: 0.05rem;margin: 0 0.4% 0.05rem; }
+.expense_list_con .expense_list_pic_list li img{width: 100%;height: 100%;}
+
+/*--患者日记--*/
+.diary_header{height: 3.4rem;background: url(../img/list-pic02.png)no-repeat;background-size: 100% 100%;position: relative;}
+.diary_header .positin{width: 0.38rem;height: 0.38rem;position: absolute;top: 0.2rem;right: 0.2rem;}
+.diary_header .positin img{width:100%;height: 100%;}
+.diary_header .logo_con{height: 0.86rem;background: rgba(0,0,0,.4);border-top-right-radius: 0.42rem;border-bottom-right-radius: 0.42rem;margin-top: 0.6rem;padding-right: 0.42rem;padding-top:0.05rem ;}
+.diary_header .logo_con .pic_size{width: 0.76rem;height: 0.76rem;}
+.diary_header .logo_con .pic_size img{width: 100%;height: 100%;}
+.diary_header .logo_con .text{height: 100%;line-height: 0.81rem;padding-left: 0.9rem;}
+.diary_header .txt{font-size: 0.36rem;}
+.diary_header .illness ul li{float: left;}
+.diary_list{border-bottom: 1px solid #DDDDDD;}
+.diary_list li{float: left;text-align: center;width: 25%;}
+.diary_list li img{height: 0.59rem;}
+.diary_list li:first-child img{width: 0.86rem;}
+.diary_list li:nth-child(2) img{width: 0.47rem;}
+.diary_list li:nth-child(3) img{width: 0.5rem;}
+.diary_list li:nth-child(4) img{width: 0.72rem;}
+.diary_text_con{border-bottom: 1px solid #DDDDDD;}
+.diary_text_con .time{height: 0.6rem;line-height: 0.6rem;}
+.diary_text_con .time span{color: #21CBBD;}
+.diary_text_con .diary_text_con_top{border-bottom: 1px solid #DDDDDD;}
+.diary_text_con .diary_text_con_top p span{color: #4389DD;}
+.diary_text_con .diary_text_con_center{line-height: 0.45rem;}
+.diary_text_con .pic li{float: left;width: 24%;height:1.68rem;margin: 0.035rem;}
+.diary_text_con .list span{color: #F16F17;float: right;}
+.diary_text_con .diary_text_con_footer .rigth li{height: 0.38rem;line-height: 0.38rem;float: left;margin-right: 0.2rem;}
+.diary_text_con .diary_text_con_footer .rigth li img{width: 0.38rem;height: 0.38rem;float: left;/*margin-top: -0.03rem;*/margin-right: 0.05rem;}
+
+
+/*--就诊医生--*/
+
+.doctor_con{margin-top: 0.88rem;}
+.doctor_list{height: 2.83rem;}
+.doctor_list .doctor_list_left{height: 100%;}
+.doctor_list .doctor_list_left .doctor_list_logo{width: 1.1rem;height: 1.1rem;border-radius:50% ;border: 1px solid #999999;}
+.doctor_list .doctor_list_left .doctor_list_logo img{width: 100%;height: 100%;}
+.doctor_list .doctor_list_left .doctor_evaluate{height: 0.31rem;}
+.doctor_list .doctor_list_left .doctor_evaluate img{width: 0.79rem;height: 100%;margin-top: 0.5rem;}
+.doctor_list .doctor_list_rigth .doctor_title p .name{font-size: 0.36rem;}
+.doctor_list .doctor_list_rigth .doctor_title .doctor_text{width: 4.87rem;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.doctor_list .doctor_list_rigth .doctor_txt{padding-left: 1.6rem;}
+.doctor_list .doctor_list_rigth .pic_list{border-top: 1px solid #DDDDDD;}
+.doctor_list .doctor_list_rigth .pic_list li{float: left;width: 33.3%;}
+.doctor_list .doctor_list_rigth .pic_list li img{width: 0.34rem;height: 0.39rem;margin-right: 0.1rem;float: left;}
+.doctor_list .doctor_list_rigth .pic_list li:first-child img{width: 0.41rem;}
+.doctor_list .doctor_list_rigth .pic_list li span{display: inline-block;height: 100%;line-height: 0.42rem;}
+
+/*--就诊医生--*/
+.hospital_con{margin-top: 0.88rem;}
+.hospital_list .pic_con img{width: 1.6rem;height: 1.26rem;}
+.hospital_list h1{font-weight: normal;}
+.hospital_list .level{color: #FF8F00;}
+.hospital_con .hospital_list .list li{background: #DCDCDC;border-radius:0.06rem ;float: left;margin-right: 0.2rem;padding: 0.02rem 0.12rem;}
+
+
+/*--日记详情--*/
+.diary_text_con{margin-bottom: 1.5rem;margin-top: 0.88rem;}
+.diary_text_con .details_hui{height: 2.44rem;}
+.diary_text_con .details_hui .logo{width: 0.6rem;height: 100%;}
+.diary_text_con .details_hui .logo img{height: 0.6rem;width: 100%;border-radius: 50%;}
+.diary_text_con .details_hui .time{line-height: 0.4rem;height: auto;}
+.diary_text_con .details_reply{padding-left: 0.8rem;}
+.diary_text_con .details_reply span{display: block;background: #F1F1F1;color: #215DCB;padding: 0.05rem 0;text-indent: 0.2rem;}
+.details_fixed{position: fixed;bottom: 0;left: 0;width: 100%;height: 1rem;border-top: 1px solid #DDDDDD;}
+.details_fixed input{width: 6.3rem; height: 100%; text-indent: 0.2rem;float: left;font-size: 0.28rem;}
+.details_fixed span{width: 0.55rem;height: 0.55rem;display: inline-block;margin-top: 0.1rem;}
+.details_fixed span img{width:100%;height: 100%;}
+
+
+/*--爱心筹-回复--*/
+.reply_con{border: 0; margin-top: 0.88rem;}
+.reply .logo{width: 0.6rem;height: 100%;}
+.reply .logo img{width: 100%;height: 0.6rem;}
+.reply-txt{padding-left: 0.8rem;}
+.reply-txt span{color: #215DCB;}
+.reply .right .rigth li img{width: 0.32rem;height: 0.32rem;}
+
+
+
+.reply_con .money span{color: #DF7335;}

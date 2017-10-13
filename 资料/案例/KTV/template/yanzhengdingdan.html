@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app' >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <script src=js/ionic/ionic.min.js></script>
+    <script src="js/ionic/ionic.bundle.js" ></script>
+    <script src="js/app.js"></script>
+    <style>
+        .Ddyz .bar-header{
+            color: #fffff;
+            background: url("images/shangjia/Top.fw.png")no-repeat 100%;
+        }
+        .Ddyz .Fb{
+            color: #ffffff;;
+        }
+        .YZtabs ul li{
+            line-height: 25px;
+            width:120px;
+            height:25px;
+            display: block;
+            float: left;
+            border:1px solid #663399;
+
+        }
+        .YZtabs ul li a{
+            text-decoration: none;
+            color: #000;
+        }
+        .YZtabs ul li:nth-of-type(1){
+            border-bottom-left-radius:5px;
+            border-top-left-radius: 5px;
+        }
+        .YZtabs ul li:nth-of-type(2){
+            border-bottom-right-radius:5px;
+            border-top-right-radius: 5px;
+        }
+        .YZtabs{
+            overflow: hidden;
+            background: #eee
+        }
+        .YZtabs ul{
+            overflow: hidden;
+            text-align: center;
+            width: 244px;
+            margin: 15px auto;
+        }
+
+    </style>
+</head>
+<body ng-controller="yanzhengCon">
+<div class="Ddyz">
+    <div class="bar bar-header">
+        <button class="Fb button button-icon ion-ios-arrow-left" ng-click="goback()"></button>
+        <h1 class="Fb title">验证订单</h1>
+    </div>
+    <ion-content class="has-header">
+    <div >
+        <div class="YZtabs">
+            <ul>
+                <li ui-sref="tabs.yanzheng.yanZ1">序列号</li>
+                <li ui-sref="tabs.yanzheng.yanZ2">扫一扫</li>
+            </ul>
+        </div>
+        <div>
+            <div class="" ui-view="D1yanzheng">
+                <i>数据加载</i>
+            </div>
+
+        </div>
+    </div>
+
+
+            </ion-content>
+
+
+
+
+
+
+
+
+        </div>
+
+
+</div>
+<script>
+    var App = angular.module("app",['ionic'])
+    App.controller("myCtrl",["$scope",function($scope){
+
+    }])
+</script>
+</body>
+</html>

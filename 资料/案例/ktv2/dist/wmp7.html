@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/wmp7.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<div class="bar bar-header" style="background:#E44BF1">
+			<button class="button button-clear ">
+				<i class="ion-ios-arrow-back stable"></i>
+			</button>
+			<h1 class="title stable">门票列表</h1>
+		</div>
+		<div class="content has-header scroll scroll-content" style="overflow-y:scroll">
+			<div class="list">
+				<div class="item" style="padding:0;">
+					<div class="row">
+						<div class="col col-30">
+							<label class="item-input item-select">
+								<div class="input-label">
+									全部
+								</div>
+								<select>									
+								</select>								
+							</label>
+						</div>
+						<div class="col col-30">
+							<label class="item-input item-select">
+								<div class="input-label">
+									价格排序
+								</div>
+								<select>									
+								</select>
+							</label>
+						</div>
+						<div class="col col-30">
+							<label class="item-input item-select">
+								<div class="input-label">
+									销量优先
+								</div>
+								<select>									
+								</select>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="item item-thumbnail-left item-text-wrap">
+					<img src="img/w01.png" alt="" />
+					<h2>蔡依林2016play巡回演唱会郑州站</h2>
+					<p style="font-size:20px;color:#663399;">￥290<span class='item-note'>已售123</span></p>					
+				</div>
+				<div class="item item-thumbnail-left item-text-wrap">
+					<img src="img/w01.png" alt="" />
+					<h2>蔡依林2016play巡回演唱会郑州站</h2>
+					<p style="font-size:20px;color:#663399;">￥290<span class='item-note'>已售123</span></p>					
+				</div>
+				<div class="item item-thumbnail-left item-text-wrap">
+					<img src="img/w01.png" alt="" />
+					<h2>蔡依林2016play巡回演唱会郑州站</h2>
+					<p style="font-size:20px;color:#663399;">￥290<span class='item-note'>已售123</span></p>					
+				</div>
+				<div class="item item-thumbnail-left item-text-wrap">
+					<img src="img/w01.png" alt="" />
+					<h2>蔡依林2016play巡回演唱会郑州站</h2>
+					<p style="font-size:20px;color:#663399;">￥290<span class='item-note'>已售123</span></p>					
+				</div>
+				<div class="item item-thumbnail-left item-text-wrap">
+					<img src="img/w01.png" alt="" />
+					<h2>蔡依林2016play巡回演唱会郑州站</h2>
+					<p style="font-size:20px;color:#663399;">￥290<span class='item-note'>已售123</span></p>					
+				</div>
+			</div>
+		</div>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>

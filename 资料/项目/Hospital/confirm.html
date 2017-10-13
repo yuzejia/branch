@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>为他证实</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<header class="mainH1Title text-center plr">
+			<div class="left_btn">
+				<a onclick="window.history.back()">
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>
+			</div>
+			为他证实
+			<div class="right_btn">
+				<!--<a>
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>-->
+			</div>
+		</header>
+		<div class="confirm_con" ng-controller="main">
+			<div class="confirm_list ptb30 clearfix">
+				<div class="confirm_list_left fl font-size28 color-default mr30">
+					你的姓名
+				</div>
+				<input type="" name="" id="name" placeholder="输入姓名"/>
+			</div>
+			<div class="confirm_list ptb30 clearfix">
+				<div class="confirm_list_left fl font-size28 color-default mr30">
+					身份证号
+				</div>
+				<input type="" name="" id="certificates" placeholder="输入证件号码"/>
+			</div>
+			<div class="confirm_list ptb30 clearfix">
+				<div class="confirm_list_left fl font-size28 color-default mr30">
+					联系方式
+				</div>
+				<input type="" name="" id="phonenumber" placeholder="输入手机号"/>
+			</div>
+			<div class="confirm_list ptb30 clearfix mb20">
+				<div class="confirm_list_left fl font-size28 color-default mr30">
+					我与求助人的关系
+				</div>
+				<div class="confirm_list_right_text fr color-gray font-size28">
+					<a href="confirm-relationship.html">
+						<span ng-bind='txts'>朋友</span>
+						<img src="img/icon/suppot-right.fw.png"/>
+					</a>
+				</div>
+			</div>
+			
+			<div class="confirm_list_right_text1 bg-white">
+				<textarea name="" rows="" cols="" placeholder="证实内容..."  id="text"></textarea>
+			</div>
+			<div class="confirm_btn text-center color-white" ng-click="yesdatas()">
+				确定
+			</div>
+			<!--remind 提示框-->
+			<div class="remind_con">
+				<div class="remind text-center color-white pt15 pb15 pl25 pr25 font-size28">
+						
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+			app.controller('main',function($scope,$http){
+				
+				//提示框
+				var show = document.querySelector(".remind_con");
+				var showtxt =document.querySelector('.remind');
+				
+				//关系选择
+				var txts = window.localStorage.getItem('thisdatastext');			//获取
+				var confirmid = window.localStorage.getItem('confirmid');	
+				  		   		window.sessionStorage.removeItem("thisdatastext"); 	//清除
+				  		   		window.sessionStorage.removeItem("confirmid");
+				  	if(txts == null || txts == ""){									//判断
+				  		txts = "朋友";
+				  		confirmid = 1;
+				  	};
+				$scope.txts = txts;											//赋值
+				
+				
+				//获取爱心筹id
+				var aixindetails = window.localStorage.getItem("aixindetails");
+				console.log(aixindetails)
+				
+				
+				
+				//点击按钮 -- 向服务器发送数据
+				$scope.yesdatas = function(){
+					
+					
+					//获取token 判断 是否存在 --不存在跳到登录页面
+					var tokens = window.localStorage.getItem('toknes');
+					
+					
+					if(tokens == "" || tokens == null){
+						
+							fadeIn(show,400);
+							showtxt.innerHTML = "您还没有登录,请先登录";
+							
+							setTimeout(function(){
+								fadeOut(show,400);
+								window.open("login.html","_self");
+							},1800);
+							
+					}else{
+						
+						var thisname = document.getElementById('name').value;					//姓名
+						var certificates = document.getElementById('certificates');		//身份号码
+						var phonenumber =  document.getElementById('phonenumber');		//电话
+						var texts = document.getElementById('text');					//证实内容
+						var relationship = document.querySelector('.confirm_list_right_text').children[0].children[0].innerHTML;
+						
+						
+						//正则验证
+						var re1  = new RegExp(/^[\u4e00-\u9fa5]+$/);  //姓名验证
+						var re2 = new RegExp(/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/);//身份号码验证
+						var re3 = new RegExp(/^1(3|4|5|7|8)\d{9}$/)   //电话验证
+						
+						
+						//姓名验证
+						if(thisname == "" || thisname == null){
+							
+									fadeIn(show,400);
+									showtxt.innerHTML = "姓名不能为空";
+									setTimeout(function(){
+										fadeOut(show,400);
+									},1500);
+									return false;
+									
+						}else{
+							
+							if (!re1.test(thisname)){ 
+								
+									fadeIn(show,400);
+									showtxt.innerHTML = "请输入您的真实姓名";
+									setTimeout(function(){
+										fadeOut(show,400);
+									},1500);
+									return false;
+								//清空输入框 
+								thisname = "";
+								
+							}else{  				//姓名验证通过
+								
+								
+								//身份号码验证
+								if(certificates.value == "" || certificates.value == null){
+									
+												fadeIn(show,400);
+												showtxt.innerHTML = "身份证号码不能为空";
+												setTimeout(function(){
+													fadeOut(show,400);
+												},1500);
+												return false;
+												
+								}else{
+									
+									if(!re2.test(certificates.value)){
+											fadeIn(show,400);
+											showtxt.innerHTML = "身份证号码输入有误,请从新输入";
+											setTimeout(function(){
+												fadeOut(show,400);
+											},1500);
+											return false;
+											certificates.value = "";
+									}else{
+										//电话号码验证
+										if(phonenumber.value == "" || phonenumber.value == null){
+													fadeIn(show,400);
+													showtxt.innerHTML = "电话号码不能为空";
+													setTimeout(function(){
+														fadeOut(show,400);
+													},1500);
+													return false;
+										}else{
+											
+											if(!re3.test(phonenumber.value)){
+													fadeIn(show,400);
+													showtxt.innerHTML = "电话号码输入有误,请从新输入";
+													setTimeout(function(){
+														fadeOut(show,400);
+													},1500);
+													return false;
+													phonenumber.value = "";
+											}else{
+	//												
+												if(texts.value == "" || texts.value == null){
+														fadeIn(show,400);
+														showtxt.innerHTML = "请输入您的留言";
+														setTimeout(function(){
+															fadeOut(show,400);
+														},1500);
+														return false;
+												}else{
+													console.log(thisname);
+													console.log(certificates.value);
+													console.log(phonenumber.value);
+													console.log(texts.value);
+													console.log(confirmid);
+													console.log(aixindetails);
+													console.log(tokens);
+													var submiturl = https+"TPBitz/crowdfunding/addverify";
+													//想服务器发送数据
+													$http({
+														url:submiturl,
+														method:'post',
+														data:{
+															"token": tokens,
+															"relationId":confirmid,
+															"crowdId":aixindetails,
+															'verifyContent':texts.value,
+															"verifyName":thisname,
+															"verifyCard":certificates.value,
+															"verifyPhone":phonenumber.value
+														}
+													}).success(function(data){
+														
+														console.log(data)
+														fadeIn(show,400);
+														showtxt.innerHTML = data.msg;
+														setTimeout(function(){
+															fadeOut(show,400);
+														},1500);
+													}).error(function(){
+														alert("no")
+													});
+													
+												};
+	//											
+											};
+										};
+										
+									};
+								};
+							};
+						};
+						
+					  };					
+					
+				};
+				
+				
+				
+				
+				
+			});
+			
+	</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<div class="bar bar-header" style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			<button class="button button-clear ">
+				<i class="icon ion-ios-arrow-back stable"></i>
+			</button>
+			<h1 class="title stable">发布</h1>
+			<button class="button button-clear">
+				<i class="stable">发送</i>
+			</button>
+		</div>
+		<div class="content has-header">
+			<label class="item item-input">
+					<textarea rows="5" placeholder="在哪？时间？房间号？跟大家分享一下吧"></textarea>
+			</label>
+			<div class="item">
+				添加图片
+			</div>
+			<div class="item">
+				添加图片
+			</div>
+		</div>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+

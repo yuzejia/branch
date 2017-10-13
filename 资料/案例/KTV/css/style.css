@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: rgb(242,242,242);
+}
+.barColor{
+    background: linear-gradient(to right,rgb(228,75,241),rgb(102,51,103));
+}
+.barColor i ,.barColor h1{
+    color: white;
+}
+.ddxqbox{
+    text-align: center;
+    margin:10px 0;
+    color: rgb(102,51,153);
+}
+.ddxqbox img {
+    vertical-align: middle;
+    margin:0 20px;
+}
+.ddxqbox b{
+    font-size: 18px;
+}
+.ddxq_rg{
+    float: right;
+}
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p{
+    white-space:normal
+}
+.price{
+    color: rgb(102,51,153);
+}
+.price span:nth-last-child{
+    font-size: 30px;
+}
+.list .price span{
+    font-size: 30px;
+    color: rgb(102,51,153);
+}
+.fontColor{
+    color: rgb(102,51,153);
+}
+
+.ddxq{
+    text-align: center;
+    background: white;
+}
+.list{
+    margin-top:10px;
+}
+.pj_price,.spdd_price{
+    margin-top:20px;
+}
+.list .sqdd_star img{
+    vertical-align: middle;
+    margin-left:10px;
+}
+.pj_camera {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    color: #cccccc;
+    text-align: center;
+    border:1px dashed #cccccc;
+}
+.pj_camera .ion-camera{
+    line-height: 70px;
+}
+.button-bar button{
+    border-left:2px solid rgb(102,51,153);
+    border-bottom:2px solid rgb(102,51,153);
+}
+.btnColor{
+    background: rgb(102,51,153);
+    color: white;
+}
+.has-header .wdyk1 .item{
+    border:none;
+}
+.has-header .wdyk1 .wx img{
+    width: 80%;
+}
+.has-header .wdyk1 .persion img{
+    vertical-align: middle;
+    width: 10%;
+    border-radius: 50%;
+}
+.imgmdd{
+    vertical-align: middle;
+}
+.has-header .wdyk1 .item{
+    line-height: 38px;
+    /*border-bottom: 2px solid #cccccc;*/
+}
+.has-header .wdyk1 .border{
+    border-bottom: 2px solid #cccccc;
+}
+.kqb .list {
+    width: 95%;
+    margin:0 auto;
+}
+

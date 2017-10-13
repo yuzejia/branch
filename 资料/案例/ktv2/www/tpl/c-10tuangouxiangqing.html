@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="main">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+		<style type="text/css">
+		body{
+			font-family: "微软雅黑";
+			background: #F2F2F2;
+		}
+			.c-dianjianav{
+				height: 250px;
+				position: relative;
+			}
+				.c-dianjianav-top{
+					padding: 15px;
+					box-sizing: border-box;
+				}
+				.c-dianjianav-top img:first-child{
+					width: 45px;
+					
+				}
+				.c-dianjianav-top img:last-child{
+					width: 45px;
+					float: right;
+					
+				}
+				.c-dianjianav-bottom{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+    				height: 36%;
+				}
+				.c-dianjianav-bottom img:first-child{
+					width: 100%;
+					height: 100%;
+				}
+				
+				.c-dianjia-posi{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					z-index: -99;
+				}
+				.c-dianjia-posi img{
+					width: 100%;
+					height: 100%;
+				}
+				.c-tunagou-img{
+					float: left;
+					    width: 5%;	
+				}
+				.c-tunagou-text{
+					display: inline-block;
+					margin-top: 2px;
+					margin-left: 10px;
+				}
+				
+				.c-dianpu-dizhi{
+					padding: 12px;
+					box-sizing: border-box;
+					border-bottom: 1px solid #E1E1E1;
+					margin-bottom: 8px;
+					background: #FFFFFF;
+				}
+				.c-dianpu-dizhi img:first-child{
+					float: left;
+					margin-right: 15px;
+    				margin-top: 4px;
+				}
+				.c-dianpu-dizhi img:last-child{
+					float: right;
+					width: 8%;
+				}
+				.c-dianpu-dizhi p{
+					width: 70%;
+					display: inline-block;
+					margin-bottom: 0px;
+					margin-left: 8px;
+				}
+				
+				
+				.c-chakan{
+					padding: 15px;
+					box-sizing: border-box;
+					text-align: center;
+					color: #F15A5A;
+					background: #FFFFFF;
+					margin-bottom: 8px;
+				}
+				.c-cearlist-bottom{
+					margin-bottom: 0;
+				}
+				.c-pinglun{
+					background: #FFFFFF;
+					padding: 15px;
+					box-sizing: border-box;
+					border-bottom: 1px solid #E1E1E1;
+				}
+				.c-pingxin{
+					width: 100%;
+					
+				}
+				.c-shijing-con img{
+					width: 26%;
+    				margin: 3.5px;
+				}
+				.c-chakancear1{
+					margin: 0;
+				}
+				.c-kk-bottom{
+					padding: 10px;
+					box-sizing: border-box;
+					background: #fff;
+					padding-left: 20px;
+					padding-right: 20px;
+					margin-bottom: 8px;
+				}
+				.c-kk-con img:first-child{
+					width: 25%;
+				}
+				.c-kk-con img:last-child{
+					margin-top: 5px;
+					width: 75%;
+	    			float: right;
+				}
+				.c-jiage{
+					font-size: 25px;
+					font-weight: bold;
+					color: #663399;
+					margin: 0;
+					display: inline-block;
+				}
+				.c-jiage span{
+					font-size: 16px;
+					color: #CCCCCC;
+					text-decoration: line-through;
+					font-weight: 100;
+					margin-left: 10px;
+					display: inline-block;
+				}
+				.c-xinxi-red{
+					    width: 39%;
+					    float: right;
+					    margin-top: 5px;
+				}
+				.row.c-row-back{
+					background: #FFFFFF;
+					text-align: center;
+					border-bottom: 1px solid #E1E1E1;
+					margin: 0;
+				}
+				.row.c-row-back1{
+					background: #FFFFFF;
+					text-align: center;
+					/*border-bottom: 1px solid #E1E1E1;*/
+					margin: 0;
+				}
+				.c-row-back p {
+					border-right: 1px solid #E1E1E1;
+					margin: 0;
+				}
+				.c-dianpu-dizhi1{
+					padding: 10px;
+					box-sizing: border-box;
+					background: #FFFFFF;
+				}
+				.c-dianpu-dizhi1 img:first-child{
+					width: 5px;
+					margin: 5px;
+					float: left;
+					margin-right: 10px;
+					
+				}
+				.c-dianpu-dizhi1 img:last-child{
+					width: 90%;
+					
+				}
+				.c-taochanxinxi-showleft{
+					margin-bottom: 8px;
+				}
+				.c-taochanxinxi-showright{
+					width: 100%;
+					height: 50%;
+					background: #FFFFFF;
+				}
+				.c-taochanxinxi-showright img{
+					width: 100%;
+				}
+				.c-goumai-posi{
+					position: fixed;
+					bottom: 0;
+					background: #FFFFFF;	
+					z-index: 22;	
+					height: 8%;	
+						
+				}
+				.c-con-con-img{
+					width: 38%;
+					display: inline-block;
+					float: left;
+					height: 90%;
+					margin-left: 20px;
+					margin-top: 6px;
+				}
+				
+				.c-goumai-posi img:last-child{
+					width: 50%;
+					float: right;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="content scroll scroll-content" style="overflow-y: scroll;">
+			<div class="c-dianjianav">
+				<div class="c-dianjianav-top">
+					<img src="img/c-051.png" ui-sref="tabs.tuangou"/>
+					<img src="img/c-052.png"/>
+				</div>
+				<div class="c-dianjianav-bottom">
+					<img src="img/c-066.png"/>
+				</div>
+				<div class="c-dianjia-posi">
+					<img src="img/c-067.png"/>
+				</div>
+			</div>
+			
+			<!---->
+			<div class="c-kk-bottom">
+				<p class="c-jiage">￥158<span>188</span></p>  
+				<img src="img/c-068.png" class="c-xinxi-red"/>
+			</div>
+			
+			<div class="c-dianpu-dizhi" ui-sref="tabs.ditu">
+				<h4>麦嘎量贩式KTV</h4>
+				<img src="img/c-053.png"/>
+				<p>郑州市管城区金水区郑花路1号丹尼斯百货花园店B1楼近农业路</p>
+				<img src="img/c-054.png"/>
+			</div>
+			<!---->
+			<div class="row c-row-back">
+				<div class="col" ng-click="canpin1()"><p>套餐内容</p></div>
+				<div class="col" ng-click="canpin2()">消费提示</div>
+			</div>
+			<div class="c-taochanxinxi-showleft" ng-show="xain1">
+				<div class="row c-row-back">
+					<div class="col">时间/包厢</div>
+					<div class="col">套餐内容</div>
+					<div class="col">团购券数</div>
+				</div>
+				<div class="row c-row-back1">
+					<div class="col">12:00 - 19:00(小包/中包)</div>
+					<div class="col">6小时欢唱</div>
+					<div class="col">1张</div>
+				</div>
+				<div class="row c-row-back1">
+					<div class="col">19:00 - 03:00(小包/中包)</div>
+					<div class="col">3小时欢唱</div>
+					<div class="col">1张</div>
+				</div>
+				<div class="c-dianpu-dizhi1">
+					<img src="img/c-069.png"/>
+					<img src="img/c-070.png"/>
+				</div>
+				<div class="item">其他（5选5）</div>
+				<div class="row c-row-back1">
+					<div class="col col-25">T牌啤酒</div>
+					<div class="col col-50">12听</div>
+					<div class="col col-25">144元</div>
+				</div>
+				<div class="row c-row-back1">
+					<div class="col col-25">果盘</div>
+					<div class="col col-50">1个</div>
+					<div class="col col-25">188元</div>
+				</div>
+				<div class="row c-row-back1">
+					<div class="col col-25">小吃</div>
+					<div class="col col-50">12斤</div>
+					<div class="col col-25">104元</div>
+				</div>
+				<div class="row c-row-back1">
+					<div class="col col-25">航空杯</div>
+					<div class="col col-50">12听</div>
+					<div class="col col-25">112元</div>
+				</div>
+			</div>
+			<div class="c-taochanxinxi-showright" ng-show="xain2">
+				<img src="img/c-071.png"/>
+			</div>
+			<!---->
+			<div class="list">
+				<div class="item">买家点评（910）</div>
+				<div class="c-pinglun">
+					<img src="img/c-057.png" class="c-pingxin" ui-sref="tabs.maijiapingjia"/>
+					<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+					<div class="c-shijing-con">
+						<img src="img/c-058.png"/>
+						<img src="img/c-059.png"/>
+						<img src="img/c-060.png"/>
+					</div>
+				</div>
+				<div class="c-pinglun">
+					<img src="img/c-061.png" class="c-pingxin" ui-sref="tabs.maijiapingjia"/>
+					<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+					<div class="c-shijing-con">
+						<img src="img/c-062.png"/>
+						<img src="img/c-063.png"/>
+						<img src="img/c-064.png"/>
+					</div>
+				</div>
+				<div class="c-chakan c-chakancear1" ui-sref="tabs.maijiapingjia">查看全部532条评价</div>
+				<div class="item item-divider"><img src="img/c-065.png" class="c-tunagou-img"/><span class="c-tunagou-text">附近团购</span></div>
+				<!--团购-->
+				<div class="c-kk-bottom" ui-sref="tabs.tuangou">
+					<div class="c-kk-con">
+						<img src="img/c-018.png"/> 
+						<img src="img/c-043.png"/>
+					</div>
+				</div>
+				<div class="c-kk-bottom" ui-sref="tabs.tuangou">
+					<div class="c-kk-con">
+						<img src="img/c-022.png"/> 
+						<img src="img/c-044.png"/>
+					</div>
+				</div>
+			</div>
+		
+			<!---->
+			<div class="c-goumai-posi">
+					<img src="img/c-072.png" class="c-con-con-img"/>
+				
+				
+				<img src="img/c-073.png"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		angular.module("myapp",['ionic'])
+//		.controller("main",["$scope",function($scope){
+				
+//			$scope.xain1 = true;
+//			$scope.xain2 = false;
+//			
+//			$scope.canpin1 = function(){
+//				$scope.xain1 = true;
+//				$scope.xain2 = false;
+//			}
+//			$scope.canpin2 = function(){
+//				
+//				$scope.xain1 = false;
+//				$scope.xain2 = true;
+//			}
+//		}])
+	</script>
+</html>

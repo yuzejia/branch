@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<ion-header-bar style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			<button class="button button-clear ">
+				<i class=" ion-ios-arrow-back stable"></i>
+			</button>
+			<h1 class="title stable">下一站</h1>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list class="text-center">
+				<div class="row">
+					<div class="col col-50" style="border-right:1px solid #ddd;height:100px;border-bottom:1px solid #ddd;height:100px">
+						<i class="icon ion-model-s energized" style="font-size:30px"></i>
+						<p>打车回家</p>
+					</div>
+					<div class="col col-50" style="">
+						<i class="icon ion-android-car positive" style="font-size:30px"></i>
+						<p>附近酒店</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-50" >
+						<i class="icon ion-xbox balanced" style="font-size:30px"></i>
+						<p>需要代价</p>
+					</div>
+					<div class="col col-50" style="border-top:1px solid #ddd;height:100px;border-left:1px solid #ddd;height:100px">
+						<i class="icon ion-coffee royal" style="font-size:30px"></i>
+						<p>附近夜宵</p>
+					</div>
+				</div>
+			</ion-list>
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+
+
+
+
+

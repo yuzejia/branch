@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>ionic指令
+		</title>
+		<link rel="stylesheet" href="css/ionic.css" />
+		<script src="js/ionic.bundle.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="mainCtrl">
+		<ion-header-bar align-title="center" class="bar-positive">
+			<h1 class="title">哈喽开心时刻</h1>
+		</ion-header-bar>
+		<ion-content>
+			    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+			 <ion-list>			 	
+			 	 <ion-item ng-repeat="item in items track by $index" class="item-text-wrap">
+			 	 	{{item.summary}}
+			 	 </ion-item>	
+			 </ion-list>		
+		</ion-content>
+		
+	
+		
+		<script>
+			angular.module("myapp",["ionic"])
+			//$funServer 是自己定义的一个本地存取服务
+			.controller("mainCtrl",["$scope","$http","$funService",function($scope,$http,$funService){
+				// 默认的笑话数据是从localstorage里面获取的 第一次为空
+				$scope.items=$funService.fetchData("datalist");//笑话的数组
+				// 默认的页面是从从localstorage里面获取的 第一次为0
+				$scope.page=$funService.fetchData("page")||0;// 当前是第几页
+			/*getData 用来加载数据 
+			 */
+			$scope.getData=function(){
+				$scope.page++; // 默认页面数加一
+				
+				$http.get("http://www.qingkt.com/duan/data.php?page="+$scope.page)
+				.success(function(res){
+					// 成功后让新的数据和老的数据合并
+					$scope.items=res.result.concat($scope.items);
+					// 保存当前是第几页
+					$funService.saveData("page",$scope.page);
+					// 保存笑话数据
+					$funService.saveData("datalist",$scope.items);
+				})
+			}
+			// 当items里面数据 才默认 加载一次数据
+			if($scope.items.length<=0){	$scope.getData()}
+		
+			// 当下拉的时候执行
+			$scope.doRefresh=function(){
+				$scope.getData();//拿到数据
+				$scope.$broadcast("scroll.refreshComplete")
+				//广播完成
+			}
+			}])
+			.factory("$funService",[function(){
+				return {
+					//保存数据
+					saveData:function(name,value){
+						// 把value对象转换为一个字符串
+						var str =JSON.stringify(value);
+						// 存储在本地
+						localStorage.setItem(name,str)
+					},
+					// 获取数据组
+					fetchData:function(name){
+//						返回一个对象
+						//localStorage.getItem(name) 拿到字符串 需要转为 json格式 如果拿不到就给一个[]
+						return JSON.parse(localStorage.getItem(name)||"[]");
+					}
+				}
+			}])
+		</script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>请选择关系</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body class="bg-white">
+		<header class="mainH1Title text-center plr">
+			<div class="left_btn">
+				<a onclick="window.history.back()">
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>
+			</div>
+			请选择关系
+			<div class="right_btn">
+				<!--<a>
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>-->
+			</div>
+		</header>
+		<div class="confirm_con" ng-controller="main">
+			<div class="pl20">
+					<div class="b-border2 pt25 pb25 font-size32 color-default" ng-click="thisdatas($event,2)">
+						朋友
+					</div>
+				</div>
+				<div class="pl20">
+					<div class="b-border2 pt25 pb25 font-size32 color-default" ng-click="thisdatas($event,2)">
+						父子
+					</div>
+				</div>
+				<div class="pl20">
+					<div class="b-border2 pt25 pb25 font-size32 color-default" ng-click="thisdatas($event,3)">
+						母子
+					</div>
+				</div>
+				<div class="pl20">
+					<div class="b-border2 pt25 pb25 font-size32 color-default" ng-click="thisdatas($event,4)">
+						同学
+					</div>
+				</div>
+				<div class="pl20">
+					<div class="b-border2 pt25 pb25 font-size32 color-default" ng-click="thisdatas($event,5)">
+						同事
+					</div>
+				</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+			app.controller('main',function($scope){
+				$scope.thisdatas = function($event,index){
+						//id值
+						var thisdatastext = $event.target.innerHTML;	//获取去当前的值
+						window.localStorage.thisdatastext = thisdatastext; 
+						window.localStorage.confirmid = index; 
+						window.history.go(-1);								//返回上一页
+						
+						
+				}
+				
+			});
+			
+	</script>
+</html>

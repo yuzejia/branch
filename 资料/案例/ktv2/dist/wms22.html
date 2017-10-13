@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/wms22.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<!--<ion-header-bar class="bar-energized" style="height:100px">
+			<button class="button button-clear ">
+				<i class="icon ion-ios-arrow-back "></i>
+			</button>
+			<h1 class="title">美食</h1>
+			<button class="button button-clear button-small button">
+				<i class="icon ion-ios-personadd-outline"></i>
+			</button>
+			<label class="item-input-inset item-energized" style="border:none">
+			 		<div class="item-input-wrapper">
+				 		<i class="icon ion-search placeholder-icon"></i>
+				 		<input type="text" placeholder="username" />				 		
+			 		</div>
+			 	</label>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				
+			</ion-list>
+		</ion-content>-->
+		<div class='bar bar-header' style="background:#FF9C38">
+			<button class="button button-clear " >
+				<i class="icon ion-ios-arrow-back  light"></i>
+			</button>
+			<h1 class="title  light">美食</h1>
+			<button class="button button-clear button-small">
+				<i class="icon ion-ios-personadd-outline  light"></i>
+			</button>
+		</div>
+		<div class='bar bar-subheader' style="background:#FF9C38;margin-bottom:-13px">
+			<label class="item-input-inset item-energized">
+			 		<div class="item-input-wrapper">
+				 		<i class="icon ion-search placeholder-icon energized"></i>
+				 		<input type="text" placeholder="请输入手机号" placeholder-energized/>				 		
+			 		</div>
+			 </label>
+		</div>
+		<ion-content class='has-header has-subheader scroll scroll-content' style="overflow-y:scroll">
+			<ion-list>
+				<ion-item>
+					<div class="row">
+						<div class='col col-25'>
+							<label class="item-input item-select">
+								<div class="input-label">
+									菜系
+								</div>
+								<select>									
+								</select>
+								<i class="ion-ios-arrow-down"></i>
+							</label>
+						</div>
+						<div class='col col-25'>
+							<label class="item-input item-select">
+								<div class="input-label">
+									范围
+								</div>
+								<select>									
+								</select>
+								<i class="ion-ios-arrow-down"></i>
+							</label>
+						</div>
+						<div class='col col-25'>
+							<label class="item-input item-select">
+								<div class="input-label">
+									筛选
+								</div>
+								<select>									
+								</select>
+								<i class="ion-ios-arrow-down"></i>
+							</label>
+						</div>
+						<div class='col col-25'>
+							<label class="item-input item-select">
+								<div class="input-label">
+									排序
+								</div>
+								<select>									
+								</select>
+								<i class="ion-ios-arrow-down"></i>
+							</label>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/w22.png" alt="" class="full-image">
+					<h2>周有烤鱼<i class="item-note"><span class='wmsspan'>团</span><span class='wmsspan'>付</span></i></h2>
+					<p><i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-wifi'></i><i class="item-note">人均：<span class='assertive'>￥45</span></i></p>
+					<p>川菜  花园路<i class='item-note'>69米</i></p>
+					<div class="wmsdiv">4.8折起，250人一团购</div>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/w22.png" alt="" class="full-image">
+					<h2>周有烤鱼<i class="item-note"><span class='wmsspan'>团</span><span class='wmsspan'>付</span></i></h2>
+					<p><i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-wifi'></i><i class="item-note">人均：<span class='assertive'>￥45</span></i></p>
+					<p>川菜  花园路<i class='item-note'>69米</i></p>
+					<div class="wmsdiv">4.8折起，250人一团购</div>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/w22.png" alt="" class="full-image">
+					<h2>周有烤鱼<i class="item-note"><span class='wmsspan'>团</span><span class='wmsspan'>付</span></i></h2>
+					<p><i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-wifi'></i><i class="item-note">人均：<span class='assertive'>￥45</span></i></p>
+					<p>川菜  花园路<i class='item-note'>69米</i></p>
+					<div class="wmsdiv">4.8折起，250人一团购</div>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/w22.png" alt="" class="full-image">
+					<h2>周有烤鱼<i class="item-note"><span class='wmsspan'>团</span><span class='wmsspan'>付</span></i></h2>
+					<p><i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-wifi'></i><i class="item-note">人均：<span class='assertive'>￥45</span></i></p>
+					<p>川菜  花园路<i class='item-note'>69米</i></p>
+					<div class="wmsdiv">4.8折起，250人一团购</div>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/w22.png" alt="" class="full-image">
+					<h2>周有烤鱼<i class="item-note"><span class='wmsspan'>团</span><span class='wmsspan'>付</span></i></h2>
+					<p><i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-star'></i>
+						<i class='ion-star'></i><i class='ion-wifi'></i><i class="item-note">人均：<span class='assertive'>￥45</span></i></p>
+					<p>川菜  花园路<i class='item-note'>69米</i></p>
+					<div class="wmsdiv">4.8折起，250人一团购</div>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+

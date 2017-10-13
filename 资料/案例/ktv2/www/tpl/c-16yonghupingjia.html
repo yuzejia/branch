@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="main">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>城市列表</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+		body{
+			background: #F2F2F2;
+		}
+			.c-zhimuposition{
+				position: fixed;
+				right: 2px;
+				top:55px;
+				width: 15px;
+				height: 100%;
+				z-index: 99;
+			}
+			.c-navs{
+				width: 15px;
+				height: 3.5%;
+				text-align: center;
+			}
+			
+			.c-nav-posibg{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -99;
+			}
+			.c-nav-posibg img{
+				width: 100%;
+				height: 100%;
+			}
+			.button-clear.button-clear{
+				color:#FFFFFF;
+			}
+			
+			.c-addcolor{
+				color: #663399;
+				font-size: 20px;
+			}
+			.c-navtextcolor{
+				color:#FFFFFF;
+				font-size: 18px;
+				margin: 0 auto;
+				line-height: 40px;
+			}
+			.c-pinglun{
+					background: #FFFFFF;
+					padding: 15px;
+					box-sizing: border-box;
+					border-bottom: 1px solid #E1E1E1;
+				}
+			.c-pingxin{
+					width: 100%;
+					
+				}
+			.c-shijing-con img{
+					width: 26%;
+    				margin: 3.5px;
+				}
+		</style>
+	</head>
+	<body>
+		<ion-header-bar>
+			<button class="button button-clear icon ion-ios-arrow-left" ui-sref="tabs.taungouxaingqing" ></button>
+			<div class="c-navtextcolor">
+				用户评价
+			</div>
+			<div class="c-nav-posibg"><img src="img/c-027.png"/></div>
+		</ion-header-bar>
+		
+		<ion-content class="content has-header scroll scroll-content" style="overflow-y: scroll;">	
+				<div class="list">
+					<div class="c-pinglun">
+						<img src="img/c-057.png" class="c-pingxin"/>
+						<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+						<div class="c-shijing-con">
+							<img src="img/c-058.png"/>
+							<img src="img/c-059.png"/>
+							<img src="img/c-060.png"/>
+						</div>
+					</div>
+					<div class="c-pinglun">
+						<img src="img/c-061.png" class="c-pingxin"/>
+						<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+						<div class="c-shijing-con">
+							<img src="img/c-062.png"/>
+							<img src="img/c-063.png"/>
+							<img src="img/c-064.png"/>
+						</div>
+					</div>
+					<div class="c-pinglun">
+						<img src="img/c-057.png" class="c-pingxin"/>
+						<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+						<div class="c-shijing-con">
+							<img src="img/c-058.png"/>
+							<img src="img/c-059.png"/>
+							<img src="img/c-060.png"/>
+						</div>
+					</div>
+					<div class="c-pinglun">
+						<img src="img/c-061.png" class="c-pingxin"/>
+						<p>这么多人吓死宝宝了，还好大厅经理人挺好提前给我们安排了。服务环境都很不错，特别是音响可以说是郑州...</p>
+						<div class="c-shijing-con">
+							<img src="img/c-062.png"/>
+							<img src="img/c-063.png"/>
+							<img src="img/c-064.png"/>
+						</div>
+					</div>
+				</div>
+		</ion-content>
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",["ionic"])
+		.controller("main",["$scope",function($scope){
+		
+		}])
+	</script>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app' >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <script src=js/ionic/ionic.min.js></script>
+    <script src="js/ionic/ionic.bundle.js" ></script>
+    <script src="js/app.js"></script>
+    <style>
+        .Sj-Top{
+            height: 257px;
+            background: url("images/shangjia/Sbj.png");
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .Sj-yanzheng{
+           margin: 0 auto;
+            width:80%;
+           padding-top: 100px;
+
+        }
+        .btn{
+            border-radius: 10px;
+        }
+        .ion-yanZ{
+            margin:0 auto;
+            width:36px;
+            height:36px;
+            display:block;
+
+        }
+        .Sj-Top2{
+            line-height: 40px;
+            background:rgba(0,0,0,0.3);
+            color: #ffffff;
+        }
+        .Sj-Top2:before{
+            display: block;
+            content: "";
+            height: 20px;
+            width: 1px;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            top: 225px;
+        }
+        .Sj-con .item p:nth-of-type(1) span{
+            color: #000;
+        }
+        .Sj-Top2 .col-50{
+            padding:0 25px;
+            font-size: 12px;
+        }
+        .ion-Sj-2{
+            width:36px;
+            height: 36px;
+            display: block;
+            border-radius: 50%;
+            float: left;
+            background: url("images/shangjia/S9.png");
+            transform:scale(0.7,0.7);
+        }
+        .ion-Sj-3{
+            width:36px;
+            height: 36px;
+            display: block;
+            border-radius: 50%;
+            float: left;
+            background: url("images/shangjia/S10.png");
+            transform:scale(0.7,0.7);
+        }
+        .ion-Sj-4{
+            width:36px;
+            height: 36px;
+            display: block;
+            border-radius: 50%;
+            float: left;
+            background: url("images/shangjia/S1.png");
+            transform:scale(0.7,0.7);
+        }
+        .ion-Sj-5{
+            width: 37px;
+            height: 36px;
+            border-radius: 50%;
+            background: url("images/shangjia/S4.png") ;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .ion-Sj-6{
+            width: 37px;
+            height: 36px;
+            border-radius: 50%;
+            background: url("images/shangjia/S5.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .ion-Sj-7{
+            width: 37px;
+            height: 36px;
+            border-radius: 50%;
+            background: url("images/shangjia/S6.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .Sj-con .item1{
+            line-height: 40px;
+            padding: 0 16px;
+        }
+        .Sj-con .item2 .col-30,.Sj-con .item2 p{
+            font-size: 12px;
+        }
+
+        .Sj-con .item2 p img{
+            width:36px;
+            height:24px;
+        }
+        .Sj-con .list2 a i:nth-of-type(2){
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body  ng-controller="myCtrl" >
+
+           <div class="bar bar-header bar-clear">
+               <a class="button button-icon ion-ios-arrow-left"> </a>
+               <h1 class="title">商家团购</h1>
+           </div>
+          <ion-content class="">
+         <div class="Sj-Top">
+            <div class="Sj-yanzheng">
+                <a ui-sref="tabs.yanzheng.yanZ1" class="btn button button-full ">验证序列号</a>
+                <p><i class="ion-yanZ">111</i></p>
+            </div>
+            <div class="row Sj-Top2">
+                <div ui-sref="tabs.ye" class="col col-50 text-center">
+                    <p>
+                    <i class="ion-Sj-2">1</i>
+                    <span>账户金额</span>
+                    <span>￥888</span>
+                    </p>
+                </div>
+
+                <div class="col col-50 text-center">
+                    <p>
+                    <i class="ion-Sj-3">1</i>
+                    <span>今日订单</span>
+                        <span>2</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div class="Sj-con">
+        <div class="list">
+            <a href="#/tabs/dingD" class="item item1">
+                <p class="fl"><i class="ion-Sj-4"></i><span>订单管理</span></p>
+                <p class="fr"><span>查看全部订单</span><i> ></i></p>
+            </a>
+            <div class="item item2">
+               <div class="row text-center">
+                   <div class="col col-30">
+                       <p><img src="images/shangjia/s2.png" alt=""></p>
+                       待验证
+                   </div>
+                   <div class="col col-30">
+                       <p><img src="images/shangjia/s2.png" alt=""></p>
+                       待验证
+                   </div>
+                   <div class="col col-30">
+                       <p><img src="images/shangjia/s2.png" alt=""></p>
+                       待验证
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="list list2">
+            <a class="item item-icon-left item-icon-right" ui-sref="tabs.Order.quanbu">
+                <i class="icon ion-Sj-5"></i>
+               购买订单
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a ui-sref="tabs.creditCard" class="item item-icon-left item-icon-right" href="#">
+                <i class="icon ion-Sj-6"></i>
+               我的银行卡
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" ui-sref="tabs.address">
+                <i class="icon ion-Sj-7"></i>
+               我的店址
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+
+        </div>
+   </div>
+        </ion-content>
+    <script>
+        var App = angular.module("app",['ionic'])
+        App.controller("myCtrl",["$scope",function($scope){
+
+        }])
+    </script>
+</body>
+</html>

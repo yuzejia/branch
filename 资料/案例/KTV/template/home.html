@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <script src="js/ionic.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/shouye.css">
+</head>
+<body  ng-controller="myCon">
+<!--头部-->
+    <div class="bar bar-header  bar-royal item-input-inset">
+            郑州
+        <!--输入框-->
+            <label class="item-input-wrapper inputs-no1">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input ng-focus="searchs()" type="search">
+            </label>
+        <!--两个小图标-->
+            <i ><img class="imsg-no1" src="img/shouye/iconfont-taiyang.png" alt=""></i>
+            <i ui-sref="tabs.information"><img class="imsg-no1" src="img/shouye/xinxi.png" alt=""></i>
+    </div>
+    <ion-content class="has-header ">
+        <!--图片部分-->
+        <div>
+            <img class="full-image" src="img/shouye/shouye-01.fw.png" alt="">
+        </div>
+        <div style="text-align: center">
+            <!--中间部分的两排的图标-->
+            <div class="row">
+                <div ui-sref="tabs.Splb" class="col">
+                    <i class="cols-no1"><img class="imsg-no2" src="img/shouye/shouye-00.fw.png" alt=""></i>
+                  <span>设计装修</span>
+                </div>
+                <div ui-sref="tabs.Splb" class="col">
+                    <i class="cols-no2"><img class="imsg-no3" src="img/shouye/shouye-03.fw.png" alt=""></i>
+                    <span>设计工程</span>
+                </div>
+                <div ui-sref="tabs.Splb" class="col">
+                    <i class="cols-no3"><img class="imsg-no4" src="img/shouye/shouye-04.fw.png" alt=""></i>
+                    <span>家居饰品</span>
+                </div>
+                <div ui-sref="tabs.Splb" class="col">
+                    <i class="cols-no4"><img class="imsg-no4" src="img/shouye/shouye-05.fw.png" alt=""></i>
+                    <span>酒水食品</span>
+                </div>
+            </div>
+            <div class="row">
+                <div ui-sref="tabs.Jygl" class="col">
+                    <i class="cols-no5"><img class="imsg-no4" src="img/shouye/shouye-06.fw.png" alt=""></i>
+                    <span>经营管理</span>
+                </div>
+                <div class="col">
+                    <i class="cols-no6"><img class="imsg-no5" src="img/shouye/shouye-07.fw.png" alt=""></i>
+                    <span>商界精英</span>
+                </div>
+                <div ui-sref="tabs.information" class="col">
+                    <i class="cols-no7"><img class="imsg-no4" src="img/shouye/shouye-08.fw.png" alt=""></i>
+                    <span>人才交流</span>
+                </div>
+                <div class="col">
+                    <i class="cols-no8"><img class="imsg-no4" src="img/shouye/shouye-09.fw.png" alt=""></i>
+                    <span>招标信息</span>
+                </div>
+            </div>
+        </div>
+        <!--下面的娱乐头条-->
+        <div class="list">
+            <div class="item item-thumbnail-left">
+                <img class="imsg-no6" src="img/shouye/shouye-10.fw.png" alt="">
+                <p class="tops"><i class="dian"></i><span>唱功不行？	k歌达人教你5天逆袭歌神！</span></p>
+                <p><i class="dian"></i>气质如何展现？会唱歌呀有没有！</p>
+                <p><i class="dian"></i>朋友聚会哪里去？疯狂K歌看这里！</p>
+            </div>
+        </div>
+        <!--下面的限时抢购-->
+        <div class="list">
+            <div class="item">
+                <div class="fl">
+                    <p>限时抢购</p>
+                    <div class="divs">
+                        <div class="fls">
+                            <p class="fls-no1">歌迷5小时欢唱</p>
+                            <p><span>惊爆价</span><img class="imsg-s1" src="img/shouye/shouye-12.fw.png" alt=""></p>
+                        </div>
+                        <div class="rls">
+                            <img class="imsg-s2" src="img/shouye/shouye-13.fw.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="rl">
+                    <p class="hs">名店风采</p>
+                    <img src="img/shouye/shouye-14.fw.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bk">
+            <i class="imsg-s3"><img src="img/shouye/shouye-15.fw.png" alt=""></i>
+            <span class="pos">商界推荐</span>
+        </div>
+        <!--下面两个列表显示-->
+        <div class="list">
+            <div class="item item-thumbnail-left">
+                <img class="full-image imsg-s4" src="img/shouye/shouye-13.fw.png" alt="">
+                <h2>最爱KTV <i class="item-note"></i></h2>
+                <p>仅售19元，价值166元下午场</p>
+                <p><span class="cols">￥199</span> <i class="item-note">已售123</i></p>
+            </div>
+            <div class="item item-thumbnail-left">
+                <img class="full-image imsg-s4" src="img/shouye/shouye-no16.png" alt="">
+                <h2>糖果量贩KTV <i class="item-note"></i></h2>
+                <p>仅售19元，价值166元下午场</p>
+                <p><span class="cols">￥555</span> <i class="item-note">已售123</i></p>
+            </div>
+        </div>
+    </ion-content>
+<!--底部tab-->
+
+
+<script type="text/javascript">
+    var myApp = angular.module("myApp", ["ionic"]);
+    myApp.controller("myCon", ["$scope", function($scope) {
+
+    }]);
+</script>
+</body>
+</html>

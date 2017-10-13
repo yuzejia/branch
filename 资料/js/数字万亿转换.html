@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        height: 100%;
+    }
+.a{
+    height: 30px;
+    width: 100%;
+    background: #000;
+}
+    .b{
+        width: 150px;
+        float: left;
+        height: 100%;
+        background: red;
+    }
+    .c{
+        width: 100%;
+        height: 100%;
+        background: #c0a16b;
+        float: right;
+    }
+    .d{
+        height: 100px;
+        background: #00a0e9;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+</style>
+<body>
+
+<div class="a"></div>
+<div class="b">safgvwsegvwevbwebweb</div>
+<div class="c">gdfhdjhfgj</div>
+<div style="clear:both"></div>
+<div class="d"></div>
+<script>
+    var as = 123965666;
+    var renqi = as.toString();
+    console.log(renqi);
+    var index = renqi.length
+    if(renqi.length>5){
+        if(renqi.length>8){
+            renqis = renqi.substring(0,index-4)/10000;
+            console.log(renqis+'亿')
+        }else {
+            renqis = renqi.substring(0,index)/10000;
+            console.log(renqis+'万')
+        }
+//        $scope.wan = true ;
+
+    }
+</script>
+</body>
+</html>

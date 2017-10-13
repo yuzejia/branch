@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	    	body{
+	    		
+	    		background-color: #f2f2f2;
+	    	}
+	    	input{
+	    		
+	    	}
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">选择银行卡</h1>
+			<button class="button button-clear button-light">
+				添加
+			</button>
+		</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+			    <ion-item class="item-avatar item-icon-right" style="margin-bottom: 10px;">
+			    	<img src="img/nmm01.fw.png" />
+			    	<h2>中国工商银行</h2>
+			    	<p>尾号7265储蓄卡</p>
+					<input type="radio" class="icon" name="checked"/>
+			    </ion-item>
+			     <ion-item class="item-avatar item-icon-right" style="margin-bottom: 10px;">
+			    	<img src="img/nmm02.fw.png" />
+			    	<h2>中国光大银行</h2>
+			    	<p>尾号2177储蓄卡</p>
+					<input type="radio" class="icon" name="checked"/>
+			    </ion-item>
+			     <ion-item class="item-avatar item-icon-right" style="margin-bottom: 10px;">
+			    	<img src="img/nmm03.fw.png" />
+			    	<h2>中国建设银行</h2>
+			    	<p>尾号8660储蓄卡</p>
+					<input type="radio" class="icon" name="checked"/>
+			    </ion-item>
+			</ion-list>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

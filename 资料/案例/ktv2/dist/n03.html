@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	    	body{
+	    		
+	    		background-color: #f2f2f2;;
+	    	}
+	    	i{
+	    		color: #CCCCCC;
+	    	}
+	       .padding button{
+	       	     color: #FFFFFF;
+	       	     background-color: #663399;
+	       }
+	    	
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">余额提现</h1>
+		</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+			    <ion-item class="item-avatar item-icon-right" style="margin-bottom: 10px;">
+			    	<img src="img/nmm01.fw.png" />
+			    	<h2>中国工商银行</h2>
+			    	<p>尾号7265储蓄卡</p>
+			    	<i class="icon ion-chevron-right"></i>
+			    </ion-item>
+			    <ion-item class="item-input">
+			           提现金额&nbsp;&nbsp; <input type="text"  placeholder="最多可提现888.00元"/>
+			    </ion-item>
+			</ion-list>
+			<div class="padding">
+			   <button class="button button-block">确认提现</button>
+			   <p style="padding-top: 20px;">提现规则</p>   
+			   <p>1.重量限定：单件货物重量不得>25kg。</p>  
+			   <p>2.体积限定：单件货物体积不得>0.4m<sup>3</sup>。</p>  
+			   <p>4.计价规则：3公里范围内，每单12元；3-10公里之间，每公里加1元；超出10公里后，每公里加2元。特殊行业价格会有浮动(如：蛋糕、数码)</p>
+			   <p>5.禁止发布有关涉及各种弓、弩、金属刀、剑制品(包含工艺品)等管制刀具的任务信息。</p>
+			   <p>6.不得包含易燃、易爆危险物品以及国家法令禁止、限制流通的物品。</p>
+			</div>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

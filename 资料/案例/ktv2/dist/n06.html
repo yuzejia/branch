@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	        body{
+	    	    background-color: #f2f2f2;
+	        }
+	        button{
+	        	background-color: #663399;
+	        	 color: #FFFFFF;
+	        }
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">订单详情</h1> 
+	</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+				<div class="padding" style="color: #663399; font-size:18px;text-align: center;">
+				  <i class="icon ion-android-bus"></i>
+				    等待卖家发货
+				</div>
+			  <ion-item style="margin-bottom: 12px;">
+			  	<p>发货人：小美        15938102596</p>
+			  	<p>收货地址：河南郑州市金水区花园路与金水路交叉口招</p>
+			  	<p>银大厦1808</p>
+			  </ion-item>
+			  <ion-item class="item-thumbnail-left">
+			  	  <img src="img/nt02.fw.png" />
+			  	  <h2>憾森点歌机家庭用KTV高清触摸屏</h2>
+			      <h2>卡拉OK点唱机一体机套装</h2>
+			      <p>数量：x1</p>
+			      <p class="royal">
+				    <i class="icon ion-social-yen royal"><span style="font-size: 25px;">299</span></i>
+				 </p>
+			  </ion-item>
+			  <ion-item>
+			  	优惠券
+			  	<span class="item-note">-5元</span>
+			  </ion-item>
+			  <ion-item style="margin-bottom: 12px;" class="item-input">
+			          买家留言：<input type="text" placeholder="无"/>
+			  </ion-item>
+			  <ion-item>
+			  	订单总价：
+			  	<span class="item-note">
+			  		<i class="icon ion-social-yen royal"><span style="font-size:18px;">299</span></i>
+			  	</span>
+			  </ion-item>
+			  <p class="padding" style="padding-top:20px;">选择配送方式</p>
+			  <ion-item class="item-toggle">
+			  	物流
+			     <label class="toggle toggle-assertive">
+			       <input type="checkbox">
+			       <div class="track">
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </ion-item>
+			  <ion-item class="item-toggle">
+			  	快递
+			     <label class="toggle toggle-assertive">
+			       <input type="checkbox">
+			       <div class="track">
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </ion-item>
+			  <ion-item class="item-toggle">
+			  	送货上门
+			     <label class="toggle toggle-assertive">
+			       <input type="checkbox">
+			       <div class="track">
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			  </ion-item>
+			 <p class="padding" style="padding-top:20px;">填写物流信息</p>  
+			 <ion-item style="margin-bottom: 12px;" class="item-input">
+			          公司名称：<input type="text" placeholder="填写公司名称"/>
+			 </ion-item> 
+			 <ion-item style="margin-bottom: 12px;" class="item-input">
+			         运 单 号：<input type="text" placeholder="填写运单号"/>
+			 </ion-item> 
+			 <ion-item >
+				<i class="icon ion-ios-paper-outline assertive"></i>
+				 订单详情
+				<p>订单编号：2521804039265482</p>
+				<p>支付方式：支付宝</p>
+				<p>下单时间：2015-05-02 17:06:25</p>
+			    <p>付款时间：2015-05-02 17:06:25</p>
+			 </ion-item>	
+			 <div class="padding">
+			    <button class="item-note button button-small button-royal">立即发货</button>
+			 </div>
+			</ion-list>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

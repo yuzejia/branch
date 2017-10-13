@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+		<style type="text/css">
+			.c-posi{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -99;
+			}
+			.c-posi img{
+				width: 100%;
+				height: 100%;
+			}
+			.c-margintop{
+			    width: 78%;
+			    margin: 0 auto;
+				margin-top: 50%;
+			}
+			.c-marginbottom{
+			    margin-bottom: 30px;
+			    border-top-left-radius: 25px;
+			    border-top-right-radius: 25px;
+			    border-bottom-left-radius: 25px;
+			    border-bottom-right-radius: 25px;
+			}
+			.c-marginbottom img{
+				width: 25px;
+				margin-right: 10px;
+				
+			}
+			.c-loginbtn{
+				width: 350px;
+				margin: 0 auto;
+				margin-top: 50px;
+				background: #663399;
+				color: #FFFFFF;
+				border-top-left-radius: 25px;
+			    border-top-right-radius: 25px;
+			    border-bottom-left-radius: 25px;
+			    border-bottom-right-radius: 25px;
+			}
+			.c-loginbtn:hover{
+				background: #663399;
+				color: #FFFFFF;
+			}
+			.c-zhuces{
+				padding:0 10px;
+				box-sizing: border-box;
+			}
+			.c-zhuces a{
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			.c-zhuces a:nth-child(2){
+				display: inline-block;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="c-posi"><img src="img/c-001.png"/></div>
+			<div class="list c-margintop">
+			  <label class="item item-input c-marginbottom">
+			  	<img src="img/c-002.png"/>
+			    <input type="text" placeholder="请输入手机号">
+			  </label>
+			  <label class="item item-input c-marginbottom">
+			  	<img src="img/c-0003.png"/>
+			    <input type="text" placeholder="请输入密码">
+			  </label>
+			  <button class="button button-block c-loginbtn"> 登 录 </button>
+			  <div class="c-zhuces">
+			  	<a href="#">快速注册</a>
+			  	<a href="#">忘记密码？</a>
+			  </div>
+			  </div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",[])
+		.controller("mian",["$scope",function($scope){
+			
+		}])
+	</script>
+</html>

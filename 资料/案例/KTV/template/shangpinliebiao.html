@@ -1,0 +1,139 @@
+<ion-view hide-tabs="true" view-title="商品列表">
+    <style>
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .SPLB .bar-header{
+            color: #fffff;
+            background: url("images/shangjia/Top.fw.png")no-repeat 100%;
+        }
+        .SPLB .bar-header .button{
+            color: #fff;
+        }
+        .SPLB .tabs-top a{
+            position: relative;
+        }
+        .SPLB .tabs-top a i{
+            font-size: 14px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+
+        }
+        .tabs a{
+            color: #000000;
+            text-align: center;
+            text-decoration: none;
+            width:33%;
+        }
+        .Xposition{
+            width: 100%;
+            position: absolute;
+            top: 93px;
+        }
+        .Xposition>div{
+            width:100%;
+            position: absolute;
+            top:0;
+        }
+        .SPLB .has-header{
+            top:94px;
+        }
+        .SPLB .Fs-14{
+            font-size: 14px;
+        }
+        .SPLB .price{
+            margin-top: 10px;
+        }
+        .SPLB .price span:nth-of-type(1){
+            color: #993366;
+        }
+        .SPLB .price span:nth-of-type(2){
+           text-decoration: underline;
+        }
+        .SPLB .price span:nth-of-type(1) i{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<div ng-controller="myCtrl">
+<div class="SPLB">
+    <div class="bar bar-header">
+        <button class="Fb button button-icon ion-ios-arrow-left" ng-click="goback()"></button>
+        <h1 class="Fb title">商品列表</h1>
+    </div>
+    <div class="tabs-striped tabs-top">
+        <div class="tabs">
+            <a ng-click="falg1=!falg1;falg2=false" class=" " > 分类 <i ng-class="{'ion-ios-arrow-down':!falg1,'ion-ios-arrow-up':falg1}" class="icon ion-ios-arrow-down"></i> </a>
+            <a ng-click="falg2=!falg2;falg1=false" class="" href="#">价格排序  <i ng-class="{'ion-ios-arrow-down':!falg2,'ion-ios-arrow-up':falg2}" class="icon ion-ios-arrow-down"></i> </a>
+            <a ng-click="falg1=false;falg2=false" class="" href="#">销量优先  </a>
+        </div>
+    </div>
+        <div class="Xposition">
+            <div ng-show="falg1">
+                <div class="item ">
+                   音响
+                </div>
+                <div class="item">
+                   麦克风
+                </div>
+                <div class="item">
+                   灯光
+                </div>
+                <div class="item">
+                    酒水
+                </div>
+            </div>
+            <div ng-show="falg2">
+                <div class="item ">
+                   价格从高到底
+                </div>
+                <div class="item ">
+                    价格从低到高
+                </div>
+            </div>
+            <div></div>
+    </div>
+    <ion-content class="has-header">
+        <div class="list">
+            <a class="item item-thumbnail-left item-text-wrap" ui-sref="tabs.spxq">
+                <img src="images/shangjia/S22.png">
+                <h2 class="Fs-14">进口啤酒 德国啤酒 德国唛帝小麦啤酒 白啤酒 500ML*24</h2>
+                <div class="price">
+                    <p class="fl"><span>￥<i>555</i></span><del>￥158</del></p>
+                    <p class="fr">已售123</p>
+                </div>
+            </a>
+            <a class="item item-thumbnail-left item-text-wrap" ui-sref="tabs.spxq">
+                <img src="images/shangjia/S22.png">
+                <h2 class="Fs-14">进口啤酒 德国啤酒 德国唛帝小麦啤酒 白啤酒 500ML*24</h2>
+                <div class="price">
+                    <p class="fl"><span>￥<i>555</i></span><del>￥158</del></p>
+                    <p class="fr">已售123</p>
+                </div>
+            </a>
+            <a class="item item-thumbnail-left item-text-wrap" ui-sref="tabs.spxq">
+                <img src="images/shangjia/S22.png">
+                <h2 class="Fs-14">进口啤酒 德国啤酒 德国唛帝小麦啤酒 白啤酒 500ML*24</h2>
+                <div class="price">
+                    <p class="fl"><span>￥<i>555</i></span><del>￥158</del></p>
+                    <p class="fr">已售123</p>
+                </div>
+            </a>
+            <a class="item item-thumbnail-left item-text-wrap" ui-sref="tabs.spxq">
+                <img src="images/shangjia/S22.png">
+                <h2 class="Fs-14">进口啤酒 德国啤酒 德国唛帝小麦啤酒 白啤酒 500ML*24</h2>
+                <div class="price">
+                    <p class="fl"><span>￥<i>555</i></span><del>￥158</del></p>
+                    <p class="fr">已售123</p>
+                </div>
+            </a>
+        </div>
+    </ion-content>
+</div>
+
+</div>
+</ion-view>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	    	h3{
+	    		padding-top: 20px;
+	    		text-align: center;
+	    		
+	    	}
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear" ui-sref="tabs.xianshi">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">详情</h1>
+		</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<h3>VOSE旗舰店</h3>
+			<hr/>
+			<p class="padding" style="text-indent: 2em;">
+				本公司主要业务包括酒店管理，KTV娱乐酒吧夜店管理。本公司包括百位高学历的管理人才，曾管理过糖果KTV，麦克风KTV如家郑州二七店，策划KTV，好听KTV
+				，算是KTV，咋整KTV，缪斯KTV。呈请客户到公司了解。
+			</p>
+			<img class="full-image" src="img/nf01.fw.png" />
+			<img class="full-image" src="img/nf02.fw.png" />
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

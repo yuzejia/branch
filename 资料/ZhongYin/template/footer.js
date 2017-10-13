@@ -1,0 +1,12 @@
+document.writeln("<div class=\'footer\'>");
+document.writeln("	<p>");
+document.writeln("		<span class=\'copyright\'>");
+document.writeln("					<span><i class=\'fa fa-wechat\'></i><i class=\'fa fa-weibo\'></i></span> 中银律师事务所 京ICP备13048428号-1");
+document.writeln("		</span>");
+document.writeln("		<span class=\'address hidden-xs\'>");
+document.writeln("					<span>地址：北京市朝阳区东三环中路39号建外SOHO-A座31层</span>");
+document.writeln("		<span>电话：010-58698899　传真：010-58699666</span>");
+document.writeln("		<span>邮编：100022　邮箱：pt@zhongyinlawyer.com</span>");
+document.writeln("		</span>");
+document.writeln("	</p>");
+document.writeln("</div>");

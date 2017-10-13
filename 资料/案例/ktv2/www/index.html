@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html ng-app="myapp" >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>容器</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+		body{
+			background: #F2F2F2;
+		}
+			.ion-shouye{
+				width: 40px;
+				background: url(../dist/img/c-023.png)center center no-repeat;
+				background-position: 0px 0px ; 
+				background-size: 30px 30px;
+			}
+			.ion-fujin{
+				width: 40px;
+				background: url(../dist/img/c-024.png)center center no-repeat;
+				background-position: center ; 
+				background-size: 27px 30px;
+			}
+			.ion-gouwu{
+				width: 40px;
+				background: url(../dist/img/c-025.png)center center no-repeat;
+				background-position: center; 
+				background-size: 30px 27px;
+			}
+			.ion-geren{
+				width: 40px;
+				background: url(../dist/img/c-026.png)center center no-repeat;
+				background-position: center ; 
+				background-size: 28px 30px;
+			}
+			.c-mytabs{
+				padding-top: 7px;
+				background: #FFFFFF;
+				border-top: 1px solid #E1E1E1;
+			}
+		</style>
+	</head>
+	<body ng-controller="main">
+			<ion-nav-view>
+				<!--最大的view-->
+				
+			</ion-nav-view>
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",['ionic'])
+		//配置路由
+		.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+				$stateProvider
+							.state("tabs",{
+								"url" : "/tab",
+								"templateUrl" : "tpl/c-tab.html"
+							})
+							.state("tabs.home",{
+								"url" : "/home",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-index.html"	//页面地址
+									}
+								}
+							})
+						//----------------------------------------------------------------------------
+							.state("tabs.dizhi",{
+								"url" : "/dizhi",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-04chengshi.html"	//页面地址
+									}
+								}
+							})
+						//----------------------------------------------------------------------------
+							.state("tabs.xiaoxi",{
+								"url" : "/xiaoxi",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-06xiaoxi.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.duihua",{
+								"url" : "/duihua",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-07xiaoxi-duihua.html"	//页面地址
+									}
+								}
+							})
+						//----------------------------------------------------------------------------
+							.state("tabs.tuangou",{
+								"url" : "/tuangou",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-08tuangou.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.taungouxaingqing",{
+								"url" : "/taungouxaingqing",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-10tuangouxiangqing.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.maijiapingjia",{
+								"url" : "/maijiapingjia",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-16yonghupingjia.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.ditu",{
+								"url" : "/ditu",		//显示在地址栏中的名字
+								"views" : {				//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-11ditu.html"	//页面地址
+									}
+								}
+							})
+						//--------------------------------------------------------
+							.state("tabs.dianjiaxinagqing",{
+								"url" : "/dianjiaxinagqing",		//显示在地址栏中的名字
+								"views" : {				//name为home的view显示的页面 地址
+									"home" : {
+										"templateUrl" : "tpl/c-09dianjiaxiangqing.html"	//页面地址
+									}
+								}
+							})
+						//--------------------------------------------------------
+							.state("tabs.xianshi",{
+									"url" : "/xianshi",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/nqg.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.mingdain",{
+									"url" : "/mingdain",			//显示在地址栏中的名字
+									"views" : {							//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/nxq02.html"	//页面地址
+										}
+									}
+							})
+						//--------------------------------------------------------
+
+							.state("tabs.mingdianhaibao",{
+									"url" : "/mingdianhaibao",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/wmd17.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.yule",{
+									"url" : "/yule",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/wyl5.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.yancahnghui",{
+									"url" : "/yancahnghui",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/ws6.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.yuek",{
+									"url" : "/yuek",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/wzt1.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.xiayizhan",{
+									"url" : "/xiayizhan",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/wxy19.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.kajuanbao",{
+									"url" : "/kajuanbao",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"home" : {
+											"templateUrl" : "tpl/ndt.html"	//页面地址
+										}
+									}
+								})
+						//--------------------------------------------------------
+							.state("tabs.yonghu",{
+								"url" : "/yonghu",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"yonghu" : {
+										"templateUrl" : "tpl/c-01denglu.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.zhuce",{
+								"url" : "/zhuce",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"yonghu" : {
+										"templateUrl" : "tpl/c-02zhuce.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.congzhi",{
+								"url" : "/congzhi",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"yonghu" : {
+										"templateUrl" : "tpl/c-03congzhimima.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.yonghuzhiliao",{
+								"url" : "/yonghuzhiliao",		//显示在地址栏中的名字
+								"views" : {			//name为home的view显示的页面 地址
+									"yonghu" : {
+										"templateUrl" : "tpl/findex.html"	//页面地址
+									}
+								}
+							})
+							.state("tabs.dingdanguanli",{
+									"url" : "/dingdanguanli",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"yonghu" : {
+											"templateUrl" : "tpl/n05.html"	//页面地址
+										}
+									}
+								})
+							.state("tabs.dingdanguanli2",{
+									"url" : "/dingdanguanli2",		//显示在地址栏中的名字
+									"views" : {				//name为home的view显示的页面 地址
+										"yonghu" : {
+											"templateUrl" : "tpl/n08.html"	//页面地址
+										}
+									}
+								})
+				$urlRouterProvider.otherwise("/tab")
+		}])
+		.controller("main",["$scope","$http","$ionicScrollDelegate",function($scope,$HTTP,$ionicScrollDelegate){
+
+			//通过ajax完成数据展示
+			$HTTP.get("js/cityList.json").success(function(data){
+				//获取成功
+				console.log(data)
+				//得到城市数据
+				var list = data.citys;
+				//开始解析数据，得到想要的格式--在ionic页面里需要循环得到的数据
+				$scope.citylist = {};
+				
+				$scope.citylist.citys = [];
+				
+				//声明城市首个字母 方便对比
+				var str=$scope.str= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+				for(var i=0; i<str.length; i++){
+					//得到每个字母用于比较
+//					console.log(str[i])
+					var tempobj = {};
+					tempobj.key = "";
+					tempobj.name = [];
+					//把每个字母添加给tempobj 的key
+					tempobj.key = str[i];
+					//循环城市列表的长度
+					for(var j=0; j<list.length; j++){
+						var sub = list[j].pinyin.substring(0,1).toUpperCase();
+						//得到每个城市拼音的首个字母大写
+//						console.log(sub)
+						if(tempobj.key == sub){
+							tempobj.name.push(list[j].city)
+						}
+					}
+					$scope.citylist.citys.push(tempobj);
+				}
+//				console.log($scope.citylist)
+//				console.log($scope.citylist.citys)
+			});
+			
+			//颜色,当前的
+			$scope.surrindex = 0;
+			//字母导航栏的点击跳转事件
+			$scope.myclick = function(index,key){
+				//点击那个 就把当前的点击元素的下标传给
+				$scope.surrindex = index;
+//				console.log(key)
+//				$(".position>div").removeClass("addcolor");//先删除类
+//				$(".position>div:contains('+key+')").addClass("addcolor")//在包含有content的元素上添加类
+				var top = $(".position:contains("+key+")").offset().top - 43;
+				$ionicScrollDelegate.$getByHandle('mainScroll').scrollBy(0,top,true);
+			};
+			var text = "";
+			$scope.scro = function(e){
+				//拿到当前item-divider 的下标 返回当前元素的内容
+				$(".na").each(function(index,item){
+
+					//如果当前元素相对顶部小于50 那么text 就等于 当前的元素的内容 trim()清楚两边空格
+					 if($(this).offset().top<50){
+					 	text = $(this).text().trim();
+                         console.log(text)
+					 }else{
+					 	return false;
+					 }
+				});
+//				console.log(text)
+				//判断 当text发生变化 吧样式修改 传到上面
+				$(".c-navs").each(function(){
+					if($(this).text()  == text){
+						$(this).addClass("c-addcolor");
+						$(this).siblings().removeClass("c-addcolor");
+					}
+				})
+			}
+			
+			
+		//---------团购页面的tab切换------------------------
+			$scope.isshow = false;
+			$scope.isshow1 = false;
+			
+			$scope.istrues = function(){
+				$scope.isshow = !$scope.isshow;
+				if($scope.isshow1){
+					$scope.isshow = false;
+				}
+			}
+			
+			$scope.istrues1 = function(){
+				$scope.isshow1 = !$scope.isshow1;
+				if($scope.isshow){
+					$scope.isshow1 = false;
+				}
+			}
+		//---团购详情的tab切换-----------------------------
+			$scope.xain1 = true;
+			$scope.xain2 = false;
+			
+			$scope.canpin1 = function(){
+				$scope.xain1 = true;
+				$scope.xain2 = false;
+			}
+			$scope.canpin2 = function(){
+				
+				$scope.xain1 = false;
+				$scope.xain2 = true;
+			}
+		}])
+	</script>
+</html>

@@ -1,0 +1,210 @@
+<ion-view hide-tabs="true" view-title="商品列表">
+    <style>
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+
+        .SPXX .bar .Fb{
+            color: #fff;
+        }
+        .SPXX .btnB{
+            margin-bottom: 10px;
+        }
+        .SPXX .btn{
+            color: #fff;
+            background: #663399;
+            width: 90%;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .YE-top{
+            text-align: center;
+            padding: 40px 0;
+        }
+        .YE-top span{
+            font-size: 40px;
+            position: relative;
+            top: 5px;
+        }
+        .YE-top .yi{
+            width:40px;
+            height:10px;
+            background: #666666;
+            margin:0 auto;
+            opacity: 0.8;
+            border-radius:50%;
+
+        }
+        .SPXX .YEnum{
+            font-size: 25px;
+            color: red;
+            margin-top: 10px;
+        }
+        .SPXX .item .fl p:nth-of-type(1){
+            font-size: 14px;
+            color: #000000;
+        }
+        .SPXX .tx{
+            position: relative;
+            top: 10px;
+            font-size: 16px;
+            color: #000;
+        }
+       .SPXX .items{
+           overflow: hidden;
+           padding:0 16px;
+       }
+        .SPXX .tabss{
+            padding-top: 45px;
+        }
+        .SPXX .backF{
+            background: #EEEEEE;
+        }
+        .SPXX .item-text-wrap{
+            background: #ffffff;
+        }
+        .SPXX .bar-footer{
+            height:60px;
+            line-height: 60px;
+            padding:0;
+        }
+        .SPXX .bar-footer>div{
+            width: 50%;
+        }
+        .SPXX .bar-footer>div:nth-of-type(2){
+            color: #ffffff;
+            font-size: 16px;
+            background: #993366;
+        }
+        .SPXX .bar-footer .footerLft div{
+            float: left;
+            text-align: center;
+           width: 50%;
+        }
+        .SPXX .GWCcon{
+            z-index: 9;
+            background: #ffffff;
+            width: 100%;
+           min-height:100px;
+            position: absolute;
+            bottom: 0px;
+            /*transition: bottom 3s ease 0s;*/
+
+        }
+
+        .SPXX .GWCcon .NumS{
+            background: #ffffff;
+        }
+        .SPXX .GWCcon .NumS p{
+            padding:4px 16px;
+        }
+        .SPXX .GWCcon .NumS div{
+            text-align: center;
+            background: #eee;
+            width:40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+
+        }
+        .SPXX .GWCcon .button{
+
+            color: #ffffff;
+            background: #993366;
+            margin-bottom: 0;
+        }
+        #cancel{
+            width:40px;
+            height: 40px;;
+        }
+        .popup-container .popup{
+            border-radius: 10px;
+            font-size: 12px;
+            width: 35%;
+        }
+        .popup-head{
+            padding: 0;
+             border-bottom:0;
+        }
+        .popup-body{
+            border-radius: 10px;
+           background-color: rgba(102, 102, 102,0.4)
+        }
+       .SPXX .items span{
+           font-size: 22px;
+           color: #993366;
+       }
+    </style>
+
+<div ng-controller="mySpxq">
+<div class="SPXX">
+    <div class="bar bar-header bar-clear">
+        <button class="Fb button button-icon ion-ios-arrow-left" ng-click="goback()"></button>
+        <button class="Fb button button-icon ion-android-share-alt" ></button>
+    </div>
+    <ion-content class="backF">
+        <div>
+            <img width="100%" src="images/shangjia/Sback.png" alt="">
+        </div>
+        <div class="item-text-wrap">
+            <div class="row">
+                <div class="col col-80" >
+                    <p>家庭专用KTV高清触摸屏卡拉ok点唱机一体机套装可配音响</p>
+                </div>
+                <div class="col col-20 text-center"><img width="25px" src="images/shangjia/gouwu.png" alt=""></div>
+            </div>
+            <div class="items">
+                <p class="fl"><span>￥158 </span><s>￥241</s> </p>
+                <p class="fr">快递：<tel>15</tel> </p>
+            </div>
+        </div>
+        <div class="tabss">
+            <div class="tabs">
+                <a class="tab-item " > 全部 </a>
+                <a class="tab-item" href="#">待验证 </a>
+                <a class="tab-item" href="#">已验证</a>
+                <a class="tab-item" href="#">未完成</a>
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer">
+            <div class="footerLft">
+                <div>
+                   购物车
+                </div>
+                <div>
+                   客服
+                </div>
+            </div>
+            <div id="JR"  ng-click="gwcon=true" class="text-center">
+                加入购物车
+            </div>
+    </div>
+    <div ng-show="gwcon"  class="GWCcon">
+        <div class="list" >
+            <div class="item item-thumbnail-left" href="#">
+                <img  src="images/shangjia/Sback2.png">
+                <div id="cancel" ng-click="gwcon=false"  class="fr text-center">X</div>
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+            </div>
+            <div class="NumS">
+                <p>购买数量</p>
+                <button ng-click="numS = numS-1>0">-</button>
+                <div ng-model="numS" >{{numS}}</div>
+                <div ng-click="numS = numS+1">+</div>
+            </div>
+            <div ng-click="showGWC()" class="button button-full" >加入购物车</div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+</script>
+</div>
+</html>

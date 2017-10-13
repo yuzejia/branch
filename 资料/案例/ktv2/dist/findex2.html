@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<script src="js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				font-family: "微软雅黑"
+			}
+			h2{
+				font-family: "微软雅黑";
+				position: relative;
+				color: #555555;
+				width: 100%;
+			}
+			.item h2 span{
+				color: #999999;
+			}
+			.item h2+p{
+				color: #777777;
+			}
+			.f2sr{
+				position: absolute;
+				right: 0;
+				color: #888888;
+			}
+			.f2c{
+				color: #FFFFFF;
+			}
+			.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image{
+				border-radius: 2px;
+				max-width: 50px;
+				max-height: 50px;
+				top: 10px;
+				
+
+			}
+		</style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style=" background: linear-gradient(to bottom right,#e44bf1, #67329a); ">
+			<button class="button button-clear"><i class="icon  ion-ios-arrow-left f2c"></i></button>
+			<div class="title f2c">消息</div>
+		</ion-header-bar>
+		<ion-content>
+			<div class="list">
+			    <a class="item item-avatar" href="#">
+			      <img src="img/f2-1.png">
+			      <h2>德荣盛电器专营店<span class="f2sr">2016-12-12</span></h2>
+			      <p>那个单子还不错，你也来看看吧?</p>
+			    </a>
+			    <a class="item item-avatar" href="#">
+			      <img src="img/f2-1.png">
+			      <h2>德荣盛电器专营店<span class="f2sr">2016-12-12</span></h2>
+			      <p>那个单子还不错，你也来看看吧?</p>
+			    </a>
+			    <a class="item item-avatar" href="#">
+			      <img src="img/f2-1.png">
+			      <h2>德荣盛电器专营店<span class="f2sr">2016-12-12</span></h2>
+			      <p>那个单子还不错，你也来看看吧?</p>
+			    </a>
+			    <a class="item item-avatar" href="#">
+			      <img src="img/f2-1.png">
+			      <h2>德荣盛电器专营店<span class="f2sr">2016-12-12</span></h2>
+			      <p>那个单子还不错，你也来看看吧?</p>
+			    </a>
+			    <a class="item item-avatar" href="#">
+			      <img src="img/f2-1.png">
+			      <h2>德荣盛电器专营店<span class="f2sr">2016-12-12</span></h2>
+			      <p>那个单子还不错，你也来看看吧?</p>
+			    </a>
+			</div>
+		</ion-content>
+	</body>
+	<script type="text/javascript">
+		angular.module("myApp",["ionic"])
+		.controller("myCon",function(){
+			
+		})
+	</script>
+</html>

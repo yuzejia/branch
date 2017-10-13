@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	      body{
+	      	background-color: #f2f2f2;
+	      }
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">我要竞标</h1>
+			<button class="button button-clear button-light">
+				提交
+			</button> 
+	</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+				<ion-item class="item-input">
+					姓名：
+					<input type="text"/>
+				</ion-item>
+				<ion-item class="item-input" style="margin-bottom: 12px;">
+					电话：
+					<input type="text"/>
+				</ion-item>
+				<ion-item class="item-input">
+					公司名称：
+					<input type="text"/>
+				</ion-item>
+				<ion-item class="item-input">
+					公司地址：
+					<input type="text"/>
+				</ion-item>
+			</ion-list>
+			
+			
+		</ion-content>
+		
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

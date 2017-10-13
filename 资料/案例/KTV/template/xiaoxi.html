@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>消息</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script src="js/ionic.bundle.js"></script>
+		<style>
+			.mycolor{
+				color: red;
+			}
+			.mymargin{
+				margin-bottom: 20px;
+			}
+			.mycolor2{
+				color:#999;
+				padding-top: 10px;
+			}
+			.tex{
+				text-indent: 2em;
+			}			
+		</style>
+		
+		
+	</head>
+	<body ng-controller="mycon">
+		<div class="bar bar-header bar-positive">
+			<button class="button button-clear icon ion-ios-arrow-back"></button>
+			<h1 class="title">消息</h1>
+			<button class="button button-clear">删除</button>
+		</div>
+		
+		<div class="content has-header has-footer scroll scroll-content"  style="overflow-y: scroll; background: #f0f0f0;">
+			<div class="list">
+				<div class="item">
+					<h1>保养小妙招</h1>
+					<p class= "mycolor2 ">2016-09-30 9:23<span class="item-note">美的官方</span></p>
+				</div>
+				<div class="item item-body">
+					<p class="tex">
+						5月新品上市，5月新品上市，5月新品上市，5月新品上市，5月新品上市，5月新品上市，5月新品上市，5月新品上市，5月新品上市,震撼来袭。
+					</p>
+					<img class="full-image" src="img/che.png" />
+					<p  class="tex" style="margin-bottom: 0;">看看新品的五大超强功能：</p>
+					<p  class="tex" style="margin-top: 0;margin-bottom: 0;">NO.1水质更好：大连市解放路速度快解放老师的水电费收到发斯蒂芬斯蒂芬都是第三方水电费的说法的说法都是。</p>
+					<p  class="tex" style="margin-top: 0;margin-bottom: 0;">NO.2水质更好：大连市解放路速度快解放老师的水电费收到发斯蒂芬斯蒂芬都是第三方水电费的说法的说法都是。</p>
+					<p  class="tex" style="margin-top: 0;margin-bottom: 0;">NO.3水质更好：大连市解放路速度快解放老师的水电费收到发斯蒂芬斯蒂芬都是第三方水电费的说法的说法都是。</p>
+					<p  class="tex" style="margin-top: 0;margin-bottom: 0;">NO.4水质更好：大连市解放路速度快解放老师的水电费收到发斯蒂芬斯蒂芬都是第三方水电费的说法的说法都是。</p>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+		<div class="bar bar-footer bar-calm">
+			<button class="button button-calm">left</button>
+			<h1 class="title">这是一个Footer</h1>
+			<button class="button button-calm">right</button>
+		</div>
+		
+
+	</body>
+	<script>
+		var myapp=angular.module("myapp",["ionic"]);
+			myapp.controller("mycon",["$scope",function($scope){
+				
+			}]);
+			
+	</script>
+</html>

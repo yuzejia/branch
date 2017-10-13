@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8" />
+		<title>名店风采</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mdfc.css"/>
+		<script src="js/ionic.bundle.min.js"></script>
+		
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar class="bar-royal">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back"></i>
+			</button>
+			<h2 class="title">名店风采</h2>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<a class="item item-thumbnail-left" href="#">
+      				<img src="img/fc1.png">
+      				<b>vose旗舰店</b>
+      				<p>一站式商用KTV音响领导品牌，品牌直销，售后无忧。</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/fc2.png">
+      				<b>沸斯官方旗舰店</b>
+      				<p>告别一站式商用KTV音响领导品牌，品牌直销，售后无忧。</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/fc3.png">
+      				<b>皇声音响官方旗舰店</b>
+      				<p>原装正品 20平方 专业级　卡拉OK　KTV套装皇声音响官方旗舰店</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/fc4.png">
+      				<b>音乐之声KTV装饰公司</b>
+      				<p>大家爱K歌！仅售128.00元，价值390元的麦嘎音乐PARTY周一至周日</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/fc5.png">
+      				<b>果冻KTV装饰公司</b>
+      				<p>大家爱K歌！仅售128.00元，价值390元的麦嘎音乐PARTY周一至周日</p>
+    			</a>
+    			<a class="item item-thumbnail-left" href="#">
+      				<img src="img/fc6.png">
+      				<b>糖果KTV装饰公司</b>
+      				<p>大家爱K歌！仅售128.00元，价值390元的麦嘎音乐PARTY周一至周日</p>
+    			</a>
+			</ion-list>
+		</ion-content>
+		<script type="text/javascript">
+			var myApp = angular.module("myApp", ["ionic"]);
+			myApp.controller("myCon", ["$scope", function($scope) {
+
+			}]);
+		</script>
+	</body>
+</html>

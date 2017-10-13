@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>支持ta</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body ng-controller="main">
+		<header class="mainH1Title text-center plr">
+			<div class="left_btn">
+				<a onclick="window.history.back()">
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>
+			</div>
+			支持ta
+			<div class="right_btn">
+				<!--<a>
+					<img src="img/icon/back-btn.fw.png"/>
+				</a>-->
+			</div>
+		</header>
+		<div class="support_con">
+			<div class="support_money bg-white plr clearfix pt30 mb20">
+				<div class="border_con">
+					
+					<input type="number" name="" id="moneys" value="" />
+					<span class="font-size32 color-default font-weight">
+						元
+					</span>
+				</div>
+			</div>
+			<div class="parens">
+				
+				
+				<div class="support_weixin b-border ptb30 bg-white clearfix click1 active">
+					<div class="support_weixin_con color-default font-size32 fl">
+						<img src="img/icon/support-weixin.png"/>
+						<span>微信支付</span>
+					</div>
+					<div class="support_right_pic fr">
+						<img src="img/icon/yes.fw.png"/>
+					</div>
+				</div>
+				
+				<div class="support_weixin mb20 ptb30 bg-white clearfix click2">
+					<div class="support_zhifubao_con color-default font-size32 fl">
+						<img src="img/icon/zhifubao.fw.png"/>
+						<span>支付宝支付</span>
+					</div>
+					<div class="support_right_pic fr">
+						<img src="img/icon/yuan.png"/>
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="support_text bg-white ptb30">
+				<textarea name="" rows="" cols="" placeholder="对小伙伴说几句鼓励的话吧..." id="texts"></textarea>
+			</div>
+			<div class="support_btn color-white text-center" ng-click="subdatas()">
+				确认支持
+			</div>
+			<!--remind 提示框-->
+			<div class="remind_con">
+				<div class="remind text-center color-white pt15 pb15 pl25 pr25 font-size28">
+						
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+			app.controller("main",function($scope){
+				//支付选项
+				var zorw = "Z";
+				let first = document.querySelector('.click1');
+				let last = document.querySelector('.click2');
+				var srcs = "img/icon/yuan.png",
+					srcs1 = "img/icon/yes.fw.png";
+					first.onclick = function(){
+						this.children[1].children[0].src = srcs1;
+						last.children[1].children[0].src = srcs;
+						zorw = "Z";
+					};
+					last.onclick = function(){
+						this.children[1].children[0].src = srcs1;
+						first.children[1].children[0].src = srcs;
+						zorw = "W";
+					};
+				//提交信息
+				var show = document.querySelector(".remind_con");
+				var showtxt =document.querySelector('.remind');
+				
+				$scope.subdatas = function(){
+					
+					var moneys = document.getElementById('moneys').value;
+					var texts = document.getElementById('texts').value;
+						console.log(texts)
+						console.log(zorw)
+					
+					if(moneys == null || moneys == 0){
+							fadeIn(show,400);
+							showtxt.innerHTML = "支持金额不能为0";
+							setTimeout(function(){
+									fadeOut(show,400);
+							},1500);
+							return false;
+					}else{
+						
+						//调用支付宝接口完成支付
+						
+						
+						
+						//调用微信接口完成支付
+						
+						
+						
+					};
+					
+				};
+				
+			});
+			
+		
+		
+		
+		
+			
+			
+		
+	</script>
+</html>

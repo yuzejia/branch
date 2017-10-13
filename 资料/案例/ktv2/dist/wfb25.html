@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script src="js/ionic.bundle.min.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<div class="bar bar-header" style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			<button class="button button-clear ">
+				<i class="icon ion-ios-arrow-back stable"></i>
+			</button>
+			<h1 class="title stable">发布</h1>
+			<button class="button button-clear">
+				<i class="stable">发送</i>
+			</button>
+		</div>
+		<div class="content has-header">
+			<label class="item item-input">
+					<input type="text" placeholder="标题" />
+			</label>
+			<label class="item item-input">
+					<textarea rows="5" placeholder="输入详细内容"></textarea>
+			</label>
+			<div class="item item-thumbnail-left">
+				<div class="wfbdiv" style="width:100px;height:100px;border:1px dashed #ddd;float:left;margin-left:-100px"><img src="" alt=""/></div>				
+				<br />
+				<p>添加图片</p>
+				<p>最多三张</p>
+			</div>
+			<div class="item">
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+
+

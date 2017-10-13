@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>卡券包</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ionic.bundle.min.js"></script>
+    <style>
+
+
+    </style>
+</head>
+<body ng-controller="myCon">
+<ion-header-bar class="barColor" >
+    <button class="button button-clear">
+        <i class="icon ion-ios-arrow-back"></i>
+    </button>
+    <h1 class="title">卡券包</h1>
+</ion-header-bar>
+<ion-content class="has-header has-footer kqb">
+    <div class="button-bar padding">
+        <button class="button  btnColor">未使用（2）</button>
+        <button class="button ">已使用（2）</button>
+        <button class="button ">已过期（2）</button>
+    </div>
+
+    <div class="list padding">
+        <div class="item item-thumbnail-left ">
+            <img src="img/favourable.png" alt="">
+            <h2 class="">满99减5</h2>
+            <p>使用范围：正大KTV设备公司</p>
+            <p>截止日期：2016.05.01
+                <img src="img/weishiyong.png" style="width: 15%;float: right"  alt="">
+            </p>
+        </div>
+    </div>
+    <div class="list padding">
+        <div class="item item-thumbnail-left ">
+            <img src="img/favourable.png" alt="">
+            <h2 class="">满99减5</h2>
+            <p>使用范围：正大KTV设备公司</p>
+            <p>截止日期：2016.05.01
+                <img src="img/weishiyong.png" style="width: 15%;float: right"  alt="">
+            </p>
+        </div>
+    </div>
+
+</ion-content>
+
+
+
+<script>
+    var myApp = angular.module("myApp",["ionic"]);
+    myApp.controller("myCon",["$scope",function($scope){
+
+    }]);
+</script>
+</body>
+</html>

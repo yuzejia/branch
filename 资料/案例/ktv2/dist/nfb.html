@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	    	body{
+	    		background-color: #f2f2f2;
+	    	}
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar  style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">发布招聘信息</h1>
+			<button class="button button-clear button-light">
+				提交
+			</button>
+		</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+			    <label class="item item-input" style="margin-bottom: 12px;">
+				   <input type="text" placeholder="输入标题">
+				</label>
+				<label class="item item-input">
+				    <textarea rows="8" placeholder="填写招聘岗位、招聘人数、工资、工作地点、联系电话等。"></textarea>
+				</label>
+			</ion-list>
+			
+		</ion-content>
+		
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

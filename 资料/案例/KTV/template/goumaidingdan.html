@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app' >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <script src=js/ionic/ionic.min.js></script>
+    <script src="js/ionic/ionic.bundle.js" ></script>
+    <script src="js/app.js"></script>
+    <style>
+        .GM .item-complex .item-content, .item-radio .item-content{
+            padding: 16px 16px 16px 16px;
+        }
+        .padding-0{
+            padding:0;
+        }
+    </style>
+
+    </head>
+<body>
+<div class="GM">
+
+        <ion-list show-delete="shouldShowDelete">
+            <ion-item>
+                <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+                <div class="row padding-0">
+
+                        <div class="col col-75">
+                            <h2>麦克疯量贩式ktv6小时欢唱</h2>
+                            <p><span>数量:<i>1</i></span><span>总价:￥<i>1</i></span></p>
+                        </div>
+                        <div class="col col-25">
+                            <img width="100%" src="images/shangjia/s18.png" alt="">
+                        </div>
+
+                </div>
+
+                <div>
+                    <div>
+                      <p>2016-02-28</p>
+                    </div>
+                </div>
+
+
+
+            </ion-item>
+        </ion-list>
+        <ion-toggle ng-model="shouldShowDelete">
+            显示删除?
+        </ion-toggle>
+
+</div>
+
+<script>
+    var App = angular.module("app",['ionic'])
+    App.controller("myCtrl",["$scope",function($scope){
+
+    }])
+</script>
+</body>
+</html>

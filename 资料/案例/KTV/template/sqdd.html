@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>商品订单</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ionic.bundle.min.js"></script>
+    <style>
+
+
+    </style>
+</head>
+<body ng-controller="myCon">
+        <ion-header-bar class="barColor" >
+            <button class="button button-clear">
+                <i class="icon ion-ios-arrow-back"></i>
+            </button>
+            <h1 class="title">商品订单</h1>
+        </ion-header-bar>
+        <ion-content class="has-header ">
+            <div class="row ddxq">
+                <div class="col">全部</div>
+                <div class="col">代付款</div>
+                <div class="col">待收货</div>
+                <div class="col">待评价</div>
+            </div>
+            <div class="list">
+                <div class="item ">
+                    <i class="icon ion-clock"></i>
+                    2015-12-22 22:00
+                    <span class="item-note assertive">待评价</span>
+                </div>
+                <div class="item item-thumbnail-left">
+                    <img src="img/grzx2.png" alt="">
+                    <p>撼森点歌机家庭用KTV套装 </p>
+                    <div class="price spdd_price">
+                        <p>￥<span>299</span> <i class="item-note">数量:x1</i></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="item-note">共计：<i class="fontColor">￥314.00</i></span>
+                </div>
+                <div class="item">
+                    <div class=" item-note">
+                        <button class="button button-small button-outline button-dark">删除订单</button>
+                        <button class="button button-small button-royal">立即评价</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item ">
+                    <i class="icon ion-clock"></i>
+                    2015-12-22 22:00
+                    <span class="item-note assertive">待评价</span>
+                </div>
+                <div class="item item-thumbnail-left">
+                    <img src="img/spdd1.png" alt="">
+                    <p>撼森点歌机家庭用KTV套装 </p>
+                    <div class="price spdd_price">
+                        <p>￥<span>299</span> <i class="item-note">数量:x1</i></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="item-note">共计：<i class="fontColor">￥314.00</i></span>
+                </div>
+                <div class="item">
+                    <div class=" item-note">
+                        <button class="button button-small button-outline button-dark">删除订单</button>
+                        <button class="button button-small button-royal">立即评价</button>
+                    </div>
+                </div>
+            </div>
+
+        </ion-content>
+
+
+<script>
+    var myApp = angular.module("myApp",["ionic"]);
+        myApp.controller("myCon",["$scope",function($scope){
+
+        }]);
+</script>
+</body>
+</html>

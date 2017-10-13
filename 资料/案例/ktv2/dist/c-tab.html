@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+		<style type="text/css">
+			body{
+				background: #F2F2F2;
+			}
+
+			
+		</style>
+	</head>
+	<body ng-controller="main">
+		
+		<ion-content>
+			<ion-tabs class="tabs-positive tabs-icon-only">
+
+			  <ion-tab title="首页" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
+			    <!-- 标签 1 内容 -->
+			  </ion-tab>
+			
+			  <ion-tab title="关于" icon-on="ion-ios7-clock" icon-off="ion-ios7-clock-outline">
+			    <!-- 标签 2 内容 -->
+			  </ion-tab>
+			
+			  <ion-tab title="设置" icon-on="ion-ios7-gear" icon-off="ion-ios7-gear-outline">
+			    <!-- 标签 3 内容 -->
+			  </ion-tab>
+			
+			</ion-tabs>
+
+		</ion-content>
+		
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",["ionic"])
+		.controller("mian",["$scope","$ionicTabsDelegate",function($scope,$ionicTabsDelegate){
+			
+		}])
+	</script>
+</html>

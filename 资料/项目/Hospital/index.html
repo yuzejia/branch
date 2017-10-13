@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>爱心筹</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body ng-controller="mycon">
+		<header class="mainH1Title text-center">
+			爱心筹
+		</header>
+		<div class="nav-top" loader>
+			
+				<div class="plr bg-white mb20" ng-repeat="b in arr| limitTo:aa">
+					
+					<a href="aixin-details.html?id={{b.crowdId}}">	
+						<!--| limitTo: 3-->
+						<div class="aixin_header_details ptb">
+							<div class="aixin_header_logo fl mr15">
+								<img src="img/logo.png" ng-src="{{b.headUrl}}">
+							</div>
+							<span class="font-size28" ng-bind="b.userName">向日葵的生命</span>
+						</div>
+						<div class="center_con">
+							<div class="mainH2Title mb30 font-weight" ng-bind="b.crowdTitle">
+								求爱心人士救救我的孩子！！！
+							</div>
+							<ul class="aixin_pic_con clearfix" ng-repeat="c in b.imageDetails">
+								<li>
+									<img src="img/pic01.png" ng-src="{{c.smallUrl}}"/>
+								</li>
+								<li>
+									<img src="img/pic02.png" ng-src="{{c.middleUrl}}"/>
+								</li>
+								<li>
+									<img src="img/pic03.png" ng-src="{{c.url}}"/>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="aixin_jin_du pt30 clearfix" progress>
+							<div class="fl progressbar mt15">
+								<span class="progressbar_con fl"></span>
+							</div>
+							
+							<div class="fr clearfix"><span class="fl">{{ b.progress }}</span><span class="ml10 mr10">%</span></div>
+						</div>
+						<ul class="aixin_footer font-size24 color-gray text-center ptb clearfix">
+							<li>目标<span ng-bind="b.crowdMoney">80000</span>元</li>
+							<li>以筹<span ng-bind="b.existingMoney">40000</span>元</li>
+							<li><span ng-bind="b.loveHelpCount">961</span>次支持</li>
+							<li>剩余<span ng-bind="b.crowdDeadline">39</span>天</li>
+						</ul>
+					</a>
+				</div>
+				<div class="text-center color-gray mb20" ng-show='falg'>Loading data...</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		
+		var app = angular.module('myapp',[]);
+		
+			//  父控制器执行操作
+			app.directive('progress',function(){
+		        return {
+		            link: function(scope,element,attr){
+		                setTimeout(()=>{
+		                    let widthA = element.children()[1].children[0].innerHTML;		//获取所有的 进度条的值
+							element.children()[0].children[0].style.width = widthA+"%"
+						},1000)
+		            }
+		        }
+		    });
+		    app.controller('mycon',function ($scope,$http) {
+			        var arr = [];
+			        $scope.arrs = "";
+			        var items;
+			        var urls =https+'TPBitz/crowdfunding/list';
+//					var urls = "json/01.json";
+			        $http.post(urls).success(function (data) {
+			             items = data.list;
+			             
+			            for(var i=0; i<items.length;i++){
+			                arr.push(items[i]);				//便利添加
+			                $scope.arrs = items[i].progress;
+			            }
+			            $scope.arr = arr;					//页面便利 替代数组
+			            $scope.aa= 5;						//限制 过滤出的列表数量
+			            $scope.add = function () {
+			                $scope.aa = $scope.aa+1;		//从新赋值加1条
+			            };
+			        });
+	        });
+			app.directive("loader",function () {
+		            return {
+		                restrict : 'A',
+		                controller:function ($scope,$timeout,$rootScope) {
+		                    window.addEventListener("scroll",function () {
+		                        var doc_height = $(document).height();
+		                        var scroll_top = $(document).scrollTop();
+		                        var window_height = $(window).height();
+		                        if(scroll_top == 0){
+		                        }else if(scroll_top + window_height >= doc_height-1){
+		                            $scope.falg = true; //提示信息
+		                            $timeout(function () {	//延迟一秒 执行添加事件
+		                               	 $scope.add()
+		                            },200)
+		                        }else {
+		                            $scope.falg = false;
+		                        }
+		                    },false);
+		                }
+		            }
+		    });
+	</script>
+</html>

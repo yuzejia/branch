@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人资料</title>
+    <link rel="stylesheet" href="../css/ionic/ionic.min.css">
+
+    <script src="../js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .bar.bar-clear {
+            /*头部渐变颜色*/
+            background: -webkit-linear-gradient(left, #E44BF1 0%, #B10EBE 50%, #663399 100%);
+        }
+        /*.x-grzxziliaodemo{
+            background-color: #f2f2f2;
+            height: 1000px;
+        }*/
+        .x-ismtkbj{
+            background:rgba(106,107,108,.4) ;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .x-ismtk{
+            text-align: center;
+            width: 75%;
+            padding:8% 0 8%;
+            background: #663399;
+            border-radius: 10px;
+            position: fixed;
+            left: 13%;
+            top: 28%;
+            z-index: 1200;
+        }
+        .x-ismtk p{
+            color: #ffffff;
+            margin-top: 7%;
+        }
+        .x-ismtk button{
+            display: block;
+            width: 80%;
+            color: #663399;
+            margin: 7% auto;
+            border-color: #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body ng-controller="myCon">
+    <!--<div class="x-grzxziliaodemo">-->
+
+        <ion-header-bar class="bar bar-header bar-clear">
+            <button class="button button-clear">
+                <i class="icon ion-ios-arrow-back"></i>
+            </button>
+            <h2 class="title">个人资料</h2>
+        </ion-header-bar>
+
+        <ion-content>
+            <ion-list>
+                <ion-item class="item-icon-right">
+                   <p style="line-height: 40px;"> 头像
+                       <span class="item-note"  >
+                           <img src="img/img-grzx1/x-httx2.png" style="width: 40px;height: 40px;vertical-align: middle;">
+                       </span>
+                   </p>
+                    <i ng-click="a()" class="icon icon ion-ios-arrow-forward"></i>
+                </ion-item>
+                <ion-item>
+                    <p style="margin-bottom: 20px">
+                        昵称
+                        <span class="item-note">我是歌手</span>
+                    </p>
+                    <p>
+                        登录密码
+                        <span class="item-note">修改</span>
+                    </p>
+                </ion-item>
+            </ion-list>
+
+
+
+        </ion-content>
+
+        <div ng-show="falg" class="x-ismtkbj"></div>
+        <div class="x-ismtk"  ng-show="falg">
+            <img src="img/img-grzx1/x-httx2.png">
+            <p>换个头像，换种心情</p>
+            <button class="button" >自拍</button>
+            <button class="button" ng-click="falg=false">从相机里选择</button>
+        </div>
+
+
+    <!--</div>-->
+
+
+
+    <script  type="text/javascript">
+        var myApp=angular.module("myApp",["ionic"]);
+        myApp.controller("myCon",["$scope", function ($scope) {
+            $scope.a = function(){
+               $scope.falg = true
+            }
+        }])
+    </script>
+</body>
+</html>

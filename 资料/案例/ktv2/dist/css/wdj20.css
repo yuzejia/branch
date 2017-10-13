@@ -1,0 +1,44 @@
+.wdjp{
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:1px solid #ddd;
+	margin:10px;
+	text-align: center;
+}
+.wico{
+	font-size:25px
+}
+.wa{
+	color:#28A54C;
+	text-decoration: none;
+}
+.button.button-stable{
+	border:none;
+	background:#ddd;
+	color:#fff;
+}
+.wsp{
+	font-size:13px;
+}
+#myCheck + label{
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid #007AFF;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+}
+#myCheck:checked + label{
+    background-color: #eee;
+}
+#myCheck:checked + label:after{
+    content:"\2714";
+    color:#007AFF;
+}
+input[type=radio], input[type=checkbox]{
+	display:none;
+}

@@ -1,0 +1,25 @@
+body{
+	font-family: "微软雅黑";
+	background: #eee;
+}
+.list{
+	margin-top: 8px;
+}
+.item span{
+	font-size: 10px;
+	color: #ccc;
+	float: right;
+}
+.item h3{
+	color: #000;
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+.item p{
+	color: #666;
+	font-size: 12px;
+}
+.item-thumbnail-left{
+	padding-left: 98px;
+	padding-right: 10px;
+}

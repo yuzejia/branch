@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ionic.bundle.min.js"></script>
+</head>
+<body ng-controller="myCon">
+        <ion-header-bar class="barColor" >
+            <button class="button button-clear">
+                <i class="icon ion-ios-arrow-back"></i>
+            </button>
+            <h1 class="title">订单详情</h1>
+            <button class="button button-clear">
+                <i>编辑</i>
+            </button>
+        </ion-header-bar>
+        <ion-content class="has-header">
+            <div class="button-bar padding">
+                <button class="button button-royal ">团购（4）</button>
+                <button class="button ">商品（8）</button>
+            </div>
+        </ion-content>
+
+<script>
+    var myApp = angular.module("myApp",["ionic"]);
+        myApp.controller("myCon",["$scope",function($scope){
+
+        }]);
+</script>
+</body>
+</html>

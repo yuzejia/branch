@@ -1,0 +1,22 @@
+.item-select select{
+	padding:0;
+}
+/*.item-select:after{
+	border:none;
+}*/
+.input-label{
+	padding:0 10px;
+	font-size:14px;	
+}
+.item-input{
+	padding:0;
+}
+.col{
+	border-right:1px solid #ddd;
+}
+.col:last-child{
+	border:none;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+	line-height:1.6;
+}

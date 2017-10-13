@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/ionic.min.css"/>
+		<link rel="stylesheet" href="css/wsp8.css"/>
+		<script src="js/ionic.bundle.min.js"></script>
+		<script src="js/wsp8.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<div class="bar bar-header bar-clear">
+			<button class="button button-clear ">
+				<i class="ion-ios-arrow-back stable"></i>
+			</button>
+			<button class="button button-clear">
+				<i class="ion-android-share-alt stable"></i>
+			</button>
+		</div>
+		<div class="content scroll scroll-content has-tabs" style="overflow-y:scroll">
+			<div>
+				<img class="full-image" src="img/w01.png" alt="" />
+			</div>
+			<div class="list">
+				<div class='item wspitem'>
+					<h2 >蔡依林2016play巡回演唱会郑州站<span class="icon ion-ios-star-outline wsp"></span></h2>
+					<p style="font-size:20px;color:#663399;">￥290</p>
+				</div>
+				<div class="item item-divider"></div>
+				<div class="item">
+					<div class="tabs-striped tabs-color-royal tabs-background-light">
+						<div class='tabs'>
+							<a class="tab-item" ng-class="{ 'active' : data.current == 1 }" ng-click="actions.setCurrent(1)">产品参数</a>
+							<a class="tab-item" ng-class="{ 'active' : data.current == 2 }" ng-click="actions.setCurrent(2)">图文详情</a>
+							<a class="tab-item" ng-class="{ 'active' : data.current == 3 }" ng-click="actions.setCurrent(3)">用户评价</a>
+						</div>
+					</div>
+				</div>
+				<!--tab1-->
+				<div class="item item-text-wrap" ng-if="data.current == 1">
+					<p>演出时间：2016.06.25</p>
+					<p>演出场馆：漳州</p>
+					<p>演出时长：以现场未战</p>
+					<p>限购：塑料</p>
+					<p>儿童入场提示：1.2米儿童拒绝入场；1.2米以上儿童可以入场</p>
+				</div>
+				<!--tab2-->
+				<div class="item item-text-wrap" style="padding:0;" ng-if="data.current == 2">
+					<img src="img/w01.png" alt="" class="full-image" height="250px"/>
+					<p>极致惊艳与性感，蔡依林首登郑州，世界巡回演唱会</p>
+					<p>媒体说：他不是天才</p>
+					<p>极致惊艳与性感</p>
+				</div>
+				<!--tab3-->
+				<div ng-if="data.current == 3">
+				<div class="item item-text-wrap" >
+					<div class="item-avatar item-icon-right ">
+						<img src="img/wzt1.jpg" alt="" />
+						<h2>落月摇情、</h2>
+						<div>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-ios-star-outline'></i>
+						</div>
+					</div>
+					<p>晚上7点，酒吧一条街晚上7点，酒吧一条街晚上7点，酒吧一条街晚上7点</p>
+					<ul class="wul">
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+					</ul>	
+					<div style="clear:both;margin:5px"></div>
+					<p class="wp1">颜色分类：基础礼盒</p>				
+				</div>
+				
+				<div class="item item-text-wrap">
+					<div class="item-avatar item-icon-right ">
+						<img src="img/w03.png" alt="" />
+						<h2>落月摇情、</h2>
+						<div>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-android-star royal'></i>
+							<i class='ion-ios-star-outline'></i>
+						</div>
+					</div>
+					<p>晚上7点，酒吧一条街晚上7点，酒吧一条街晚上7点，酒吧一条街晚上7点</p>
+					<ul class="wul">
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+						<li><img src="img/wzt1.jpg" alt="" /></li>
+					</ul>	
+					<div style="clear:both;margin:5px"></div>
+					<p class="wp1">颜色分类：基础礼盒</p>				
+				</div>
+				</div>
+				<div class="item item-divider"></div>
+			</div>
+		</div>		
+			<div class='tabs tabs-bottom tabs-icon-top'>
+				<a class="tab-item assertive">
+					<span class='wspsp'><i class="icon ion-ios-cart-outline "></i></span>
+					购物车
+				</a>
+				<a class="tab-item assertive">
+					<span class='wspsp'><i class="icon ion-ios-chatbubble-outline "></i></span>
+					客服
+				</a>
+				<button class="button button-royal">					
+					加入购物车
+				</button>
+			</div>		
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="main">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>城市列表</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+		body{
+			background: #F2F2F2;
+		}
+			.c-zhimuposition{
+				position: fixed;
+				right: 2px;
+				top:55px;
+				width: 15px;
+				height: 100%;
+				z-index: 99;
+			}
+			.c-navs{
+				width: 15px;
+				height: 3.5%;
+				text-align: center;
+			}
+			
+			.c-nav-posibg{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -99;
+			}
+			.c-nav-posibg img{
+				width: 100%;
+				height: 100%;
+			}
+			.button-clear.button-clear{
+				color:#FFFFFF;
+			}
+			
+			.c-addcolor{
+				color: #663399;
+				font-size: 20px;
+			}
+			.c-navtextcolor{
+				color:#FFFFFF;
+				font-size: 18px;
+				margin: 0 auto;
+				line-height: 40px;
+			}
+			.c-xiangqing-top{
+				width: 100%;
+				padding: 15px;
+				box-sizing: border-box;
+				background: #FFFFFF;
+				margin-bottom: 8px;
+			}
+			.c-xiangqing-top img{
+				width: 100%;
+				height: 100%;
+			}
+			.c-ciangqing-text-con{
+				padding: 10px;
+				box-sizing: border-box;
+				background: #FFFFFF;
+				margin-bottom: 8px;
+			}
+			.c-ciangqing-text-con-pic{
+				width: 100%;
+				padding: 8px;
+			}
+			.c-xiangqinag-pinglun{
+				width: 100%;
+				height: 50px;
+			}
+			.c-xiangqinag-pinglun img{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<ion-header-bar>
+			<button class="button button-clear icon ion-ios-arrow-left"></button>
+			<div class="c-navtextcolor">
+				详情
+			</div>
+			<div class="c-nav-posibg"><img src="img/c-027.png"/></div>
+		</ion-header-bar>
+		
+		<ion-content class="content has-header scroll scroll-content" style="overflow-y: scroll;">	
+			<div class="c-xiangqing-top">
+				<img src="img/c-094.png"/>
+			</div>
+			<div class="c-ciangqing-text-con">
+				    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" 要想唱一首歌曲，首先唱歌的人一定要做到声情并茂。一是“声”：用哪些动作去唱歌，什么动作在唱歌时运用会发挥出更好的效果。二是“情”：唱歌时所要表达的一种感情，怎样带动“观众”（被认作是不是投入有没有一种音乐独特的气质。）
+				   <img src="img/c-095.png" class="c-ciangqing-text-con-pic"/>
+				    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本期小编推荐南区地铁口潜力盘，虽然新进入的加上目前现有的，看起来南区目前楼盘众多，但占据地铁口优势的就只有那么几个，卖一套少一套，赶紧来看看吧。正商城是位于二环旁的综合体盘，地理位置优越；临近地铁5号线、BRT快速公交等，交通十分便利；小区周边配套相对成熟，其中教育资源丰富，内部规划有5所幼儿园，三所小学，周边有铁路晨曦幼儿园，心连心幼儿园，春晖小学，邱砦小学，长江路小学，中学有82中、62中。	
+				    
+			</div>
+			<div class="c-xiangqing-top">
+				<img src="img/c-096.png"/>
+			</div>
+			<div class="c-xiangqinag-pinglun">
+				<img src="img/c-039.png"/>
+			</div>
+			
+		</ion-content>
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",["ionic"])
+		.controller("main",["$scope",function($scope){
+			
+		}])
+	</script>
+</html>

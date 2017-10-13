@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="main">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css"/>
+		<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+		<style type="text/css">
+		body{
+			font-family: "微软雅黑";
+			background: #F2F2F2;
+		}
+			.c-dianjianav{
+				height: 100%;
+				position: relative;
+			}
+				.c-dianjianav-top{
+					padding: 15px;
+					box-sizing: border-box;
+				}
+				.c-dianjianav-top img:first-child{
+					width: 45px;
+					
+				}
+		
+				.c-dianjianav-bottom{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+    				height: 36%;
+				}
+				.c-dianjianav-bottom img:first-child{
+					width: 100%;
+					height: 100%;
+				}
+				
+				.c-dianjia-posi{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					z-index: -99;
+				}
+				.c-dianjia-posi img{
+					width: 100%;
+					height: 100%;
+				}
+				
+		
+		</style>
+	</head>
+	<body>
+		<div class="content scroll scroll-content" style="overflow-y: scroll;">
+			<div class="c-dianjianav">
+				<div class="c-dianjianav-top">
+					<img src="img/c-051.png"/>
+				</div>
+				<div class="c-dianjia-posi">
+					<img src="img/c-074.png"/>
+				</div>
+			</div>
+			
+
+	</body>
+	<script type="text/javascript">
+		angular.module("myapp",['ionic'])
+		.controller("main",["$scope",function($scope){
+		
+		}])
+	</script>
+</html>

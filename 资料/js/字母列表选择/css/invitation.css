@@ -1,0 +1,93 @@
+.invitation .In_top{
+    text-align: center;
+    padding:0.2rem;
+    font-size: 0.25rem;
+
+}
+.invitation .In_top span{
+    text-decoration: underline;
+    color: #43435f;
+ }
+
+.invitation .con_img{
+    margin-top: -0.75rem;
+    border-radius: 50%;
+}
+.invitation .con_img>div{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background-color: #fff;
+    margin:0 auto;
+    padding:0.05rem;
+}
+.invitation .con_img img{
+    width: 1.5rem;
+    border-radius: 50%;
+}
+.invitation .content{
+    width:85%;
+    margin:0 auto;
+    border:1px solid #eee;
+    border-radius: 0.3rem;
+    min-height: 9rem;
+    text-align: center;
+    margin-top: 0.8rem;
+    padding-bottom: 0.2rem;
+    position: relative;
+}
+.invitation .content .con_img_bg{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.invitation .content h1{
+    margin: 0.3rem 0 0.5rem 0;
+    font-size: 0.35rem;
+    color: #047048;
+}
+.invitation .content .con_2{
+    padding:0 0.3rem;
+    font-size: 0.2rem;
+    color: #047048;
+    line-height: 0.4rem;
+}
+.invitation .content .code2{
+    width: 3rem;
+    height: 3rem;
+    margin:0.6rem auto 0.2rem;
+    background: #666;
+}
+.invitation .modal_regulation{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.invitation .modal_regulation .regulation{
+    text-align: center;
+    width:80%;
+    height: 8rem;
+background-color: #fff;
+    margin:2rem auto;
+    border-radius: 0.3rem;
+    padding:0.2rem;
+    position: relative;
+}
+.invitation .modal_regulation .regulation div{
+    padding:0.2rem;
+    line-height: 0.6rem;
+}
+.invitation .modal_regulation .regulation .cancel{
+    position: absolute;
+    bottom:-0.6rem;
+    left:46%;
+    color: #fff;
+    font-size: 0.25rem;
+
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	        body{
+	        	height: 800px;
+	    	    background-color: #f2f2f2;
+	    	    text-align: center;
+	        }
+	        .padding{
+	        	padding-top: 40px;
+	        	padding-bottom: 10px;
+	        }
+	        i{
+	        	font-size: 80px;
+	        	color: #663399;
+	        }
+	        p{
+	        	height: 30px;
+	        	padding-top: 10px;
+	        }
+	        p button{
+	        	width: 160px;
+	        	font-weight: bold;
+	        }
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">支付结果</h1> 
+	   </ion-header-bar>
+	   <ion-content>
+		   	 <div class="padding">
+		   	 	<i class="icon ion-bag"></i>
+		   	 	<p>支付成功~请等待卖家发货！</p>
+		   	  </div>
+		   	 <p>
+			   	<button class="button button-small button-outline button-stable" style="color: #663399;">继续逛逛</button>
+			    <button class="button button-small button-outline button-stable" style="color: #663399;">查看订单</button>
+		    </p> 
+	   </ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

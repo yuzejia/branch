@@ -1,0 +1,78 @@
+{
+"msg": "",
+"mgid": "true",
+"version": "1.0.0",
+"stateId": 0,
+"addId": 0,
+"timeStamp": 1500534613141,
+"list": {
+			"crowdId": 13,
+			"isMe": false,
+			"crowdTitle": "组装主机",
+			"crowdState": true,
+			"crowdMoney": 10000,
+			"existingMoney": null,
+			"progress": "0",
+			"crowdDate": "1500533349851",
+			"crowdDeadline": "31",
+			"crowdStopDate": "1503158400000",
+			"loveHelpCount": 0,
+			"crowdDetail": "6700k +1080显卡 你值得拥有",
+			"imageDetails": [{
+					"imageId": 39,
+					"imageName": "201707201449130.jpg",
+					"imageSize": "53876",
+					"smallUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449130.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+					"middleUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449130.jpg?x-oss-process=image/resize,m_lfit,h_1080,w_1080",
+					"url": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449130.jpg",
+					"imageType": ""
+				},
+				{
+					"imageId": 40,
+					"imageName": "201707201449141.jpg",
+					"imageSize": "194667",
+					"smallUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449141.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+					"middleUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449141.jpg?x-oss-process=image/resize,m_lfit,h_1080,w_1080",
+					"url": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449141.jpg",
+					"imageType": ""
+				},
+				{
+					"imageId": 41,
+					"imageName": "201707201449142.jpg",
+					"imageSize": "148735",
+					"smallUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449142.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+					"middleUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449142.jpg?x-oss-process=image/resize,m_lfit,h_1080,w_1080",
+					"url": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/1500533349879603059201707201449142.jpg",
+					"imageType": ""
+				}],
+				"userName": "谁谁谁",
+				"nickName": "笔记本",
+				"headUrl": "http://tpbucket.oss-cn-shanghai.aliyuncs.com/191500360526644723193201707181448480.jpg",
+				"userId": 19,
+				"oauthpatientName": "海纤纤",
+				"oauthpatientId": null,
+				"identityProveState": false,
+				"oauthpatientDisease": "",
+				"diagnosisProveState": false,
+				"hospitalName": "首都儿科研究所",
+				"hospitalId": null,
+				"oauthpayeeName": "海春宏",
+				"oauthpayeeId": null,
+				"relationName": "父女",
+				"payeeIdentityProveState": true,
+				"payeeAuthState": "认证失败",
+				"patientAuthState": "认证成功",
+				"verifyDetail": {
+								"verifyCount": 0,
+								"headUrlList": [ ]
+				},
+				"crowdFundingStateDetails": [{
+												"stateId": 13,
+												"createDate": "1500533349851",
+												"des": "",
+												"orderMoney": 10000,
+												"stateType": "A"
+				}],
+				"savedState": false
+	}
+}

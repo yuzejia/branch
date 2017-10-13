@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>卡券包</title>
+    <link rel="stylesheet" href="css/ionic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ionic.bundle.min.js"></script>
+    <style>
+    </style>
+</head>
+<body ng-controller="myCon">
+<ion-header-bar class="barColor" >
+    <button class="button button-clear">
+        <i class="icon ion-ios-arrow-back"></i>
+    </button>
+    <h1 class="title">我的约K</h1>
+</ion-header-bar>
+<ion-content class="has-header has-footer">
+    <div class="wdyk1">
+
+        <div class="item item-avatar item-icon-right">
+            <img src="img/titlepic1.png" alt="">
+            <h2>落月摇情、</h2>
+            <p>2015-02-22</p>
+            <i class="icon  ion-trash-a"></i>
+        </div>
+        <div class="item wx" style="margin-top: -32px;">
+            <p>晚上7点，酒吧一条街麦嘎KTV808房间，有神秘惊喜，不见不散，我的微信号：wechat0000。</p>
+            <div class="row">
+                <div class="col">
+                    <img style="width: 80%;height: 80%" src="img/home1.png" alt="">
+                </div>
+                <div class="col">
+                    <img style="width: 80%;height: 80%" src="img/home2.png" alt="">
+                </div>
+                <div class="col">
+                    <img style="width: 80%;height: 80%" src="img/home3.png" alt="">
+                </div>
+            </div>
+            <div class=" persion">
+                共报名五人：
+                <img src="img/person1.png" alt="">
+                <img src="img/person1.png" alt="">
+                <img src="img/person1.png" alt="">
+                <img src="img/person1.png" alt="">
+            </div>
+        </div>
+    
+        <div class="list">
+            <div class="item border">
+                <img class="imgmdd" src="img/baoming.png" alt="">
+                已报名（2）
+            </div>
+            <div class="item item-avatar ">
+                <img class="imgmdd" src="img/person1.png" alt="">
+                <span>失去方向的鱼</span>
+                <span class="item-note">8分钟前</span>
+            </div>
+            <div class="item border">
+                <p>加我一个！晚上8点左右会到！手机号：1353294329</p>
+            </div>
+
+            <div class="item item-avatar ">
+                <img class="imgmdd" src="img/person1.png" alt="">
+                <span>失去方向的鱼</span>
+                <span class="item-note">8分钟前</span>
+            </div>
+            <div class="item border">
+                <p>加我一个！晚上8点左右会到！手机号：1353294329</p>
+            </div>
+
+
+        </div>
+
+    </div>
+</ion-content>
+
+
+
+<script>
+    var myApp = angular.module("myApp",["ionic"]);
+    myApp.controller("myCon",["$scope",function($scope){
+
+    }]);
+</script>
+</body>
+</html>

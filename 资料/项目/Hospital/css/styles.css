@@ -1,0 +1,304 @@
+/* You can add global styles to this file, and also import other style files */
+.mainP{
+  padding:0.2rem;
+}
+
+/*清除浮动*/
+.clearfix{
+	overflow: hidden;
+}
+
+/*浮动*/
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.b-border{
+	border-bottom: 1px solid #EEEEEE;
+}
+.b-border2{
+	border-bottom: 1px solid #DDDDDD;
+}
+.b-border3{
+	border-bottom: 1px solid #21CBBD;
+}
+.b-border-blue{
+	border: 1px solid #21CBBD;
+}
+
+.border_con{border: 1px solid #DDDDDD;
+						border-top-left-radius: 0.12rem;
+						border-top-right-radius: 0.12rem;
+						border-bottom-left-radius: 0.12rem;
+						border-bottom-right-radius: 0.12rem;
+						}
+/*左右内边距*/
+.plr{
+  padding:0 0.2rem;
+}
+/*上下内边距*/
+.ptb{
+  padding:0.2rem 0;
+}
+.ptb30{
+  padding:0.3rem 0.2rem;
+}
+/*上内边距*/
+.pt10{
+  padding-top:0.1rem;
+}
+.pt15{
+  padding-top: 0.15rem;
+}
+.pt20{
+  padding-top: 0.2rem;
+}
+.pt25{
+  padding-top: 0.25rem;
+}
+.pt30{
+  padding-top: 0.3rem;
+}
+
+/*左内边距*/
+.pl10{
+  padding-left: 0.1rem;
+}
+.pl15{
+  padding-left: 0.15rem;
+}
+.pl20{
+  padding-left: 0.2rem;
+}
+.pl25{
+  padding-left: 0.25rem;
+}
+.pl30{
+  padding-left: 0.3rem;
+}
+
+/*右内边距*/
+
+.pr10{
+  padding-right: 0.1rem;
+}
+.pr15{
+  padding-right: 0.15rem;
+}
+.pr20{
+  padding-right: 0.2rem;
+}
+.pr25{
+  padding-right: 0.25rem;
+}
+.pr30{
+  padding-right: 0.3rem;
+}
+/*nei下内边距*/
+.pb10{
+  padding-bottom:0.1rem;
+}
+.pb15{
+  padding-bottom: 0.15rem;
+}
+.pb20{
+  padding-bottom: 0.2rem;
+}
+.pb25{
+  padding-bottom: 0.25rem;
+}
+.pb30{
+  padding-bottom: 0.3rem;
+}
+
+/*--none--*/
+.pb_none{
+	padding-bottom: 0;
+}
+.m_none{
+	margin: 0 !important;
+}
+
+
+/*上外边距*/
+.mt10{
+  margin-top: 0.1rem;
+}
+.mt15{
+  margin-top: 0.15rem;
+}
+.mt20{
+  margin-top: 0.2rem;
+}
+.mt25{
+  margin-top: 0.25rem;
+}
+/*模块下边距*/
+.mt30{
+  margin-top: 0.3rem;
+}
+
+
+/*下外边距*/
+.mb10{
+  margin-bottom: 0.1rem;
+}
+.mb15{
+  margin-bottom: 0.15rem;
+}
+.mb20{
+  margin-bottom: 0.2rem;
+}
+.mb25{
+  margin-bottom: 0.25rem;
+}
+/*模块下边距*/
+.mb30{
+  margin-bottom: 0.3rem;
+}
+
+
+/*左外边距*/
+.ml10{
+  margin-left: 0.1rem;
+}
+.ml15{
+  margin-left: 0.15rem;
+}
+.ml20{
+  margin-left: .2rem;
+}
+.ml25{
+  margin-left: 0.25rem;
+}
+.ml30{
+  margin-left: 0.3rem;
+}
+
+/*右外边距*/
+.mr10{
+  margin-right: 0.1rem;
+}
+.mr15{
+  margin-right: .15rem;
+}
+.mr20{
+  margin-right: 0.2rem;
+}
+.mr25{
+  margin-right: 0.25rem;
+}
+.mr30{
+  margin-right: 0.3rem;
+}
+
+/*圆形 圆角50%*/
+.bdrs50{
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/*文字居中*/
+.text-center{
+  text-align: center;
+}
+
+/*一级主标题*/
+.mainH1Title{
+  font-size:0.36rem;
+  color: #21ccbe;
+  position: fixed;
+  top: 0;left: 0;
+ /*float: left;*/
+  width: 100%;
+  z-index: 99;
+  }
+
+/*二级副标题*/
+.mainH2Title{
+  font-size:0.32rem;
+  color: #333;
+}
+
+
+/*首行缩进*/
+.text-indent{
+  text-indent: 2em;
+}
+
+/*字体大小*/
+.font-size28{
+  font-size: 0.28rem;
+}
+.font-size24{
+  font-size: 0.24rem;
+}
+.font-size32{
+  font-size:0.32rem;
+}
+
+
+/*内容字体颜色*/
+.color-default{
+  color: #333333;
+}
+.color-444{
+	color: #656565;
+}
+/*灰色字体*/
+.color-gray{
+  color: #999999;
+}
+.color-white{
+  color: #FFFFFF;
+}
+.color-blue{
+  color: #21CBBD;
+}
+
+/*字体加粗*/
+.font-weight{
+  font-weight: bold;
+}
+
+/*背景颜色*/
+/*白色背景*/
+.bg-white{
+  background-color: #ffffff;
+}
+.bg-body{
+	background: #eeeeee;
+}
+
+
+/*模块显示隐藏 不占空间*/
+.model-hide{
+  display: none !important;
+}
+.model-show{
+  display: block !important;
+}
+/*模块显示隐藏 占空间*/
+
+.mode-visible-hide{
+  visibility: hidden;
+}
+
+.mode-visible-show{
+  visibility: visible;
+}
+
+/*透明背景层*/
+.overlay{
+    background:rgba(0,0,0,0.5);
+    visibility: visible;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}

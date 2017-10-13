@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<script type="text/javascript" src="js/ionic.bundle.min.js" ></script>
+	    <style>
+	        body{
+	    	    background-color: #f2f2f2;
+	        }
+	        
+	    	b{
+	    		border: 1px solid #663399;
+	    		border-radius: 5px;
+	    		color:#663399;
+	    	}
+	    	
+	    </style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style="background: -webkit-linear-gradient(left,#E44BF1,#663399);">
+			<button class="button button-clear">
+				<i class="icon ion-ios-arrow-back light"></i>
+			</button>
+			<h1 class="title light">限时抢购</h1> 
+	</ion-header-bar>
+		<ion-content class="has-header has-footer">
+			<ion-list>
+				<ion-item>
+					<i class="icon ion-ios-alarm-outline royal"></i>
+					限时抢购
+					<span class="item-note"><b>04</b> : <b>03</b> : <b>26</b></span>
+				</ion-item>
+				<ion-item class="item-thumbnail-left" style="margin-bottom: 12px;">
+					<img src="img/nt01.fw.png" />
+					<h3>索爱CK-M3家庭KTV音响套装会议功放专</h3>
+					<h3>业卡包音响 电视机卡拉OK家用</h3>
+				    <p class="royal">
+				    	<i class="icon ion-social-yen royal">388</i>
+				    </p>
+				    <p>
+				    <span>已抢123</span>
+				    <button class="item-note button button-outline button-royal button-small">
+				    	<span class="assertive">立即抢购</span>
+				    </button>
+				    </p>
+				</ion-item>
+				<ion-item>
+					<i class="icon ion-ios-alarm-outline royal"></i>
+					限时抢购
+					<span class="item-note"><b>04</b> : <b>03</b> : <b>26</b></span>
+				</ion-item>
+				<ion-item class="item-thumbnail-left" style="margin-bottom: 12px;">
+					<img src="img/nt02.fw.png" />
+					<h3>索爱CK-M3家庭KTV音响套装会议功放专</h3>
+					<h3>业卡包音响 电视机卡拉OK家用</h3>
+				    <p class="royal">
+				    	<i class="icon ion-social-yen royal">388</i>
+				    </p>
+				    <p>
+				    <span>已抢123</span>
+				    <button class="item-note button button-outline button-royal button-small">
+				    	<span class="assertive">立即抢购</span>
+				    </button>
+				    </p>
+				</ion-item>
+				<ion-item>
+					<i class="icon ion-ios-alarm-outline royal"></i>
+					限时抢购
+					<span class="item-note"><b>04</b> : <b>03</b> : <b>26</b></span>
+				</ion-item>
+				<ion-item class="item-thumbnail-left">
+					<img src="img/nt03.png" />
+					<h3>索爱CK-M3家庭KTV音响套装会议功放专</h3>
+					<h3>业卡包音响 电视机卡拉OK家用</h3>
+				    <p class="royal">
+				    	<i class="icon ion-social-yen royal">388</i>
+				    </p>
+				    <p>
+				    <span>已抢123</span>
+				    <button class="item-note button button-outline button-royal button-small">
+				    	<span class="assertive">立即抢购</span>
+				    </button>
+				    </p>
+				</ion-item>
+				
+				
+			</ion-list>
+		</ion-content>
+		<script>
+			var myApp=angular.module("myApp",["ionic"]);
+			myApp.controller("myCon",["$scope",function($scope){
+				
+				
+				
+			}]);
+		</script>
+	</body>
+</html>

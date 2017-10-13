@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" href="css/ionic.min.css" />-->
+		<link rel="stylesheet" href="css/wmd17.css" />
+		<!--<script src="js/ionic.bundle.min.js"></script>-->
+		<style>
+			
+		</style>
+	</head>
+	<body ng-controller="con">
+		<ion-header-bar style="background:-webkit-linear-gradient(left,#E44BF1,#663399)">
+			
+			<button class="button button-clear">
+				<i class=" ion-ios-arrow-back stable"></i>
+			</button>
+			<h1 class="title stable" ui-sref="tabs.home">名店海报</h1>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<ion-item>
+					<img src="img/w06.png" alt="" class="full-image"/>									
+					<div class="wmd">
+							<p>苏格缪斯ktv</p>
+							<p>地址：农业路与金水路交叉口</p>
+					</div>
+				</ion-item>
+				<ion-item style="margin-top:-50px">
+					<img src="img/w06.png" alt="" class="full-image"/>				
+					<div class="wmd">
+							<p>苏格缪斯ktv</p>
+							<p>地址：农业路与金水路交叉口</p>
+					</div>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+		<script>
+			var app=angular.module("app",["ionic"]);
+			app.controller("con",["$scope",function($scope){
+				
+			}])
+		</script>
+	</body>
+</html>
+
+
+

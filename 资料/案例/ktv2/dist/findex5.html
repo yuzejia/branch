@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ionic.css"/>
+		<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background: #F2F2F2;
+				font-family: "微软雅黑";
+			}
+			.f2c{
+				color: #FFFFFF;font-family: "微软雅黑"
+			}
+			.f4in{
+				position: relative;
+				right: 45px;
+				color: #C0C0C0;
+			}
+			.f5pos{
+				position: absolute;
+				bottom: 0;
+			}
+			.f5window{
+				position: absolute;
+				background: rgba(0,0,0,.8);
+				width: 60%;
+				text-align: center;
+				display: none;
+				color: #FFFFFF;
+				z-index: 99;
+				margin-left: 20%;
+				top: 80%;
+				padding: 6% 4%;
+				border-radius: 5%;
+			}
+			.f5window img{
+				width: 30px;
+			}
+			.f5window p{
+				line-height: 2;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body ng-controller="myCon">
+		<ion-header-bar style=" background: linear-gradient(to bottom right,#e44bf1, #67329a); ">
+			<button class="button button-clear"><i class="icon  ion-ios-arrow-left f2c"></i></button>
+			<div class="title f2c">我要开店</div>
+
+		</ion-header-bar>
+		<ion-content >
+			<div class="">
+				<img src="img/f5-1.png"/style="width: 100%;">
+			</div>
+			<div class="list ">
+				<label class="item item-input">
+			    <span class="input-label">姓名</span>
+			    <input type="text">
+			    <span class="f4in" style="right: 55px;">填写真实姓名</span>
+			  </label>
+			  <label class="item item-input">
+			    <span class="input-label">电话</span>
+			    <input type="text">
+			    <span class="f4in">点击完善</span>
+			  </label>
+			  <label class="item item-input">
+			    <span class="input-label">店铺名称</span>
+			    <input type="text">
+			    <span class="f4in">点击完善</span>
+			  </label>
+			  <label class="item item-input">
+			    <span class="input-label">店铺地址</span>
+			    <input type="text">
+			    <span class="f4in">点击完善</span>
+			  </label>
+			</div>
+			
+			<div class="f5window">
+				<img src="img/f5-2.png" alt="" />
+				<p>提交成功,请等候审核!</p>
+			</div>
+		</ion-content>
+		<div class=" bar-footer padding" >
+			<button class="button button-block button-positive f5pos" onclick="pup()">
+			  提交
+			</button></div>
+	</body>
+	<script type="text/javascript">
+		angular.module("myApp",["ionic"])
+		.controller("myCon",["$scope",function($scope){
+			
+		}]) 
+		function pup(){
+
+			$(".f5window").fadeIn(600)
+		}
+	   setInterval(function() {
+	      $(".f5window").fadeOut(600)
+	   }, 3000);
+
+	</script>
+</html>
