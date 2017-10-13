@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>发布信息</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/postMessage.css">
+    <style>
+        .addcolor{
+            background-color: #e4e4e4;
+            color: #fff;
+        }
+        .addcolor2{
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body class="scope" ng-controller="mylist">
+<div class="FriendList" >
+    <div class="ABCList" abc-click>
+        <p class="abcs" ng-class="{'addcolor' : $index == surrindex}" ng-click="abClick($index)" ng-repeat="a in abcList">{{a}}</p>
+    </div>
+    <div class="list">
+        <div class="item item-divider">请选择你要@的好友，如果没有，<span>点击邀请</span></div>
+        <div class="search_top">
+            <input type="text" placeholder="搜索">
+        </div>
+        <div id="asd" class="messagesList" onscroll>
+            <!--最近联系人-->
+            <div>
+                <div class="item-divider na">最近联系人</div>
+                <div class="item-avatar" ng-click="lays()">
+                    <div class="fl">
+                        <img src="img/head.png">
+                    </div>
+                    <div class="fl">
+                        <p >标题控</p>
+                        <p >标题控</p>
+                    </div>
+                </div>
+            </div>
+            <!--分组-->
+            <div ng-repeat="q in abcList track by $index">
+                <div class="item-Zm " >{{q}}</div>
+                <div class="item-avatar" ng-click="lays()">
+                    <div class="fl">
+                        <img src="img/bg.png">
+                    </div>
+                    <div class="fl">
+                        <h2 >标题控</h2>
+                    </div>
+                </div>
+                <div class="item-avatar" ng-click="lays()">
+                    <div class="fl">
+                        <img src="img/head.png">
+                    </div>
+                    <div class="fl">
+                        <h2 >标题控</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script src="js/libyys-flexible.js"></script>-->
+<script src="js/jquery.1.11.3.js"></script>
+<script src="js/angular.js"></script>
+<script>
+
+var App = angular.module("App",[]);
+App.controller('mylist',["$scope","$http",function ($scope,$http) {
+
+    $http.post("http://106.14.20.11/TPBitz/crowdfunding/list")
+        .success(function(data){
+           console.log(data)
+        })
+}]);
+
+App.directive('abcClick',function () {
+    return {
+        restrict:'A',
+        link: function(scope,elem) {
+            var ABC = '*ABCDEFGHIJKLMNOPQRSTUVWXYZ#';
+            var ABCstring = [];
+            /*转换为数组*/
+            for(var i=0;i<ABC.length;i++){
+                ABCstring.push(ABC[i]);
+            }
+            scope.abcList = ABCstring;
+            var doc = angular.element(document);
+
+            var list =document.querySelectorAll('.messagesList')[0];
+            scope.surrindex = 1; /*默认选中第一个*/
+            scope.abClick = function (index) {  /*点击字母*/
+                var Zm =document.querySelectorAll('.item-Zm');  //获取列表字母
+                scope.surrindex = index ; /*添加选种颜色*/
+                var Zms = Zm[index];
+                var naTop =Zms.offsetTop;
+                console.log(naTop);
+                window.scrollTo(0,naTop);
+            };
+            doc.bind('scroll',function () {
+                var Zm =document.querySelectorAll('.item-Zm');  //获取列表字母
+                var BodyTop = document.body.scrollTop;
+                var as = [];
+                var text = '';
+                Zm.forEach(function (e,index,thisValue) {
+                    console.log()
+                    var tops =  e.offsetTop-BodyTop+26;
+                    console.log(tops)
+                    if(tops<30){
+                       text  = e.innerHTML;
+                       console.log(e)
+                    };
+                });
+                var ABCS =document.querySelectorAll('.abcs'); //获取侧边字母
+                var ABCS_Arrly=[];
+                for(let i in ABCS){
+                    ABCS_Arrly.push(ABCS[i]);  //转换为数组
+                };
+              /*  console.log(ABCS_Arrly instanceof Array);*/
+                ABCS_Arrly.forEach(function (e) {
+                    if(e.innerHTML == text) {
+                        toggleClass(e);
+                    }
+                });
+                /*改变class*/
+               function toggleClass(e) {
+                    for (var a=0;a<=ABCS.length-1;a++){
+                           if (ABCS[a]!=e){                //判断当前元素
+                               removeClass2(ABCS[a], 'addcolor')
+//                               $(e).siblings().removeClass('addcolor')
+                           }else{
+                               addClass(e,'addcolor');     /* 给当前元素加上颜色 */
+                               $(e).addClass('addcolor')
+                           }
+                    }
+               }
+                /*添加class*/
+                function addClass(obj, cls){
+                    var obj_class = obj.className,//获取 class 内容.
+                        blank = (obj_class != '') ? ' ' : '';//判断获取到的 class 是否为空, 如果不为空在前面加个'空格'.
+                    added = obj_class + blank + cls;//组合原来的 class 和需要添加的 class.
+                    obj.className = added;//替换原来的 class.
+                }
+                /*删除class*/
+                function removeClass2(obj, cls){
+                    var obj_class = ' '+obj.className+' ';//获取 class 内容, 并在首尾各加一个空格. ex) 'abc    bcd' -> ' abc    bcd '
+                    obj_class = obj_class.replace(/(\s+)/gi, ' '),//将多余的空字符替换成一个空格. ex) ' abc    bcd ' -> ' abc bcd '
+                        removed = obj_class.replace(' '+cls+' ', ' ');//在原来的 class 替换掉首尾加了空格的 class. ex) ' abc bcd ' -> 'bcd '
+                    removed = removed.replace(/(^\s+)|(\s+$)/g, '');//去掉首尾空格. ex) 'bcd ' -> 'bcd'
+                    obj.className = removed;//替换原来的 class.
+                }
+            })
+        }
+    }
+
+})
+
+</script>
+</body>
+</html>

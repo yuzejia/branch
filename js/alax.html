@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p>
+    <input id="aaa" type="button"   />
+</p>
+
+
+<script type="text/javascript" src='jquery/jquery.1.11.3.js'></script>
+<script>
+
+    $("#aaa").on("click",function (){
+
+
+        $.ajax({
+            type: "POST",
+            url: 'http://106.14.20.11/TPBitz/crowdfunding/list',
+            async: true, //同步
+            dataType: "json",
+            data: {  },
+            //后台执行完成后，返回页面处理函数
+            success: function (data) {
+                console.log(data)
+            }
+        });
+    } )
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+
+
+
+//    (function () {
+//        var str = window.location.href;
+//        endindex = str.indexOf('?');
+//        function find(str,cha,num){
+//            var x=str.indexOf(cha);
+//            for(var i=0;i<num;i++){
+//                x=str.indexOf(cha,x+1);
+//            }
+//            return x;
+//        };
+//        var startIndex = find(str,'/',2);
+//        console.log(startIndex,endindex)
+//        console.log(str.substring(startIndex,endindex))
+//    })();
+
+
+
+function urlSunstring(a,start,num) {
+    var str = window.location.href;
+    endindex = str.indexOf(a);
+    function find(str,cha,num){
+        var x=str.indexOf(cha);
+        for(var i=0;i<num;i++){
+            x=str.indexOf(cha,x+1);
+        }
+        return x;
+    };
+    var startIndex = find(str,start,num);
+    return str.substring(startIndex+1,endindex);
+}
+
+var as = urlSunstring('?','/',2);
+console.log(as)
+
+     //获取问好出现的位置；
+
+</script>
+</html>

@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>setTimeout</title>
+    <script type="text/javascript">
+        // bsd lisenced 2008 realazy
+        (function(){
+
+            // document.getElementById shorthand
+            function get(id){
+                return document.getElementById(id);
+            }
+
+            window.onload = function(){
+                get('makeinput').onmousedown = function(){
+                    var input = document.createElement('input');
+                    input.setAttribute('type', 'text');
+                    input.setAttribute('value', 'test1');
+                    get('inpwrapper').appendChild(input);
+                    input.focus();
+                    input.select();
+                }
+                get('makeinput2').onmousedown = function(){
+                    var input = document.createElement('input');
+                    input.setAttribute('type', 'text');
+                    input.setAttribute('value', 'test1');
+                    get('inpwrapper2').appendChild(input);
+                    setTimeout(function(){
+                        input.focus();
+                        input.select();
+                    }, 0);
+                }
+                get('input').onkeypress = function(){
+                    setTimeout(function(){
+                        get('preview').innerHTML = get('input').value;
+                    },0);
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body>
+<h1><code>setTimeout</code></h1>
+<h2>1、未使用 <code>setTimeout</code></h2>
+<button id="makeinput">生成 input</button>
+<p id="inpwrapper"></p>
+<h2>2、使用 <code>setTimeout</code></h2>
+<button id="makeinput2">生成 input</button>
+</h2>
+<p id="inpwrapper2"></p>
+<h2>3、另一个例子</h2>
+<p>
+    <input type="text" id="input" value="" /><span id="preview"></span></p>
+</body>
+<script>
+
+    wx.config({
+        debug: false,
+        appId: '{{$signPackage["appId"]}}',
+        timestamp: '{{ $signPackage["timestamp"]}}',
+        nonceStr: '{{$signPackage["nonceStr"]}}',
+        signature: '{{ $signPackage["signature"]}}',
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'showOptionMenu'
+        ]
+    });
+
+    wx.ready(function () {
+        // 在这里调用 API
+        //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        {{--@include('weixin.share');--}}
+        wx.onMenuShareTimeline({
+            title: '<?php echo $share->title;?>', // 分享标题
+            link: "<?php echo $share->link?>",
+            imgUrl: "<?php echo $share->imgurl?>", // 分享图标
+            success: function () {
+                //$.ajax({
+                //    type: 'get',
+                //    url:'',
+                //});
+            },
+        });
+
+// 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage({
+            title: '<?php echo $share->title;?>', // 分享标题
+            desc: '<?php echo $share->desc;?>',//分享摘要
+            link: "<?php echo $share->link;?>",
+            imgUrl: "<?php echo $share->imgurl?>", // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            success: function () {
+                //$.ajax({
+                //    type: 'get',
+                //    url:'',
+                //});
+            },
+        });
+    });
+
+    window.onload = function () {
+        $('#load').hide();
+        $('#scroll-content').show();
+    }
+
+</script>
+
+$signPackage = \App\Common\weixin\ApplyWxjs::getMainJsSignPackage();
+$share = App\BLL\WXShare\WxShare::getType(\App\Enums\WXShareType::ForumIndex);
+$head = \App\BLL\pageHead::get('index');
+
+</html>

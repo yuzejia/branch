@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>爱心筹</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<header class="mainH1Title text-center">
+			爱心筹
+		</header>
+		<div class="nav-top">
+			
+			<div class="plr bg-white mb20">
+				<div class="aixin_header_details ptb">
+					<div class="aixin_header_logo fl mr15">
+						<img src="img/logo.png"/>
+					</div>
+					<span class="font-size28">向日葵的生命</span>
+				</div>
+				<div class="center_con">
+					<div class="mainH2Title mb30 font-weight">
+						求爱心人士救救我的孩子！！！
+					</div>
+					<ul class="aixin_pic_con clearfix">
+						<li>
+							<img src="img/pic01.png"/>
+						</li>
+						<li>
+							<img src="img/pic02.png"/>
+						</li>
+						<li>
+							<img src="img/pic03.png"/>
+						</li>
+					</ul>
+				</div>
+				
+				
+				<div class="aixin_jin_du pt30">
+					<div class="progressbar mt15">
+						<div class="progressbar_con"></div>
+					</div>
+					<span class="color-gray font-size24">50%</span>
+				</div>
+				
+				
+				<ul class="aixin_footer font-size24 color-gray text-center ptb clearfix">
+					<li>目标<span>80000</span>元</li>
+					<li>以筹<span>40000</span>元</li>
+					<li><span>961</span>次支持</li>
+					<li>剩余<span>39</span>天</li>
+				</ul>
+			</div>
+			
+			
+			<div class="plr aixin_List_of_details mb20">
+				<div class="aixin_header_details ptb">
+					<div class="aixin_header_logo fl mr15">
+						<img src="img/logo.png"/>
+					</div>
+					<span class="font-size28">向日葵的生命</span>
+				</div>
+				<div class="center_con">
+					<div class="mainH2Title mb30 font-weight">
+						求爱心人士救救我的孩子！！！
+					</div>
+					<ul class="aixin_pic_con clearfix">
+						<li>
+							<img src="img/pic01.png"/>
+						</li>
+						<li>
+							<img src="img/pic02.png"/>
+						</li>
+						<li>
+							<img src="img/pic03.png"/>
+						</li>
+					</ul>
+				</div>
+				
+				
+				<div class="aixin_jin_du pt30">
+					<div class="progressbar mt15">
+						<div class="progressbar_con"></div>
+					</div>
+					<span class="color-gray font-size24">50%</span>
+				</div>
+				
+				<ul class="aixin_footer font-size24 color-gray text-center ptb clearfix">
+					<li>目标80000元</li>
+					<li>以筹40000元</li>
+					<li>961次支持</li>
+					<li>剩余39天</li>s
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/zepto-1.2.0.js"></script>
+	<script type="text/javascript" src="js/libyys-flexible.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			//便利--限制数量
+			
+			
+			//数据请求
+			var url_path = "json/01.json"
+			$.ajax({
+				  type:"get",
+				  url: url_path,
+				  dataType:"json", //设置为json 类型后返回数据不需要 再次转换;
+				  success:function(data){
+				      console.log(data)
+					var arrimg = data.list[0].headUrl;
+					var arrname = data.list[0].userName;
+					var arrtitle = data.list[0].crowdTitle;
+					var arrpic = data.list[0].imageDetails[0].url;	//原图
+					var arrmoney = data.list[0].crowdMoney;			//筹款金额
+					var arrmoneys =  data.list[0].existingMoney;	//已筹款金额
+					var arrprogress = data.list[0].progress;		//进度百分比
+					var arrdate = data.list[0].crowdDate;			//筹款日期，时间戳，精确到毫秒
+					var arrdateline = data.list[0].crowdDeadline;	//筹款剩余天数
+					var arrlove = data.list[0].loveHelpCount;		//爱心帮助，支持数
+					var arrmoneytype = data.list[0].crowdMoneytype;	//筹款币种类型
+					var arrcrowdDetail = data.list[0].crowdDetail;	//筹款详情描述
+//					var arrcrowdState = 
+					
+					
+					
+					
+					
+					
+//				 	$('.aixin_header_logo').children('img').attr('src',arrimg);
+//				 	$('.aixin_header_details').find('span').html(arrname);
+					
+
+				  },
+				  error:function(e){
+						alert('no')
+				  }
+			});
+		})
+		
+	</script>
+</html>
